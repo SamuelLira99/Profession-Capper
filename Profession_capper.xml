@@ -8,7 +8,7 @@
       <OnDragStop>self:StopMovingOrSizing();</OnDragStop>
     </Scripts>
     <Anchors>
-      <Anchor point="LEFTBOTTOM" relativePoint="LEFTBOTTOM">
+      <Anchor point="bottomleft" relativePoint="bottomleft">
         <Offset>
           <!-- <AbsDimension x="200" y="0"/> -->
           <AbsDimension x="0" y="0"/>
