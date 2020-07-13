@@ -1,0 +1,156 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+  <Script file="Core.lua"/>
+  <Frame name="MainFrameCore" parent="UIParent" hidden="true" movable="true" enableMouse="true" clampedToScreen="true">
+    <Scripts>
+      <OnLoad>fnOnLoad();</OnLoad>
+      <OnEvent>fnOnEvent();</OnEvent>
+      <OnDragStart>self:StartMoving();</OnDragStart>
+      <OnDragStop>self:StopMovingOrSizing();</OnDragStop>
+    </Scripts>
+    <Anchors>
+      <Anchor point="LEFTBOTTOM" relativePoint="LEFTBOTTOM">
+        <Offset>
+          <!-- <AbsDimension x="200" y="0"/> -->
+          <AbsDimension x="0" y="0"/>
+        </Offset>
+      </Anchor>
+    </Anchors>
+    <Size>
+      <AbsDimension x="225" y="250"/>
+    </Size>
+
+    <Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" tile="true" edgeFile="Interface\DialogFrame\UI-DialogBox-Border">
+      <TileSize>
+        <AbsValue val="32"/>
+      </TileSize>
+      <EdgeSize>
+        <AbsValue val="32"/>
+      </EdgeSize>
+      <BackgroundInsets>
+        <AbsInset left="11" right="12" top="12" bottom="11"/>
+        <!-- <AbsInset left="400" right="500" top="400" bottom="500"/> -->
+    </BackgroundInsets>
+
+    </Backdrop>
+
+    <Layers>
+        <Layer level="ARTWORK">
+
+            <!-- Header texture -->
+            <Texture name="$parentTitle" file="Interface\DialogFrame\UI-DialogBox-Header">
+                <Size>
+                    <AbsDimension x="430" y="64"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOP">
+                        <Offset>
+                            <AbsDimension x="0" y="0"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+            </Texture>
+
+
+            <!-- Skill icon texture -->
+            <Texture name="imgSkillIcon" file="Interface\InventoryItems\WoWUnknownItem01">
+            <!-- <Texture name="imgSkillIcon" file="Interface\Icons\INV_Misc_Bag_EnchantedMageweave"> -->
+                <Size>
+                    <AbsDimension x="50" y="50"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="top">
+                        <Offset>
+                            <AbsDimension y="-75"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+            </Texture>
+
+
+            <FontString inherits="GameFontNormal" text="PROFESSION_CAPPER_FRAME_HEADER_TEXT">
+                <Anchors>
+                    <Anchor point="TOP" relativeTo="$parentTitle">
+                        <Offset>
+                            <AbsDimension x="0" y="-14"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+            </FontString>
+
+            <FontString name="txtShouldCraft" inherits="GameFontNormal">
+                <Size>
+                    <AbsDimension x="200"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOP" relativeTo="$parentTitle">
+                        <Offset>
+                            <AbsDimension x="0" y="-50"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+            </FontString>
+
+            <FontString name="txtShouldCraftRecipe" inherits="GameFontNormal">
+                <Size>
+                    <AbsDimension x="200"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOP" relativeTo="$parentTitle">
+                        <Offset>
+                            <AbsDimension x="0" y="-165"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+            </FontString>
+
+        </Layer>
+    </Layers>
+
+    <Frames>
+        <Button name="$parentCraft" text="TXT_CRAFT" inherits="UIPanelButtonTemplate">
+            <Size>
+                <AbsDimension x="96" y="32"/>
+            </Size>
+            <Anchors>
+                <Anchor point="top">
+                    <Offset>
+                        <AbsDimension y="-125" />
+                    </Offset>
+                </Anchor>
+            </Anchors>
+            <Scripts>
+                <OnLoad>
+                    self:RegisterForClicks("LeftButtonUp");
+                </OnLoad>
+                <OnClick>
+                    craftRecipe();
+                </OnClick>
+            </Scripts>
+        </Button>
+    </Frames>
+
+
+  </Frame>
+
+
+
+  <!-- Button -->
+  <!-- <Button name="btn_craft" virtual="true">
+      <ButtonText>
+          <Anchors>
+              <Anchor point="CENTER">
+                  <Offset>
+                      <AbsDimension x="0" y="1"/>
+                  </Offset>
+              </Anchor>
+          </Anchors>
+      </ButtonText>
+      <NormalFont style="GameFontNormal"/>
+      <HighlightFont style="GameFontHighlight"/>
+      <DisabledFont style="GameFontDisable"/>
+      <NormalTexture inherits="UIPanelByttonUpTexture"/>
+      <PushedTexture inherits="UIPanelButtonDownTexture"/>
+      <DisabledTexture inherits="UIPanelButtonDisabledTexture"/>
+      <HighlightTexture inherits="UIPanelButtonHighlightTexture"/>
+  </Button> -->
+</Ui>

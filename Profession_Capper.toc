@@ -1,0 +1,7 @@
+## Interface: 30300
+## Title: Profession Capper
+## Notes: Tells you which recipe you shoud craft based on your current professions skill level
+## Version: 1.0.0
+
+localization.en.lua
+Profession_Capper.xml
