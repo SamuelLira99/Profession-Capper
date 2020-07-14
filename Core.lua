@@ -3,7 +3,7 @@
 local tradeSkillName, rank, maxLevel; -- variables for currently opened profession frame
 local isLinked, name; -- variables to know if you opened your own profession frame or if it's a link
 
-local shouldCraft = ''; -- varible that will show which recipe one should craft based on current skill level
+local shouldCraft = 'unknown'; -- varible that will show which recipe one should craft based on current skill level
 local shouldCraftRecipe = 'unknown'; -- variable that will hold the material needed to craft <shouldCraft>
 local skillAction = ''; -- variable to define String as "You should <craft/mine/gather/skin> <recipe>"
 
@@ -190,6 +190,20 @@ function GetCraftingToDo()
 
 
     -- Blacksmithing
+    if tradeSkillName == "Blacksmithing" then
+        if rank > 0 and rank < 26 then -- 1-25
+            shouldCraft = "Rough Sharpening Stone";
+            shouldCraftRecipe = "1x Rough Stone";
+        elseif rank > 25 and rank < 46 then -- 26-45
+            shouldCraft = "Rough Grinding Stone";
+            shouldCraftRecipe = "2x Rough Stone";
+        elseif rank > 45 and rank < 76 then -- 46-75
+            shouldCraft = "Copper Chain Belt";
+            shouldCraftRecipe = "6x Copper Bar";
+        elseif rank == 450 then
+            shouldCraft = "unknown";
+        end
+    end -- Blacksmithing end
 
 
 
@@ -269,6 +283,8 @@ function GetCraftingToDo()
                 -- Replacements for generic icons
                 if GetTradeSkillIcon(i) == "Interface\\Icons\\Trade_Engraving" then
                     shouldCraftIcon = "Interface\\Icons\\Spell_Holy_GreaterHeal";
+                else
+                    shouldCraftIcon = GetTradeSkillIcon(i);
                 end
 
 
@@ -325,6 +341,7 @@ SLASH_TOGGLE_PCAPPER_FRAME1 = "/pcapper";
 end
 
 function fnOnEvent()
+    resetValues();
     -- DEFAULT_CHAT_FRAME:AddMessage("TS window opened"); -- for debugging
 
 
@@ -363,4 +380,11 @@ function craftRecipe()
             DoTradeSkill(i);
         end
     end
+end
+
+function resetValues()
+    shouldCraft = "unknown";
+    txtShouldCraft:SetText(shouldCraft);
+    imgSkillIcon:SetTexture("Interface\\InventoryItems\\WoWUnknownItem01");
+    txtShouldCraftRecipe:SetText('');
 end
