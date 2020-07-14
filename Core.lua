@@ -173,11 +173,21 @@ function GetCraftingToDo()
     -- Tailoring
     if tradeSkillName == "Tailoring" then
         if rank > 0 and rank < 46 then -- 1-45
-            shouldCraft = "[Bolt of Linen Cloth] - 2x Linen Cloth";
-        elseif rank > 44 and rank < 71 then -- 45-70
-            shouldCraft = "[Heavy Linen Gloves] - 2 Bolt of Linen Cloth, 1 Coarse Thread";
+            shouldCraft = "Bolt of Linen Cloth";
+            shouldCraftRecipe = "2x Linen Cloth";
+        elseif rank > 44 and rank < 70 then -- 45-69
+            shouldCraft = "Heavy Linen Gloves";
+            shouldCraftRecipe = "2x Bolt of Linen Cloth, 1x Coarse Thread";
+        elseif rank > 69 and rank < 75 then -- 70-74
+            shouldCraft = "Reinforced Linen Cape";
+            shouldCraftRecipe = "2x Bolt of Linen Cloth, 3x Coarse Thread";
+        elseif rank > 74 and rank < 100 then -- 75-99
+            shouldCraft = "Bolt of Woolen Cloth"
+            shouldCraftRecipe = "3x Wool Cloth";
+
         elseif rank > 424 and rank < 450 then -- 425-449
             shouldCraft = "[Enchant Gloves : Expertise] - 12x Infinite Dust";
+            shouldCraftRecipe = "";
         elseif rank == 450 then
             shouldCraft = "nothing";
         end
