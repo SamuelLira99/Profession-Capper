@@ -1,5 +1,5 @@
 # About Profession Capper
-**Profession Capper** is a World of Warcraft(3.3.5) addon that wil show you how to level up your **trade skills** to its cap(450)
+**Profession Capper** is a World of Warcraft(3.3.5) addon that wil show you how to level up your **trade skills** to its cap(450) based on your current profession skill level
 
 When you open your **Profession frame**, the **Profession Capper frame** will be opened too, telling you which recipe you'd better to craft in order to reach next level of that **profession**
 
