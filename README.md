@@ -38,3 +38,10 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 `First Aid` - Not supported yet (queued to implement)
 
 `Fishing` - Not supported (probably won't be)
+
+### Prints
+![BS_copper_chanin_belt](https://rentyourapp.com/img/000-off-topic/pcapper/pcapper_blacksmithing_print.png)
+
+![ENC_greater_mana_restoration](https://rentyourapp.com/img/000-off-topic/pcapper/pcapper_enchanting_plain_print.png)
+
+![Tailoring_Capped](https://rentyourapp.com/img/000-off-topic/pcapper/pcapper_tailoring_plain.png)
