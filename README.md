@@ -39,7 +39,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 
 `Fishing` - Not supported (probably won't be)
 
-### Prints
+# Screenshots
 ![BS_copper_chanin_belt](https://rentyourapp.com/img/000-off-topic/pcapper/pcapper_blacksmithing_print.png)
 
 ![ENC_greater_mana_restoration](https://rentyourapp.com/img/000-off-topic/pcapper/pcapper_enchanting_plain_print.png)
