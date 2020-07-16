@@ -5,6 +5,14 @@ When you open your **Profession frame**, the **Profession Capper frame** will be
 
 By default, the **Profession Capper frame** will be opened at the **Bottom Left** corner of the game screen
 
+# Instructions
+
+1. Click `Code` green button on this page
+2. Download ZIP
+3. Extract to `Profession-Capper-master`
+4. Rename the extracted folder to `Profession_Capper`
+5. Move the folder "Profession_Capper" to `<WoW folder>/Interface/AddOns`
+
 # Professions current status
 
 ### Primary Trade Skills
