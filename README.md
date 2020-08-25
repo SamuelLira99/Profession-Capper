@@ -53,3 +53,6 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 ![ENC_greater_mana_restoration](https://rentyourapp.com/img/000-off-topic/pcapper/pcapper_enchanting_plain_print.png)
 
 ![Tailoring_Capped](https://rentyourapp.com/img/000-off-topic/pcapper/pcapper_tailoring_plain.png)
+
+# Support
+You can open an issue on this repo, or mark `@SamuelLira99` on [Twitter](https://twitter.com/SamuelLira99)
