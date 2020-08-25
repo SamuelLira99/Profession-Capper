@@ -172,7 +172,7 @@ function GetCraftingToDo()
 
     -- Tailoring
     if tradeSkillName == "Tailoring" then
-        if rank > 0 and rank < 46 then -- 1-45
+        if rank > 0 and rank < 45 then -- 1-44
             shouldCraft = "Bolt of Linen Cloth";
             shouldCraftRecipe = "2x Linen Cloth";
         elseif rank > 44 and rank < 70 then -- 45-69
@@ -182,8 +182,44 @@ function GetCraftingToDo()
             shouldCraft = "Reinforced Linen Cape";
             shouldCraftRecipe = "2x Bolt of Linen Cloth, 3x Coarse Thread";
         elseif rank > 74 and rank < 100 then -- 75-99
-            shouldCraft = "Bolt of Woolen Cloth"
+            shouldCraft = "Bolt of Woolen Cloth";
             shouldCraftRecipe = "3x Wool Cloth";
+        elseif rank > 99 and rank < 110 then -- 100-109
+            shouldCraft = "Bolt of Linen Cloth";
+            shouldCraftRecipe = "1x Fine Thread";
+        elseif rank > 109 and rank < 125 then -- 110-124
+            shouldCraft = "Double-stitched Woolen Shoulders";
+            shouldCraftRecipe = "3x Bolt of Woolen Cloth, 2x Fine Thread";
+        elseif rank > 124 and rank < 145 then -- 125-144
+            shouldCraft = "Bolt of Silk Cloth";
+            shouldCraftRecipe = "4x Silk Cloth";
+        elseif rank > 144 and rank < 160 then -- 145-159
+            shouldCraft = "Azure Silk Hood";
+            shouldCraftRecipe = "2x Bolt of Silk Cloth, 2x Blue Dye, 1x Fine Thread";
+        elseif rank > 159 and rank < 170 then -- 160-169
+            shouldCraft = "Silk Headband";
+            shouldCraftRecipe = "3x Bolt of Silk Cloth, 2x Fine Thread";
+        elseif rank > 169 and rank < 175 then -- 170-174
+            shouldCraft = "Formal White Shirt";
+            shouldCraftRecipe = "3x Bolt of Silk Cloth, 2x Bleach, 1x Fine Thread";
+        elseif rank < 174 and rank < 185 then -- 715-184
+            shouldCraft = "Bolt of Mageweave";
+            shouldCraftRecipe = "4x Mageweave Cloth";
+        elseif rank > 184 and rank < 200 then -- 185-199
+            shouldCraft = "Crimson Silk Vest";
+            shouldCraftRecipe = "4x Bolt of Silk Cloth, 2x Fine Thread, 2x Red Dye";
+        elseif rank > 199 and rank < 215 then -- 200-214
+            shouldCraft = "Crimson Silk Pantaloons";
+            shouldCraftRecipe = "4x Bolt of Silk Cloth, 2x Red Dye, 2x Silken Thread";
+        elseif rank > 214 and rank < 220 then -- 215-219
+            shouldCraft = "Black Mageweave Leggings";
+            shouldCraftRecipe = "2x Bolt of Mageweave, 3x Silken Thread";
+        elseif rank > 219 and rank < 230 then -- 220-229
+            shouldCraft = "Black Mageweave Gloves";
+            shouldCraftRecipe = "2x Bolt of Mageweave, 2x Heavy Silken Thread";
+        elseif rank > 229 and rank < 250 then -- 230-249
+            shouldCraft = "Black Mageweave Headband";
+            shouldCraftRecipe = "3x Bolt of Mageweave, 2x Heavy Silken Thread";
 
         elseif rank > 424 and rank < 450 then -- 425-449
             shouldCraft = "[Enchant Gloves : Expertise] - 12x Infinite Dust";
@@ -196,7 +232,22 @@ function GetCraftingToDo()
 
 
     -- Jewelcrafting
+    if tradeSkillName == "Jewelcrafting" then
+        if rank > 0 and rank < 30 then -- 1-29
+            shouldCraft = "Delicate Copper Wire";
+            shouldCraftRecipe = "2x Copper Bar";
 
+        elseif rank > 339 and rank < 350 then -- 340-359
+            shouldCraft = "Heavy Adamantite Ring";
+            shouldCraftRecipe = "1x Adamantite Bar, 1x Mercurial Adamantite";
+        elseif rank > 359 and rank < 395 then -- 360-394
+            shouldCraft = "Need to rename this";
+            shouldCraftRecipe = "Dark Jade";
+
+        elseif rank == 450 then
+            shouldCraft = "unknown";
+        end
+    end -- Jewelcrafting end
 
 
     -- Blacksmithing

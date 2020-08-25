@@ -19,7 +19,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 
 `Enchanting` - Fully supported
 
-`Tailoring` - In progress (supported till lvl 99)
+`Tailoring` - In progress (supported till lvl 249)
 
 `Blacksmithing` - In progress (supported till lvl 75)
 
