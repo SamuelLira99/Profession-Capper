@@ -530,10 +530,10 @@ function GetCraftingToDo()
         elseif rank > 79 and rank < 115 then -- 80-114
             shouldCraft = "Wool Bandage";
             shouldCraftRecipe = "1x Wool Cloth";
-        elseif rank > 114 and rank < 151 then -- 115-150
+        elseif rank > 114 and rank < 150 then -- 115-149
             shouldCraft = "Heavy Wool Bandage";
             shouldCraftRecipe = "2x Wool Cloth";
-        elseif rank > 150 and rank < 180 then -- 151-179
+        elseif rank > 149 and rank < 180 then -- 151-179
             shouldCraft = "Silk Bandage";
             shouldCraftRecipe = "1x Silk Cloth";
         elseif rank > 179 and rank < 210 then -- 180-209
@@ -619,6 +619,12 @@ function GetCraftingToDo()
 
     elseif tradeSkillName == "Skinning" then
       action = "skin";
+
+    elseif tradeSkillName == "First Aid" then
+      action = "Make";
+
+    elseif tradeSkillName == "Cooking" then
+        action = "cook";
     end
 
 
@@ -632,8 +638,17 @@ function GetCraftingToDo()
         for i = 1, GetNumTradeSkills() do
             local skillName, skillType, numAvailable, isExpanded, serviceType = GetTradeSkillInfo(i);
             if skillName == shouldCraft then
+
+                -- Disable "craft" button if you can't craft the item
+                if numAvailable > 0 then
+                    MainFrameCoreCraft:Enable();
+                else
+                    MainFrameCoreCraft:Disable();
+                end
+
                 txtShouldCraftRecipe:SetText("Reagents: " .. shouldCraftRecipe);
                 MainFrameCoreCraft:Show();
+                MainFrameCoreCraft:SetText('Craft (' .. numAvailable .. ')');
                 MainFrameCore:SetHeight(250);
 
 
@@ -700,6 +715,7 @@ end
 function fnOnEvent()
     resetValues();
     -- DEFAULT_CHAT_FRAME:AddMessage("TS window opened"); -- for debugging
+    -- print('event: ' .. event);
 
 
 
@@ -733,8 +749,8 @@ function craftRecipe()
     for i = 1, GetNumTradeSkills() do
         local skillName, skillType, numAvailable, isExpanded, serviceType = GetTradeSkillInfo(i);
         if skillName == shouldCraft then
-            print("crafting " .. shouldCraft)
-            DoTradeSkill(i);
+            print("crafting " .. numAvailable .."x " .. shouldCraft)
+            DoTradeSkill(i, numAvailable);
         end
     end
 end
@@ -744,4 +760,5 @@ function resetValues()
     txtShouldCraft:SetText(shouldCraft);
     imgSkillIcon:SetTexture("Interface\\InventoryItems\\WoWUnknownItem01");
     txtShouldCraftRecipe:SetText('');
+    MainFrameCoreCraft:SetText('Craft');
 end
