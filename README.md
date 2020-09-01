@@ -43,7 +43,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 ### Secondary Trade Skills
 `Coocking` - Not supported yet (queued to implement)
 
-`First Aid` - Not supported yet (queued to implement)
+`First Aid` - Fully supported
 
 `Fishing` - Not supported (probably won't be)
 
