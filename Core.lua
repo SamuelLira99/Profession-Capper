@@ -563,7 +563,7 @@ function GetCraftingToDo()
         elseif rank > 389 and rank < 450 then -- 390-449
             shouldCraft = "Heavy Frostweave Bandage";
             shouldCraftRecipe = "2x Frostweave Cloth";
-        elseif rank == 450 -- 450
+        elseif rank == 450 then -- 450
             shouldCraft = "unknown";
             shouldCraftRecipe = "unknown";
         end
