@@ -254,10 +254,60 @@ function GetCraftingToDo()
         elseif rank > 229 and rank < 250 then -- 230-249
             shouldCraft = "Black Mageweave Headband";
             shouldCraftRecipe = "3x Bolt of Mageweave, 2x Heavy Silken Thread";
-
+        elseif rank > 249 and rank < 260 then -- 250-259
+            shouldCraft = "Bolt of Runecloth";
+            shouldCraftRecipe = "4x Runecloth";
+        elseif rank > 259 and rank < 280 then -- 260-279
+            shouldCraft = "Runecloth Belt";
+            shouldCraftRecipe = "3x Bolt of Runecloth, 1x Rune Thread";
+        elseif rank > 279 and rank < 295 then -- 280-294
+            shouldCraft = "Runecloth Gloves";
+            shouldCraftRecipe = "5x Bolt of Runecloth, 2x Rune Thread";
+        elseif rank > 294 and rank < 300 then -- 295-299
+            shouldCraft = "Runecloth Headband";
+            shouldCraftRecipe = "6x Bolt of Runecloth, 2x Rune Thread";
+        elseif rank > 299 and rank < 325 then -- 300-324
+            shouldCraft = "Bolt of Netherweave";
+            shouldCraftRecipe = "5x Netherweave Cloth";
+        elseif rank > 324 and rank < 335 then -- 325-334
+            shouldCraft = "Bolt of Imbued Netherweave";
+            shouldCraftRecipe = "3x Bolt of Netherweave, 2x Arcane Dust";
+        elseif rank > 334 and rank < 345 then -- 335-344
+            shouldCraft = "Netherweave Boots";
+            shouldCraftRecipe = "6x Bolts of Netherweave, 2x Knothide Leather, 1x Rune Thread";
+        elseif rank > 344 and rank < 350 then -- 345-349
+            shouldCraft = "Netherweave Tunic";
+            shouldCraftRecipe = "8x Bolts of Netherweave, 2x Rune Thread";
+        elseif rank > 349 and rank < 375 then -- 350-374
+            shouldCraft = "Bolt of Frostweave";
+            shouldCraftRecipe = "5x Frostweave Cloth";
+        elseif rank > 374 and rank < 380 then -- 375-379
+            shouldCraft = "Frostwoven Belt";
+            shouldCraftRecipe = "3x Bolt of Frostweave, 1x Eternium Thread";
+        elseif rank > 379 and rank < 385 then -- 380-384
+            shouldCraft = "Frostwoven Boots";
+            shouldCraftRecipe = "4x Bolt of Frostweave, 1x Eternium Thread";
+        elseif rank > 384 and rank < 395 then -- 385-394
+            shouldCraft = "Frostwoven Cowl";
+            shouldCraftRecipe = "5x Bolt of Frostweave, 1x Eternium Thread";
+        elseif rank > 394 and rank < 400 then -- 395-399
+            shouldCraft = "Duskweave Belt";
+            shouldCraftRecipe = "7x Bolt of Frostweave, 1x Eternium Thread";
+        elseif rank > 399 and rank < 405 then -- 400-404
+            shouldCraft = "Bolt of Imbued Frostweave";
+            shouldCraftRecipe = "2x Bolt of Frostweave, 2x Infinite Dust";
+        elseif rank > 404 and rank < 410 then -- 405-409
+            shouldCraft = "Duskweave Wristwraps";
+            shouldCraftRecipe = "8x Bolt of Frostweave, 1x Eternium Thread";
+        elseif rank > 409 and rank < 415 then -- 410-414
+            shouldCraft = "Duskweave Gloves";
+            shouldCraftRecipe = "9x Bolt of Frostweave, 1x Eternium Thread";
+        elseif rank > 414 and rank < 425 then -- 415-424
+            shouldCraft = "Duskweave Boots";
+            shouldCraftRecipe = "10x Bolt of Frostweave, 1x Eternium Thread";
         elseif rank > 424 and rank < 450 then -- 425-449
-            shouldCraft = "[Enchant Gloves : Expertise] - 12x Infinite Dust";
-            shouldCraftRecipe = "";
+            shouldCraft = "Frostweave Bag";
+            shouldCraftRecipe = "6x Bolt of Imbued Frostweave, 2x Eternium Thread";
         elseif rank == 450 then
             shouldCraft = "unknown";
             shouldCraftRecipe = "unknown";
