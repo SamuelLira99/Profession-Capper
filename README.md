@@ -1,17 +1,16 @@
 # About Profession Capper
 **Profession Capper** is a World of Warcraft(3.3.5) addon that will show you how to level up your **trade skills** to its cap(450) based on your current profession skill level
 
-When you open your **Profession frame**, the **Profession Capper frame** will be opened too, telling you which recipe you'd better to craft in order to reach next level of that **profession**
+When you open your **Profession frame**, the **Profession Capper frame** will be opened too, telling you which recipe you'd better to craft next in order to reach next level of that **profession**
 
-By default, the **Profession Capper frame** will be opened at the **Bottom Left** corner of the game screen
+By default, the **Profession Capper frame** will be opened at the **Bottom Left** corner of the game screen, feel free to drag it as you want
 
 # Instructions
+1. Download [lastest release](https://github.com/SamuelLira99/Profession-Capper/releases) of Profession_Capper
 
-1. Click `Code` green button on this page
-2. Download ZIP
-3. Extract to `Profession-Capper-master`
-4. Rename the extracted folder to `Profession_Capper`
-5. Move the folder "Profession_Capper" to `<WoW folder>/Interface/AddOns`
+2. Extract the file "Profession_Capper.zip"
+
+3. Move the new "Profession_Capper" folder to `<WoW folder>/Interface/AddOns`
 
 # Professions current status
 
@@ -29,7 +28,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 
 `Jewelcrafting` - Fully supported
 
-`Leatherworking` - Not supported yet (queued to implement)
+`Leatherworking` - In progress (supported till lvl 130)
 
 `Inscription` - Not supported yet (queued to implement)
 
@@ -40,7 +39,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 
 `Skinning` - Not supported (probably won't be)
 
-### Secondary Trade Skills
+### Secondary Professions
 `Coocking` - Not supported yet (queued to implement)
 
 `First Aid` - Fully supported
@@ -48,6 +47,11 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 `Fishing` - Not supported (probably won't be)
 
 # Screenshots
+![option_01](https://rentyourapp.com/img/000-off-topic/pcapper/pcapper_crafting_option_1.jpg)
+
+![option_02](https://rentyourapp.com/img/000-off-topic/pcapper/pcapper_crafting_option_2.jpg)
+
+# Screenshots(previous tetsting versions)
 ![BS_copper_chanin_belt](https://rentyourapp.com/img/000-off-topic/pcapper/pcapper_blacksmithing_print.png)
 
 ![ENC_greater_mana_restoration](https://rentyourapp.com/img/000-off-topic/pcapper/pcapper_enchanting_plain_print.png)

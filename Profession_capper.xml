@@ -127,6 +127,50 @@
                 </OnClick>
             </Scripts>
         </Button>
+
+        <Button name="$parentNextRecipe" text="&gt;" inherits="UIPanelButtonTemplate">
+            <Size>
+                <AbsDimension x="32" y="32"/>
+            </Size>
+            <Anchors>
+                <Anchor point="topright">
+                    <Offset>
+                        <AbsDimension y="-125" x="-20" />
+                    </Offset>
+                </Anchor>
+            </Anchors>
+            <Scripts>
+                <OnLoad>
+                    self:RegisterForClicks("LeftButtonUp");
+                </OnLoad>
+                <OnClick>
+                    displayNextRecipe();
+                    <!-- craftRecipe(); -->
+                </OnClick>
+            </Scripts>
+        </Button>
+
+        <Button name="$parentPreviousRecipe" text="&lt;" inherits="UIPanelButtonTemplate">
+            <Size>
+                <AbsDimension x="32" y="32"/>
+            </Size>
+            <Anchors>
+                <Anchor point="topleft">
+                    <Offset>
+                        <AbsDimension y="-125" x="20" />
+                    </Offset>
+                </Anchor>
+            </Anchors>
+            <Scripts>
+                <OnLoad>
+                    self:RegisterForClicks("LeftButtonUp");
+                </OnLoad>
+                <OnClick>
+                    displayPreviousRecipe();
+                    <!-- craftRecipe(); -->
+                </OnClick>
+            </Scripts>
+        </Button>
     </Frames>
 
 
