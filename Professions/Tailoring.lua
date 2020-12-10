@@ -1,5 +1,3 @@
-print('[Profession Capper] loaded Tailoring module');
-
 addonName, addonTable = ...;
 
 local shouldCraft, shouldCraftRecipe;
@@ -110,3 +108,5 @@ addonTable.getTailoringCurrentSkillLevelRecipeToCraft = function(rank)
     end
     return shouldCraft, shouldCraftRecipe;
 end
+
+print("|cff" .. addonTable.chat_frame_default_color .. '[Profession Capper] loaded Tailoring module|r');

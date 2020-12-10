@@ -3,6 +3,7 @@
 ## Notes: Tells you which recipe you shoud craft based on your current professions skill level
 ## Version: 1.0.0-beta1
 
+constants.lua
 Professions\Enchanting.lua
 Professions\Tailoring.lua
 Professions\Jewelcrafting.lua
@@ -13,5 +14,4 @@ Professions\Inscription.lua
 Professions\Alchemy.lua
 Professions\FirstAid.lua
 Professions\Cooking.lua
-localization.en.lua
 Profession_Capper.xml

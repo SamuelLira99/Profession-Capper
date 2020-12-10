@@ -96,7 +96,7 @@ end
 
 
 function fnOnLoad()
-print("[Profession Capper] all modules loaded for [" .. UnitLevel("player") .. "]" .. UnitName("player") .. "") -- print() = DEFAULT_CHAT_FRAME:AddMessage()
+print("|cff" .. addonTable.chat_frame_default_color .. "[Profession Capper] all modules loaded for|r |cff" .. addonTable.chat_frame_player_name_color .. "[" .. UnitLevel("player") .. "]" .. UnitName("player") .. "|r") -- print() = DEFAULT_CHAT_FRAME:AddMessage()
 this:RegisterEvent("TRADE_SKILL_UPDATE");
 this:RegisterEvent("TRADE_SKILL_CLOSE");
 
@@ -237,7 +237,7 @@ function craftRecipe()
     for i = 1, GetNumTradeSkills() do
         local skillName, skillType, numAvailable, isExpanded, serviceType = GetTradeSkillInfo(i);
         if skillName == shouldCraft[craftRecipeOptionsIndex] then
-            print("crafting " .. numAvailable .."x " .. shouldCraft[craftRecipeOptionsIndex])
+            print("|cff" .. addonTable.chat_frame_default_color .."[Profession Capper] crafting|r |cff" .. addonTable.chat_frame_player_name_color .. numAvailable .."x |r|cff" .. addonTable.chat_frame_default_color .. shouldCraft[craftRecipeOptionsIndex] .. "|r")
             DoTradeSkill(i, numAvailable);
         end
     end

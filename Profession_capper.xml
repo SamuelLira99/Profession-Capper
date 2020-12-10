@@ -67,7 +67,7 @@
             </Texture>
 
 
-            <FontString inherits="GameFontNormal" text="PROFESSION_CAPPER_FRAME_HEADER_TEXT">
+            <FontString inherits="GameFontNormal" text="Next recipe you should craft">
                 <Anchors>
                     <Anchor point="TOP" relativeTo="$parentTitle">
                         <Offset>
