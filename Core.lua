@@ -8,6 +8,9 @@ local shouldCraft = {"unknown"}; -- varible that will show which recipe one shou
 local shouldCraftRecipe = {"unknown"}; -- variable that will hold the material needed to craft <shouldCraft>
 local craftRecipeOptionsIndex = 1; -- variavle to define index of recipes
 
+-- variables for check if the recipe you should craft has changed
+local previousShouldCraft = {"unknown"}; -- what was the last value of shouldCraft?
+
 
 
 
@@ -123,7 +126,6 @@ function fnOnEvent()
             -- print(tradeSkillName .. '(' .. rank .. '-' .. maxLevel .. ')'); -- for debugging
 
             GetCraftingToDo();
-            -- print('updated') -- debugging
 
             MainFrameCore:Show()
 
@@ -139,39 +141,43 @@ function fnOnEvent()
 end
 
 function displayRecipe()
-    txtShouldCraft:SetText(shouldCraft[craftRecipeOptionsIndex]);
-    -- txtShouldCraftRecipe:SetText("Recipe: " .. shouldCraftRecipe);
+    local hasRecipeChanged = table.concat(shouldCraft) ~= table.concat(previousShouldCraft);
+    local skillName, skillType, numAvailable, isExpanded, serviceType
+    local craftButtonText
+
+    -- print('shouldCraft: ' .. table.concat(shouldCraft));
+    -- print('previousShouldCraft: ' .. table.concat(previousShouldCraft));
+    --
+    -- print('recipe changed:');
+    -- print(hasRecipeChanged); --debugging
+    --
+    -- -- prevent skill level changes from having nil values due to index out of bound
+    -- print('craftRecipeOptionsIndex(BEFORE): ' .. craftRecipeOptionsIndex); --debugging
+    if hasRecipeChanged then
+        craftRecipeOptionsIndex = 1
+    end
+    -- print('craftRecipeOptionsIndex(AFTER): ' .. craftRecipeOptionsIndex); --debugging
+
+    -- Disable "previous" button if the first one is currently being shown
+    if craftRecipeOptionsIndex <= 1 then
+        MainFrameCorePreviousRecipe:Disable();
+    else
+        MainFrameCorePreviousRecipe:Enable();
+    end
+
+    -- Disable "next" button if the last one is currently being shown
+    if craftRecipeOptionsIndex >= table.getn(shouldCraft) then
+        MainFrameCoreNextRecipe:Disable();
+    else
+        MainFrameCoreNextRecipe:Enable();
+    end
+
 
     for i = 1, GetNumTradeSkills() do
-        local skillName, skillType, numAvailable, isExpanded, serviceType = GetTradeSkillInfo(i);
+        skillName, skillType, numAvailable, isExpanded, serviceType = GetTradeSkillInfo(i);
+
         if skillName == shouldCraft[craftRecipeOptionsIndex] then
-
-            -- Disable "craft" button if you can't craft the item
-            if numAvailable > 0 then
-                MainFrameCoreCraft:Enable();
-            else
-                MainFrameCoreCraft:Disable();
-            end
-
-            -- Disable "previous" button if the first one is currently being shown
-            if craftRecipeOptionsIndex <= 1 then
-                MainFrameCorePreviousRecipe:Disable();
-            else
-                MainFrameCorePreviousRecipe:Enable();
-            end
-
-            -- Disable "next" button if the last one is currently being shown
-            if craftRecipeOptionsIndex >= table.getn(shouldCraft) then
-                MainFrameCoreNextRecipe:Disable();
-            else
-                MainFrameCoreNextRecipe:Enable();
-            end
-
-            txtShouldCraftRecipe:SetText("Reagents: " .. shouldCraftRecipe[craftRecipeOptionsIndex]);
-            MainFrameCoreCraft:Show();
-            MainFrameCoreCraft:SetText('Craft (' .. numAvailable .. ')');
-            MainFrameCore:SetHeight(250);
-
+            craftButtonText = 'Craft (' .. numAvailable .. ')';
 
             -- Replacements for generic icons
             if GetTradeSkillIcon(i) == "Interface\\Icons\\Trade_Engraving" then
@@ -180,23 +186,52 @@ function displayRecipe()
                 shouldCraftIcon = GetTradeSkillIcon(i);
             end
 
+            break; -- exit 'for' loop if current skill index(on profession frame) matches the skill stored on 'shouldCraft' variable
+        else
+            shouldCraftIcon = "Interface\\InventoryItems\\WoWUnknownItem01"; -- red interrogation icon
+            craftButtonText = "Unavailable"; -- means that you have not learnt this recipe yet
+        end --if
+    end --for
 
-            imgSkillIcon:SetTexture(shouldCraftIcon);
-            print("index: " .. i); -- debugging
-            print("texturePath: " .. GetTradeSkillIcon(i)); -- debugging
-        end
+
+    -- Disable "craft" button if you can't craft the item
+    if numAvailable > 0 then
+        MainFrameCoreCraft:Enable();
+    else
+        MainFrameCoreCraft:Disable();
     end
-end
+
+
+    -- Setup and display the frame and its elements
+    txtShouldCraft:SetText(shouldCraft[craftRecipeOptionsIndex]); -- text that displays next recipe(s) you should craft
+    txtShouldCraftRecipe:SetText("Recipe: " .. shouldCraftRecipe[craftRecipeOptionsIndex]); -- text that displays reagents for next recipe(s) you should craft
+
+    imgSkillIcon:SetTexture(shouldCraftIcon); ---- skill texture icon above button
+    MainFrameCoreCraft:SetText(craftButtonText) -- 'craft' button
+    MainFrameCore:SetHeight(250); ---------------- set frame height
+    MainFrameCoreCraft:Show(); ------------------- show the frame itself(turn it visible)
+
+    previousShouldCraft = shouldCraft;
+end --displayRecipe()
+
+
+
 
 function displayNextRecipe()
     craftRecipeOptionsIndex = craftRecipeOptionsIndex + 1
     displayRecipe()
 end
 
+
+
+
 function displayPreviousRecipe()
     craftRecipeOptionsIndex = craftRecipeOptionsIndex - 1
     displayRecipe()
 end
+
+
+
 
 function craftRecipe()
     for i = 1, GetNumTradeSkills() do
@@ -207,6 +242,9 @@ function craftRecipe()
         end
     end
 end
+
+
+
 
 function resetValues()
     shouldCraft = {"unknown"};
