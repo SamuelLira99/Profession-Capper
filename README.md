@@ -22,7 +22,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 
 `Blacksmithing` - In progress (supported till lvl 75)
 
-`Alchemy` - Need changes
+`Alchemy` - In progress (supported till lvl 155)
 
 `Engineering` - Not supported yet (queued to implement)
 
