@@ -125,8 +125,14 @@ addonTable.getEnchantingCurrentSkillLevelRecipeToCraft = function(rank)
         shouldCraft = {"Runed Titanium Rod"};
         shouldCraftRecipe = {"1x Titanium Rod, 12x Infinite Dust, 4x Greater Cosmic Essence,2x Dream Shard, 1x Runed Eternium Rod"};
     elseif rank > 425 and rank < 440 then -- 426-439
-        shouldCraft = {"Enchant Chest - Super Health"};
-        shouldCraftRecipe = {"20x Infinite Dust, 4x Greater Cosmic Essence"};
+        shouldCraft = {
+            "Enchant Chest - Super Health",
+            "Enchant Weapon - Icebreaker"
+        };
+        shouldCraftRecipe = {
+            "20x Infinite Dust, 4x Greater Cosmic Essence", --- Enchant Chest - Super Health
+            "4x Dream Shard, 4x Eternal Fire" ----------------- Enchant Weapon - Icebreaker
+        };
     elseif rank > 439 and rank < 450 then -- 440-449
         shouldCraft = {"Enchant Boots - Greater Assault"};
         shouldCraftRecipe = {"4x Greater Cosmic Essence, 4x Dream Shard"};
