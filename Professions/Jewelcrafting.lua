@@ -66,7 +66,7 @@ addonTable.getJewelcraftingCurrentSkillLevelRecipeToCraft = function(rank)
         };
         shouldCraftRecipe = {
             "1x Powerful Mojo, 1x Essence of Earth, 1x Thorium Setting", --Onslaught Ring
-            "10 Blue Sapphire, 10 Essence of Undeath, 10 Thorium Setting" --Sapphire Pendant of Winter Night
+            "1x Blue Sapphire, 1x Essence of Undeath, 1x Thorium Setting" --Sapphire Pendant of Winter Night
         };
     elseif rank > 289 and rank < 300 then -- 290-299
         shouldCraft = {"Emerald Lion Ring"};
