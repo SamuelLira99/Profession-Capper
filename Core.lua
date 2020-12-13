@@ -71,6 +71,8 @@ function GetCraftingToDo()
         imgSkillIcon:SetTexture(GetSpellTexture(tradeSkillName));
         txtShouldCraftRecipe:SetText('');
         MainFrameCoreCraft:Hide();
+        MainFrameCoreNextRecipe:Hide();
+        MainFrameCorePreviousRecipe:Hide();
         MainFrameCore:SetHeight(150);
     end
 
@@ -153,6 +155,11 @@ function displayRecipe()
     --
     -- -- prevent skill level changes from having nil values due to index out of bound
     -- print('craftRecipeOptionsIndex(BEFORE): ' .. craftRecipeOptionsIndex); --debugging
+
+    -- show buttons in case it was hidden due to 'skill level already 450'
+    MainFrameCoreNextRecipe:Show();
+    MainFrameCorePreviousRecipe:Show();
+
     if hasRecipeChanged then
         craftRecipeOptionsIndex = 1
     end
