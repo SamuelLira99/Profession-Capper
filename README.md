@@ -28,7 +28,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 
 `Jewelcrafting` - Fully supported
 
-`Leatherworking` - In progress (supported till lvl 130)
+`Leatherworking` - Fully supported
 
 `Inscription` - Not supported yet (queued to implement)
 
