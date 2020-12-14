@@ -6,7 +6,12 @@ When you open your **Profession frame**, the **Profession Capper frame** will be
 By default, the **Profession Capper frame** will be opened at the **Bottom Left** corner of the game screen, feel free to drag it as you want
 
 # Instructions
-1. Download [lastest release](https://github.com/SamuelLira99/Profession-Capper/releases) of Profession_Capper
+1. Download lastest release of Profession_Capper
+
+    - from [GitHub](https://github.com/SamuelLira99/Profession-Capper/releases)
+
+    - from [bestwowaddons.com](https://bestwowaddons.com/download/profession-capper/)
+
 
 2. Extract the file "Profession_Capper.zip"
 
