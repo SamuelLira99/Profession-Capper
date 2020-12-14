@@ -146,6 +146,7 @@ function displayRecipe()
     local hasRecipeChanged = table.concat(shouldCraft) ~= table.concat(previousShouldCraft);
     local skillName, skillType, numAvailable, isExpanded, serviceType
     local craftButtonText
+    local enableBtnCraft = false; -- controls if "craft" button will be enabled
 
     -- print('shouldCraft: ' .. table.concat(shouldCraft));
     -- print('previousShouldCraft: ' .. table.concat(previousShouldCraft));
@@ -185,6 +186,7 @@ function displayRecipe()
 
         if skillName == shouldCraft[craftRecipeOptionsIndex] then
             craftButtonText = 'Craft (' .. numAvailable .. ')';
+            enableBtnCraft = true;
 
             -- Replacements for generic icons
             if GetTradeSkillIcon(i) == "Interface\\Icons\\Trade_Engraving" then
@@ -197,12 +199,13 @@ function displayRecipe()
         else
             shouldCraftIcon = "Interface\\InventoryItems\\WoWUnknownItem01"; -- red interrogation icon
             craftButtonText = "Unavailable"; -- means that you have not learnt this recipe yet
+            enableBtnCraft = false;
         end --if
     end --for
 
 
     -- Disable "craft" button if you can't craft the item
-    if numAvailable > 0 then
+    if (enableBtnCraft) and (numAvailable > 0) then
         MainFrameCoreCraft:Enable();
     else
         MainFrameCoreCraft:Disable();
