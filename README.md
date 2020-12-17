@@ -25,7 +25,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 
 `Tailoring` - Fully supported
 
-`Blacksmithing` - In progress (supported till lvl 75)
+`Blacksmithing` - Fully supported
 
 `Alchemy` - In progress (supported till lvl 155)
 
