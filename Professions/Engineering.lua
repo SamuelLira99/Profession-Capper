@@ -7,8 +7,14 @@ addonTable.getEngineeringCurrentSkillLevelRecipeToCraft = function(rank)
         shouldCraft = {"Rough Blasting Powder"};
         shouldCraftRecipe = {"1x Rough Stone"};
     elseif rank > 20 and rank < 31 then -- 21-30
-        shouldCraft = {"Rough Dynamite"};
-        shouldCraftRecipe = {"2x Rough Blasting Powder, 1x Linen Cloth"};
+        shouldCraft = {
+            "Rough Dynamite",
+            "Rough Blasting Powder"
+        };
+        shouldCraftRecipe = {
+            "2x Rough Blasting Powder, 1x Linen Cloth", -- Rough Dynamite
+            "1x Rough Stone" ----------------------------- Rough Blasting Powder
+        };
     elseif rank > 30 and rank < 50 then -- 31-49
         shouldCraft = {"Handful of Copper Bolts"};
         shouldCraftRecipe = {"1x Copper Bar"};
@@ -18,9 +24,18 @@ addonTable.getEngineeringCurrentSkillLevelRecipeToCraft = function(rank)
     elseif rank > 50 and rank < 75 then -- 51-74
         shouldCraft = {"Copper Tube"};
         shouldCraftRecipe = {"2x Copper bar, 1x Weak Flux"};
-    elseif rank > 74 and rank < 90 then -- 75-89
+    elseif rank > 74 and rank < 85 then -- 75-84
         shouldCraft = {"Coarse Blasting Powder"};
         shouldCraftRecipe = {"1x Coarse Stone"};
+    elseif rank > 84 and rank < 90 then -- 85-89
+        shouldCraft = {
+            "Coarse Dynamite",
+            "Coarse Blasting Powder"
+        };
+        shouldCraftRecipe = {
+            "3x Coarse Blasting Powder, 1x Linen Cloth", -- Coarse Dynamite
+            "1x Coarse Stone" ----------------------------- Coarse Blasting Powder
+        };
     elseif rank > 89 and rank < 100 then -- 90-99
         shouldCraft = {"Copper Modulator"};
         shouldCraftRecipe = {"2x Handful Copper Bolts, 1x Copper Bar, 2x Linen Cloth"};
@@ -37,8 +52,13 @@ addonTable.getEngineeringCurrentSkillLevelRecipeToCraft = function(rank)
         shouldCraft = {"Heavy Blasting Powder"};
         shouldCraftRecipe = {"1x Heavy Stone"};
     elseif rank > 140 and rank < 150 then -- 141-149
-        shouldCraft = {"Whirring Bronze Gizmo"};
-        shouldCraftRecipe = {"2x Bronze Bar, 1x Wool Cloth"};
+        shouldCraft = {
+            "Heavy Blasting Powder",
+            "Whirring Bronze Gizmo"
+        };
+        shouldCraftRecipe = {
+            "1x Heavy Stone", ----------------- Heavy Blasting Powder
+            "2x Bronze Bar, 1x Wool Cloth"}; -- Whirring Bronze Gizmo
     elseif rank > 149 and rank < 155 then -- 150-154
         shouldCraft = {"Bronze Framework"};
         shouldCraftRecipe = {"2x Bronze Bar, 1x Medium Leather, 1x Wool Cloth"};
@@ -51,9 +71,18 @@ addonTable.getEngineeringCurrentSkillLevelRecipeToCraft = function(rank)
     elseif rank > 175 and rank < 195 then -- 176-194
         shouldCraft = {"Solid Blasting Powder"};
         shouldCraftRecipe = {"2x Solid Stone"};
-    elseif rank > 194 and rank < 205 then -- 195-204
+    elseif rank > 194 and rank < 200 then -- 195-199
         shouldCraft = {"Mithril Tube"};
         shouldCraftRecipe = {"3x Mithril Bar"};
+    elseif rank > 199 and rank < 205 then -- 200-204
+            shouldCraft = {
+                "Unstable Trigger",
+                "Mithril Tube"
+            };
+            shouldCraftRecipe = {
+                "1x Mithril Bar, 1x Mageweave Cloth, 1x Solid Blasting Powder", -- Unstable Trigger
+                "3x Mithril Bar" ------------------------------------------------- Mithril Tube
+            };
     elseif rank > 204 and rank < 210 then -- 205-209
         shouldCraft = {"Unstable Trigger"};
         shouldCraftRecipe = {"1x Mithril Bar, 1x Mageweave Cloth, 1x Solid Blasting Powder"};
@@ -81,27 +110,57 @@ addonTable.getEngineeringCurrentSkillLevelRecipeToCraft = function(rank)
     elseif rank > 284 and rank < 300 then -- 285-299
         shouldCraft = {"Thorium Shells"};
         shouldCraftRecipe = {"2x Thorium Bar, 1x Dense Blasting Powder"};
-    elseif rank > 299 and rank < 325 then -- 300-324
+    elseif rank > 299 and rank < 310 then -- 300-309
         shouldCraft = {"Handful of Fel Iron Bolts"};
         shouldCraftRecipe = {"1x Fel Iron Casing, 2x Handful of Fel Iron Bolts, 1x Elemental Blasting Powder"};
-    elseif rank > 324 and rank < 340 then -- 325-339
+    elseif rank > 309 and rank < 320 then -- 310-319
+            shouldCraft = {"Fel Iron Casing"};
+            shouldCraftRecipe = {"3x Fel Iron Bar"};
+    elseif rank > 319 and rank < 325 then -- 320-324
+            shouldCraft = {
+                "Fel Iron Bomb",
+                "Fel Iron Musket"
+            };
+            shouldCraftRecipe = {
+                "1x Fel Iron Casing, 2x Handful of Fel Iron Bolts, 1x Elemental Blasting Powder", -- Fel Iron Bomb
+                "1x Heavy Stock, 3x Fel Iron Casing, 6x Handful of Fel Iron Bolts" ----------------- Fel Iron Musket
+            };
+    elseif rank > 324 and rank < 335 then -- 325-334
         shouldCraft = {"Adamantite Grenade"};
         shouldCraftRecipe = {"4x Adamantite Bar, 1x Elemental Blasting Powder, 2x Handful of Fel Iron Bolts"};
+        elseif rank > 334 and rank < 340 then -- 335-339
+            shouldCraft = {
+                "White Smoke Flare",
+                "Adamantite Grenade"
+            };
+            shouldCraftRecipe = {
+                "1x Elemental Blasting Powder, 1x Netherweave Cloth", ---------------------------- White Smoke Flare
+                "4x Adamantite Bar, 1x Elemental Blasting Powder, 2x Handful of Fel Iron Bolts" -- Adamantite Grenade
+            }; 
     elseif rank > 339 and rank < 350 then -- 340-349
-        shouldCraft = {"Felsteel Stabilizer"};
-        shouldCraftRecipe = {"2x Felsteel Bar"};
+        shouldCraft = {
+            "Felsteel Stabilizer",
+            "White Smoke Flare"
+        };
+        shouldCraftRecipe = {
+            "2x Felsteel Bar", ------------------------------------ Felsteel Stabilizer
+            "1x Elemental Blasting Powder, 1x Netherweave Cloth" -- White Smoke Flare
+        };
     elseif rank > 349 and rank < 370 then -- 350-369
         shouldCraft = {"Handful of Cobalt Bolts"};
         shouldCraftRecipe = {"2x Cobalt Bar"};
     elseif rank > 369 and rank < 375 then -- 370-374
         shouldCraft = {"Volatile Blasting Trigger"};
         shouldCraftRecipe = {"3x Cobalt Bar, 1x Crystallized Water"};
-    elseif rank > 374 and rank < 380 then -- 375-379
-        shouldCraft = {"Overcharged Capacitor"};
-        shouldCraftRecipe = {"4x Cobalt Bar, 1x Crystallized Earth"};
-    elseif rank > 379 and rank < 385 then -- 380-384
-        shouldCraft = {"Hammer Pick"};
-        shouldCraftRecipe = {"5x Cobalt Bar"};
+    elseif rank > 374 and rank < 385 then -- 375-384
+        shouldCraft = {
+            "Overcharged Capacitor",
+            "Hammer Pick"
+        };
+        shouldCraftRecipe = {
+            "4x Cobalt Bar, 1x Crystallized Earth", -- Overcharged Capacitor
+            "5x Cobalt Bar" -------------------------- Hammer Pick
+        };
     elseif rank > 384 and rank < 390 then -- 385-389
         shouldCraft = {"Explosive Decoy"};
         shouldCraftRecipe = {"1x Frostweave Cloth, 3x Volatile Blasting Trigger"};
@@ -111,13 +170,22 @@ addonTable.getEngineeringCurrentSkillLevelRecipeToCraft = function(rank)
     elseif rank > 399 and rank < 405 then -- 400-404
         shouldCraft = {"Diamond-cut Refractor Scope"};
         shouldCraftRecipe = {"1x Froststeel Tube, 2x Handful of Cobalt Bolts"};
-    elseif rank > 404 and rank < 415 then -- 405-414
+    elseif rank > 404 and rank < 410 then -- 405-409
         shouldCraft = {"Box of Bombs"};
         shouldCraftRecipe = {"5x Saronite Bar, 1x Volatile Blasting Trigger"};
-    elseif rank > 414 and rank < 420 then -- 415-419
-        shouldCraft = {"Mana Injector Kit"};
-        shouldCraftRecipe = {"12x Saronite Bar, 2x Crystallized Water"};
-    elseif rank > 419 and rank < 430 then -- 420-429
+    elseif rank > 409 and rank < 415 then -- 410-414
+            shouldCraft = {
+                "Mammoth Cutters",
+                "Box of Bombs"
+            };
+            shouldCraftRecipe = {
+                "1x Saronite Bar, 1x Volatile Blasting Trigger", -- Mammoth Cutters
+                "5x Saronite Bar, 1x Volatile Blasting Trigger" --- Box of Bombs
+            };
+    elseif rank > 414 and rank < 425 then -- 415-424
+        shouldCraft = {"Saronite Razorheads"};
+        shouldCraftRecipe = {"2x Saronite Bar"};
+    elseif rank > 424 and rank < 430 then -- 420-429
         shouldCraft = {"Mechanized Snow Goggles"};
         shouldCraftRecipe = {"8x Saronite Bar, 2x Borean Leather, 1x Eternal Shadow"};
     elseif rank > 429 and rank < 435 then -- 430-434
