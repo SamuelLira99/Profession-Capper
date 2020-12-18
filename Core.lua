@@ -46,6 +46,9 @@ function GetCraftingToDo()
     elseif tradeSkillName == "Leatherworking" then
         shouldCraft, shouldCraftRecipe = addonTable.getLeatherworkingCurrentSkillLevelRecipeToCraft(rank);
 
+    elseif tradeSkillName == "Engineering" then
+        shouldCraft, shouldCraftRecipe = addonTable.getEngineeringCurrentSkillLevelRecipeToCraft(rank);
+
     elseif tradeSkillName == "Alchemy" then
         shouldCraft, shouldCraftRecipe = addonTable.getAlchemyCurrentSkillLevelRecipeToCraft(rank);
 
