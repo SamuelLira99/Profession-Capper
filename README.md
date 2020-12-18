@@ -35,7 +35,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 
 `Leatherworking` - Fully supported
 
-`Inscription` - Not supported yet (queued to implement)
+`Inscription` - In progress (supported till lvl 155)
 
 ### Gathering Skills
 `Herbalism` - Not supported (probably won't be)
