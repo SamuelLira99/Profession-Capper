@@ -198,6 +198,236 @@ addonTable.getInscriptionCurrentSkillLevelRecipeToCraft = function(rank)
     elseif rank > 149 and rank < 155 then -- 150-154
             shouldCraft = {"Jadefire Ink"};
             shouldCraftRecipe = {"2x Emerald Pigment"};
+    elseif rank > 154 and rank < 160 then -- 155-159
+        shouldCraft = {
+            "Glyph of Evocation",
+            "Glyph of Righteous Defense"
+        };
+        shouldCraftRecipe = {
+            "1x Jadefire Ink, 1x Common Parchment", -- Glyph of Evocation
+            "1x Jadefire Ink, 1x Common Parchment"  -- Glyph of Righteous Defense
+        };
+    elseif rank > 159 and rank < 165 then -- 160-164
+        shouldCraft = {
+            "Glyph of Gouge",
+            "Glyph of Renew"
+        };
+        shouldCraftRecipe = {
+            "1x Jadefire Ink, 1x Common Parchment", -- Glyph of Gouge
+            "1x Jadefire Ink, 1x Common Parchment"  -- Glyph of Renew
+        };
+    elseif rank > 164 and rank < 170 then -- 165-169
+        shouldCraft = {
+            "Glyph of Lava Lash",
+            "Glyph of Shadow Bolt"
+        };
+        shouldCraftRecipe = {
+            "1x Jadefire Ink, 1x Common Parchment", -- Glyph of Lava Lash
+            "1x Jadefire Ink, 1x Common Parchment"  -- Glyph of Shadow Bolt
+        };
+    elseif rank > 169 and rank < 175 then -- 170-174
+        shouldCraft = {
+            "Glyph of Overpower",
+            "Glyph of Rebirth"
+        };
+        shouldCraftRecipe = {
+            "1x Jadefire Ink, 1x Common Parchment", -- Glyph of Overpower
+            "1x Jadefire Ink, 1x Common Parchment"  -- Glyph of Rebirth
+        };
+    elseif rank > 174 and rank < 180 then -- 175-179
+        shouldCraft = {
+            "Glyph of Aimed Shot",
+            "Glyph of Icy Veins",
+            "Glyph of Levitate"
+        };
+        shouldCraftRecipe = {
+            "1x Jadefire Ink, 1x Common Parchment", -- Glyph of Aimed Shot
+            "1x Jadefire Ink, 1x Common Parchment", -- Glyph of Icy Veins
+            "1x Jadefire Ink, 1x Common Parchment"  -- Glyph of Levitate
+        };
+    elseif rank > 179 and rank < 185 then -- 180-184
+        shouldCraft = {
+            "Glyph of Cleansing",
+            "Glyph of Mind Flay"
+        };
+        shouldCraftRecipe = {
+            "1x Jadefire Ink, 1x Common Parchment", -- Glyph of Cleansing
+            "1x Jadefire Ink, 1x Common Parchment"  -- Glyph of Mind Flay
+        };
+    elseif rank > 184 and rank < 190 then -- 185-189
+        shouldCraft = {
+            "Glyph of Frost Shock",
+            "Glyph of Sap"
+        };
+        shouldCraftRecipe = {
+            "1x Jadefire Ink, 1x Common Parchment", -- Glyph of Frost Shock
+            "1x Jadefire Ink, 1x Common Parchment"  -- Glyph of Sap
+        };
+    elseif rank > 189 and rank < 200 then -- 190-199
+        shouldCraft = {
+            "Glyph of Revenge",
+            "Glyph of Voidwalker"
+        };
+        shouldCraftRecipe = {
+            "1x Jadefire Ink, 1x Common Parchment", -- Glyph of Revenge
+            "1x Jadefire Ink, 1x Common Parchment"  -- Glyph of Voidwalker
+        };
+    elseif rank > 199 and rank < 205 then -- 200-204
+            shouldCraft = {"Celestial Ink"};
+            shouldCraftRecipe = {"2x Violet Pigment"};
+    elseif rank > 204 and rank < 210 then -- 205-209
+            shouldCraft = {"Armor Vellum II"};
+            shouldCraftRecipe = {"1x Celestial Ink, 2x Common Parchment"};
+    elseif rank > 209 and rank < 215 then -- 210-214
+        shouldCraft = {
+            "Glyph of Sinister Strike",
+            "Glyph of Smite"
+        };
+        shouldCraftRecipe = {
+            "1x Celestial Ink, 1x Heavy Parchment", -- Glyph of Sinister Strike
+            "1x Celestial Ink, 1x Heavy Parchment"  -- Glyph of Smite
+        };
+    elseif rank > 214 and rank < 220 then -- 215-219
+        shouldCraft = {
+            "Glyph of Healing Stream Totem",
+            "Glyph of Searing Pain"
+        };
+        shouldCraftRecipe = {
+            "1x Celestial Ink, 1x Heavy Parchment", -- Glyph of Healing Stream Totem
+            "1x Celestial Ink, 1x Heavy Parchment"  -- Glyph of Searing Pain
+        };
+    elseif rank > 219 and rank < 225 then -- 220-224
+        shouldCraft = {
+            "Glyph of Barbaric Insults",
+            "Glyph of Starfire"
+        };
+        shouldCraftRecipe = {
+            "1x Celestial Ink, 1x Heavy Parchment", -- Glyph of Barbaric Insults
+            "1x Celestial Ink, 1x Heavy Parchment"  -- Glyph of Starfire
+        };
+    elseif rank > 224 and rank < 230 then -- 225-229
+        shouldCraft = {
+            "Glyph of Disengage",
+            "Glyph of Ice Block"
+        };
+        shouldCraftRecipe = {
+            "1x Celestial Ink, 1x Heavy Parchment", -- Glyph of Disengage
+            "1x Celestial Ink, 1x Heavy Parchment"  -- Glyph of Ice Block
+        };
+    elseif rank > 229 and rank < 235 then -- 230-234
+        shouldCraft = {
+            "Glyph of Crusader Strike",
+            "Glyph of Dispel Magic"
+        };
+        shouldCraftRecipe = {
+            "1x Celestial Ink, 1x Heavy Parchment", -- Glyph of Crusader Strike
+            "1x Celestial Ink, 1x Heavy Parchment"  -- Glyph of Dispel Magic
+        };
+    elseif rank > 234 and rank < 240 then -- 235-239
+        shouldCraft = {
+            "Glyph of Lesser Healing Wave",
+            "Glyph of Slice and Dice"
+        };
+        shouldCraftRecipe = {
+            "1x Celestial Ink, 1x Heavy Parchment", -- Glyph of Lesser Healing Wave
+            "1x Celestial Ink, 1x Heavy Parchment"  -- Glyph of Slice and Dice
+        };
+    elseif rank > 239 and rank < 250 then -- 240-249
+        shouldCraft = {
+            "Glyph of Cleaving",
+            "Glyph of Soulstone"
+        };
+        shouldCraftRecipe = {
+            "1x Celestial Ink, 1x Heavy Parchment", -- Glyph of Cleaving
+            "1x Celestial Ink, 1x Heavy Parchment"  -- Glyph of Soulstone
+        };
+    elseif rank > 249 and rank < 255 then -- 250-254
+            shouldCraft = {"Shimmering Ink"};
+            shouldCraftRecipe = {"2x Silvery Pigment"};
+    elseif rank > 254 and rank < 260 then -- 255-259
+        shouldCraft = {"Scroll of Spirit V"};
+        shouldCraftRecipe = {"1x Shimmering Ink, 2x Heavy Parchment"};
+    elseif rank > 259 and rank < 265 then -- 260-264
+        shouldCraft = {
+            "Glyph of Freezing Trap",
+            "Glyph of Shred"
+        };
+        shouldCraftRecipe = {
+            "1x Shimmering Ink, 1x Heavy Parchment", -- Glyph of Freezing Trap
+            "1x Shimmering Ink, 1x Heavy Parchment"  -- Glyph of Shred
+        };
+    elseif rank > 264 and rank < 270 then -- 265-269
+        shouldCraft = {
+            "Glyph of Bone Shield",
+            "Glyph of Exorcism"
+        };
+        shouldCraftRecipe = {
+            "1x Shimmering Ink, 1x Heavy Parchment", -- Glyph of Bone Shield
+            "1x Shimmering Ink, 1x Heavy Parchment"  -- Glyph of Exorcism
+        };
+    elseif rank > 269 and rank < 275 then -- 270-274
+        shouldCraft = {
+            "Glyph of Fear Ward",
+            "Glyph of Frost Strike"
+        };
+        shouldCraftRecipe = {
+            "1x Shimmering Ink, 1x Heavy Parchment", -- Glyph of Fear Ward
+            "1x Shimmering Ink, 1x Heavy Parchment"  -- Glyph of Frost Strike
+        };
+    elseif rank > 274 and rank < 280 then -- 275-279
+        shouldCraft = {
+            "Glyph of Shadowburn",
+            "Glyph of Water Mastery",
+            "Glyph of Dark Death"
+        };
+        shouldCraftRecipe = {
+            "1x Shimmering Ink, 1x Heavy Parchment", -- Glyph of Shadowburn
+            "1x Shimmering Ink, 1x Heavy Parchment", -- Glyph of Water Mastery
+            "1x Shimmering Ink, 1x Heavy Parchment"  -- Glyph of Dark Death
+        };
+    elseif rank > 279 and rank < 285 then -- 280-284
+        shouldCraft = {
+            "Glyph of Disease",
+            "Glyph of Icy Touch",
+            "Glyph of Mana Gem"
+        };
+        shouldCraftRecipe = {
+            "1x Shimmering Ink, 1x Heavy Parchment", -- Glyph of Disease
+            "1x Shimmering Ink, 1x Heavy Parchment", -- Glyph of Icy Touch
+            "1x Shimmering Ink, 1x Heavy Parchment"  -- Glyph of Mana Gem
+        };
+    elseif rank > 284 and rank < 290 then -- 285-289
+        shouldCraft = {
+            "Glyph of Death Grip",
+            "Glyph of Execution",
+            "Glyph of Sprint"
+        };
+        shouldCraftRecipe = {
+            "1x Shimmering Ink, 1x Heavy Parchment", -- Glyph of Death Grip
+            "1x Shimmering Ink, 1x Heavy Parchment", -- Glyph of Execution
+            "1x Shimmering Ink, 1x Heavy Parchment"  -- Glyph of Sprint
+        };
+    elseif rank > 289 and rank < 305 then -- 290-304
+            shouldCraft = {"Ethereal Ink"};
+            shouldCraftRecipe = {"2x Nether Pigment"};
+    elseif rank > 304 and rank < 310 then -- 305-309
+        shouldCraft = {
+            "Glyph of Feint",
+            "Glyph of Unbreakable Armor"
+        };
+        shouldCraftRecipe = {
+            "1x Ethereal Ink, 1x Heavy Parchment", -- Glyph of Feint
+            "1x Ethereal Ink, 1x Heavy Parchment"  -- Glyph of Unbreakable Armor
+        };
+    elseif rank > 309 and rank < 315 then -- 310-314
+        shouldCraft = {
+            "Glyph of Rake",
+            "Glyph of Rune Tap"
+        };
+        shouldCraftRecipe = {
+            "1x Ethereal Ink, 1x Heavy Parchment", -- Glyph of Rake
+            "1x Ethereal Ink, 1x Heavy Parchment"  -- Glyph of Rune Tap
+        };
     end
     return shouldCraft, shouldCraftRecipe
 end
