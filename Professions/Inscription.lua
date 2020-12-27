@@ -416,8 +416,8 @@ addonTable.getInscriptionCurrentSkillLevelRecipeToCraft = function(rank)
             "Glyph of Unbreakable Armor"
         };
         shouldCraftRecipe = {
-            "1x Ethereal Ink, 1x Heavy Parchment", -- Glyph of Feint
-            "1x Ethereal Ink, 1x Heavy Parchment"  -- Glyph of Unbreakable Armor
+            "1x Ethereal Ink, 1x Heavy Parchment", ------ Glyph of Feint
+            "1x Ethereal Ink, 1x Resilient Parchment"  -- Glyph of Unbreakable Armor
         };
     elseif rank > 309 and rank < 315 then -- 310-314
         shouldCraft = {
@@ -425,9 +425,300 @@ addonTable.getInscriptionCurrentSkillLevelRecipeToCraft = function(rank)
             "Glyph of Rune Tap"
         };
         shouldCraftRecipe = {
-            "1x Ethereal Ink, 1x Heavy Parchment", -- Glyph of Rake
-            "1x Ethereal Ink, 1x Heavy Parchment"  -- Glyph of Rune Tap
+            "1x Ethereal Ink, 1x Resilient Parchment", -- Glyph of Rake
+            "1x Ethereal Ink, 1x Resilient Parchment"  -- Glyph of Rune Tap
         };
+    elseif rank > 314 and rank < 320 then -- 315-319
+        shouldCraft = {
+            "Glyph of Arcane Blast",
+            "Glyph of Holy Nova",
+            "Glyph of Rapid Fire"
+        };
+        shouldCraftRecipe = {
+            "1x Ethereal Ink, 1x Resilient Parchment", -- Glyph of Arcane Blast
+            "1x Ethereal Ink, 1x Resilient Parchment", -- Glyph of Holy Nova
+            "1x Ethereal Ink, 1x Resilient Parchment"  -- Glyph of Rapid Fire
+        };
+    elseif rank > 319 and rank < 325 then -- 320-324
+        shouldCraft = {
+            "Glyph of Blood Strike",
+            "Glyph of Sweeping Strikes"
+        };
+        shouldCraftRecipe = {
+            "1x Ethereal Ink, 1x Resilient Parchment", -- Glyph of Blood Strike
+            "1x Ethereal Ink, 1x Resilient Parchment"  -- Glyph of Sweeping Strikes
+        };
+    elseif rank > 324 and rank < 330 then -- 325-329
+        shouldCraft = {
+            "Glyph of Blood Tap",
+            "Glyph of Enduring Victory",
+            "Glyph of Horn of Winter",
+            "Glyph of Mage Armor",
+            "Glyph of Succubus"
+        };
+        shouldCraftRecipe = {
+            "1x Ethereal Ink, 1x Resilient Parchment", -- Glyph of Blood Tap
+            "1x Ethereal Ink, 1x Resilient Parchment", -- Glyph of Enduring Victory
+            "1x Ethereal Ink, 1x Resilient Parchment", -- Glyph of Horn of Winter
+            "1x Ethereal Ink, 1x Resilient Parchment", -- Glyph of Mage Armor
+            "1x Ethereal Ink, 1x Resilient Parchment"  -- Glyph of Succubus
+        };
+    elseif rank > 329 and rank < 335 then -- 330-334
+        shouldCraft = {
+            "Glyph of Scourge Strike",
+            "Glyph of Windfury Weapon"
+        };
+        shouldCraftRecipe = {
+            "1x Ethereal Ink, 1x Resilient Parchment", -- Glyph of Scourge Strike
+            "1x Ethereal Ink, 1x Resilient Parchment"  -- Glyph of Windfury Weapon
+        };
+    elseif rank > 334 and rank < 340 then -- 335-339
+        shouldCraft = {
+            "Glyph of Arcane Power",
+            "Glyph of Seal of Command"
+        };
+        shouldCraftRecipe = {
+            "1x Ethereal Ink, 1x Resilient Parchment", -- Glyph of Arcane Power
+            "1x Ethereal Ink, 1x Resilient Parchment"  -- Glyph of Seal of Command
+        };
+    elseif rank > 339 and rank < 345 then -- 340-344
+        shouldCraft = {
+            "Glyph of Ambush",
+            "Glyph of Death Strike"
+        };
+        shouldCraftRecipe = {
+            "1x Ethereal Ink, 1x Resilient Parchment", -- Glyph of Ambush
+            "1x Ethereal Ink, 1x Resilient Parchment"  -- Glyph of Death Strike
+        };
+    elseif rank > 344 and rank < 350 then -- 345-349
+        shouldCraft = {
+            "Glyph of Vampiric Blood",
+            "Glyph of Whirlwind"
+        };
+        shouldCraftRecipe = {
+            "1x Ethereal Ink, 1x Resilient Parchment", -- Glyph of Vampiric Blood
+            "1x Ethereal Ink, 1x Resilient Parchment"  -- Glyph of Whirlwind
+        };
+    elseif rank > 349 and rank < 355 then -- 350-354
+        shouldCraft = {"Ink of the Sea"};
+        shouldCraftRecipe = {"2x Azure Pigment"};
+    elseif rank > 354 and rank < 360 then -- 355-359
+        shouldCraft = {"Scroll of Spirit VII"};
+        shouldCraftRecipe = {"1x Ink of the Sea, 2x Resilient Parchment"};
+    elseif rank > 359 and rank < 365 then -- 360-364
+        shouldCraft = {"Scroll of Intellect VII"};
+        shouldCraftRecipe = {"1x Ink of the Sea, 2x Resilient Parchment"};
+    elseif rank > 364 and rank < 370 then -- 365-369
+        shouldCraft = {"Scroll of Strength VII"};
+        shouldCraftRecipe = {"1x Ink of the Sea, 2x Resilient Parchment"};
+    elseif rank > 369 and rank < 375 then -- 370-374
+        shouldCraft = {"Scroll of Agility VII"};
+        shouldCraftRecipe = {"1x Ink of the Sea, 2x Resilient Parchment"};
+    elseif rank > 374 and rank < 380 then -- 375-379
+        shouldCraft = {"Snowfall Ink"};
+        shouldCraftRecipe = {"2x Icy Pigment"};
+    elseif rank > 379 and rank < 385 then -- 380-384
+        shouldCraft = {"Glyph of Focus"};
+        shouldCraftRecipe = {"1x Ink of the Sea, 1x Resilient Parchment"};
+    elseif rank > 384 and rank < 386 then -- 385
+        shouldCraft = {
+            "Northrend Inscription Research",
+            "Glyph of Polymorph"
+        };
+        shouldCraftRecipe = {
+            "3x Ink of the Sea, 1x Snowfall Ink, 5x Resilient Parchment", -- Northrend Inscription Research
+            "1x Ink of the Sea, 1x Resilient Parchment"  ------------------- Northrend Inscription Research
+        };
+    elseif rank > 385 and rank < 400 then -- 386-399
+        shouldCraft = {
+            "Northrend Inscription Research",
+            "Glyph of Polymorph",
+            "Glyph of Adrenaline Rush",
+            "Glyph of Lava",
+            "Glyph of Anti-Magic Shell",
+            "Glyph of Aspect of the Viper",
+            "Glyph of Avenger's Shield",
+            "Glyph of Avenging Wrath",
+            "Glyph of Bestial Wrath",
+            "Glyph of Blade Flurry",
+            "Glyph of Blocking",
+            "Glyph of Bloodthirst",
+            "Glyph of Chain Heal",
+            "Glyph of Chain Lightning",
+            "Glyph of Chains of Ice",
+            "Glyph of Circle of Healing",
+            "Glyph of Conflagrate",
+            "Glyph of Crippling Poison",
+            "Glyph of Curse of Agony",
+            "Glyph of Dark Command",
+            "Glyph of Deadly Throw",
+            "Glyph of Death and Decay",
+            "Glyph of Death Coil",
+            "Glyph of Devastate",
+            "Glyph of Elemental Mastery",
+            "Glyph of Felguard",
+            "Glyph of Felhunter",
+            "Glyph of Fire Blast",
+            "Glyph of Fire Elemental Totem",
+            "Glyph of Fireball",
+            "Glyph of Frostbolt",
+            "Glyph of Frostfire",
+            "Glyph of Ghostly Strike",
+            "Glyph of Growl",
+            "Glyph of Hammer of Wrath",
+            "Glyph of Healing Wave",
+            "Glyph of Heart Strike",
+            "Glyph of Hemorrhage",
+            "Glyph of Holy Wrath",
+            "Glyph of Howl of Terror",
+            "Glyph of Hurricane",
+            "Glyph of Icebound Fortitude",
+            "Glyph of Immolate",
+            "Glyph of Innervate",
+            "Glyph of Intervene",
+            "Glyph of Invisibility",
+            "Glyph of Last Stand",
+            "Glyph of Lifebloom",
+            "Glyph of Lightwell",
+            "Glyph of Mana Tide Totem",
+            "Glyph of Mangle",
+            "Glyph of Mass Dispel",
+            "Glyph of Mind Control",
+            "Glyph of Molten Armor",
+            "Glyph of Mortal Strike",
+            "Glyph of Obliterate",
+            "Glyph of Prayer of Healing",
+            "Glyph of Preparation",
+            "Glyph of Regrowth",
+            "Glyph of Remove Curse",
+            "Glyph of Resonating Power",
+            "Glyph of Rune Strike",
+            "Glyph of Rupture",
+            "Glyph of Seal of Light",
+            "Glyph of Seal of Righteousness",
+            "Glyph of Seal of Vengeance",
+            "Glyph of Seal of Wisdom",
+            "Glyph of Shadow",
+            "Glyph of Shadow Word: Death",
+            "Glyph of Shocking",
+            "Glyph of Siphon Life",
+            "Glyph of Snake Trap",
+            "Glyph of Spirit of Redemption",
+            "Glyph of Starfall",
+            "Glyph of Steady Shot",
+            "Glyph of Swiftmend",
+            "Glyph of Taunt",
+            "Glyph of the Beast",
+            "Glyph of Trueshot Aura",
+            "Glyph of Unstable Affliction",
+            "Glyph of Victory Rush",
+            "Glyph of Vigor",
+            "Glyph of Volley",
+            "Glyph of Water Elemental",
+            "Glyph of Wyvern Sting"
+        };
+        shouldCraftRecipe = {
+            "3x Ink of the Sea, 1x Snowfall Ink, 5x Resilient Parchment", -- Northrend Inscription Research
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Polymorph
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Adrenaline Rush
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Lava
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Anti-Magic Shell
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Aspect of the Viper
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Avenger's Shield
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Avenging Wrath
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Bestial Wrath
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Blade Flurry
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Blocking
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Bloodthirst
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Chain Heal
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Chain Lightning
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Chains of Ice
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Circle of Healing
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Conflagrate
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Crippling Poison
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Curse of Agony
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Dark Command
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Deadly Throw
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Death and Decay
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Death Coil
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Devastate
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Elemental Mastery
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Felguard
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Felhunter
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Fire Blast
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Fire Elemental Totem
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Fireball
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Frostbolt
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Frostfire
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Ghostly Strike
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Growl
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Hammer of Wrath
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Healing Wave
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Heart Strike
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Hemorrhage
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Holy Wrath
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Howl of Terror
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Hurricane
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Icebound Fortitude
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Immolate
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Innervate
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Intervene
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Invisibility
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Last Stand
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Lifebloom
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Lightwell
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Mana Tide Totem
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Mangle
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Mass Dispel
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Mind Control
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Molten Armor
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Mortal Strike
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Obliterate
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Prayer of Healing
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Preparation
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Regrowth
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Remove Curse
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Resonating Power
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Rune Strike
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Rupture
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Seal of Light
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Seal of Righteousness
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Seal of Vengeance
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Seal of Wisdom
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Shadow
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Shadow Word: Death
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Shocking
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Siphon Life
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Snake Trap
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Spirit of Redemption
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Starfall
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Steady Shot
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Swiftmend
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Taunt
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of the Beast
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Trueshot Aura
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Unstable Affliction
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Victory Rush
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Vigor
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Volley
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Water Elemental
+            "1x Ink of the Sea, 1x Resilient Parchment"  ------------------- Glyph of Wyvern Sting
+        };
+    elseif rank > 399 and rank < 405 then -- 400-404
+        shouldCraft = {"Scroll of Stamina VIII"};
+        shouldCraftRecipe = {"1x Ink of the Sea, 2x Resilient Parchment"};
+    elseif rank > 404 and rank < 410 then -- 405-409
+        shouldCraft = {"Scroll of Spirit VIII"};
+        shouldCraftRecipe = {"1x Ink of the Sea, 2x Resilient Parchment"};
+    elseif rank > 409 and rank < 415 then -- 410-414
+        shouldCraft = {"Scroll of Intellect VIII"};
+        shouldCraftRecipe = {"1x Ink of the Sea, 2x Resilient Parchment"};
+    elseif rank > 414 and rank < 420 then -- 415-419
+        shouldCraft = {"Scroll of Strength VIII"};
+        shouldCraftRecipe = {"1x Ink of the Sea, 2x Resilient Parchment"};
+    elseif rank > 419 and rank < 430 then -- 420-429
+        shouldCraft = {"Scroll of Agility VIII"};
+        shouldCraftRecipe = {"1x Ink of the Sea, 2x Resilient Parchment"};
     end
     return shouldCraft, shouldCraftRecipe
 end
