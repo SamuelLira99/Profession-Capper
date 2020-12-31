@@ -719,6 +719,15 @@ addonTable.getInscriptionCurrentSkillLevelRecipeToCraft = function(rank)
     elseif rank > 419 and rank < 430 then -- 420-429
         shouldCraft = {"Scroll of Agility VIII"};
         shouldCraftRecipe = {"1x Ink of the Sea, 2x Resilient Parchment"};
+    elseif rank > 429 and rank < 450 then -- 430-449
+        shouldCraft = {
+            "Northrend Inscription Research",
+            "Runescroll of Fortitude"
+        };
+        shouldCraftRecipe = {
+            "3x Ink of the Sea, 1x Snowfall Ink, 5x Resilient Parchment", -- Northrend Inscription Research
+            "1x Snowfall Ink, 5x Resilient Parchment" ---------------------- Runescroll of Fortitude
+        };
     end
     return shouldCraft, shouldCraftRecipe
 end
