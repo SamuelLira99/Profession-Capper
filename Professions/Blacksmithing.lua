@@ -53,12 +53,12 @@ addonTable.getBlacksmithingCurrentSkillLevelRecipeToCraft = function(rank)
         shouldCraftRecipe = {"8x Mithril Bar"};
     elseif rank > 234 and rank < 250 then -- 235-249
         shouldCraft = {
-            "Mithril Coif",
-            "Mithril Spurs"
+            "Mithril Spurs",
+            "Mithril Coif"
         };
         shouldCraftRecipe = {
-            "10x Mithril Bar, 6x Mageweave Cloth", ----- Mithril Coif
-            "4x Mithril Bar, 3x Solid Grinding Stone" -- Mithril Spurs
+            "4x Mithril Bar, 3x Solid Grinding Stone", -- Mithril Spurs
+            "10x Mithril Bar, 6x Mageweave Cloth" ------- Mithril Coif
         };
     elseif rank > 249 and rank < 260 then -- 250-259
         shouldCraft = {"Dense Sharpening Stone"};
@@ -91,8 +91,14 @@ addonTable.getBlacksmithingCurrentSkillLevelRecipeToCraft = function(rank)
         shouldCraft = {"Fel Iron Chain Gloves"};
         shouldCraftRecipe = {"5x Fel Iron Bar"};
     elseif rank > 319 and rank < 325 then -- 320-324
-        shouldCraft = {"Fel Iron Plate Boots"};
-        shouldCraftRecipe = {"6x Fel Iron Bar"};
+        shouldCraft = {
+            "Fel Iron Plate Boots",
+            "Fel Iron Chain Bracers"
+        };
+        shouldCraftRecipe = {
+            "6x Fel Iron Bar", -- Fel Iron Plate Boots
+            "6x Fel Iron Bar"  -- Fel Iron Chain Bracers
+        };
     elseif rank > 324 and rank < 330 then -- 325-329
         shouldCraft = {"Lesser Rune of Warding"};
         shouldCraftRecipe = {"1x Adamantite Bar"};
@@ -152,7 +158,7 @@ addonTable.getBlacksmithingCurrentSkillLevelRecipeToCraft = function(rank)
         shouldCraftRecipe = {"8x Cobalt Bar"};
     elseif rank > 404 and rank < 415 then -- 405-414
         shouldCraft = {"Deadly Saronite Dirk"};
-        shouldCraftRecipe = {"7x Saronite Bar, 2x Cristalized Air"};
+        shouldCraftRecipe = {"7x Saronite Bar, 2x Crystallized Air"};
     elseif rank > 414 and rank < 425 then -- 415-424
         shouldCraft = {"Eternal Belt Buckle"};
         shouldCraftRecipe = {"4x Saronite Bar, 1x Eternal Earth, 1x Eternal Water, 1x Eternal Shadow"};
