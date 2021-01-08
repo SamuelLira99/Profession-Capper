@@ -16,8 +16,8 @@ addonTable.getTailoringCurrentSkillLevelRecipeToCraft = function(rank)
         shouldCraft = {"Bolt of Woolen Cloth"};
         shouldCraftRecipe = {"3x Wool Cloth"};
     elseif rank > 99 and rank < 110 then -- 100-109
-        shouldCraft = {"Bolt of Linen Cloth"};
-        shouldCraftRecipe = {"1x Fine Thread"};
+        shouldCraft = {"Simple Kilt"};
+        shouldCraftRecipe = {"4x Bolt of Linen Cloth, 1x Fine Thread"};
     elseif rank > 109 and rank < 125 then -- 110-124
         shouldCraft = {"Double-stitched Woolen Shoulders"};
         shouldCraftRecipe = {"3x Bolt of Woolen Cloth, 2x Fine Thread"};
@@ -36,10 +36,10 @@ addonTable.getTailoringCurrentSkillLevelRecipeToCraft = function(rank)
     elseif rank < 174 and rank < 185 then -- 715-184
         shouldCraft = {"Bolt of Mageweave"};
         shouldCraftRecipe = {"4x Mageweave Cloth"};
-    elseif rank > 184 and rank < 200 then -- 185-199
+    elseif rank > 184 and rank < 205 then -- 185-204
         shouldCraft = {"Crimson Silk Vest"};
         shouldCraftRecipe = {"4x Bolt of Silk Cloth, 2x Fine Thread, 2x Red Dye"};
-    elseif rank > 199 and rank < 215 then -- 200-214
+    elseif rank > 204 and rank < 215 then -- 205-214
         shouldCraft = {"Crimson Silk Pantaloons"};
         shouldCraftRecipe = {"4x Bolt of Silk Cloth, 2x Red Dye, 2x Silken Thread"};
     elseif rank > 214 and rank < 220 then -- 215-219
