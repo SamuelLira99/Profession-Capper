@@ -49,6 +49,9 @@ function GetCraftingToDo()
     elseif tradeSkillName == "Engineering" then
         shouldCraft, shouldCraftRecipe = addonTable.getEngineeringCurrentSkillLevelRecipeToCraft(rank);
 
+    elseif tradeSkillName == "Inscription" then
+        shouldCraft, shouldCraftRecipe = addonTable.getInscriptionCurrentSkillLevelRecipeToCraft(rank);
+
     elseif tradeSkillName == "Alchemy" then
         shouldCraft, shouldCraftRecipe = addonTable.getAlchemyCurrentSkillLevelRecipeToCraft(rank);
 
