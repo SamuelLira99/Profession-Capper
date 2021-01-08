@@ -221,7 +221,7 @@ addonTable.getJewelcraftingCurrentSkillLevelRecipeToCraft = function(rank)
             "Rigid Sun Crystal",
             "Smooth Sun Crystal",
             "Thick Sun Crystal"
-        }; -- TODO add note "or any equivalent gem from Bloodstone, Chalcedony, Dark Jade, Huge Citrine, Shadow Crystal, Sun Crystal"
+        };
         shouldCraftRecipe = {
             "1x Bloodstone",-------Bold Bloodstone
             "1x Bloodstone",-------Bright Bloodstone
@@ -323,6 +323,8 @@ addonTable.getJewelcraftingCurrentSkillLevelRecipeToCraft = function(rank)
         shouldCraftRecipe = {"1x Forest Emerald"};
     elseif rank > 424 and rank < 450 then -- 425-449
         shouldCraft = {
+            "Swift Skyflare Diamond",
+            "Tireless Skyflare Diamond",
             "Chaotic Skyflare Diamond",
             "Destructive Skyflare Diamond",
             "Effulgent Skyflare Diamond",
@@ -331,9 +333,7 @@ addonTable.getJewelcraftingCurrentSkillLevelRecipeToCraft = function(rank)
             "Forlorn Skyflare Diamond",
             "Impassive Skyflare Diamond",
             "Revitalizing Skyflare Diamond",
-            "Swift Skyflare Diamond",
             "Thundering Skyflare Diamond",
-            "Tireless Skyflare Diamond",
             "Austere Earthsiege Diamond",
             "Beaming Earthsiege Diamond",
             "Bracing Earthsiege Diamond",
@@ -346,6 +346,8 @@ addonTable.getJewelcraftingCurrentSkillLevelRecipeToCraft = function(rank)
             "Trenchant Earthsiege Diamond"
         };
         shouldCraftRecipe = {
+            "1x Skyflare Diamond",-----Swift Skyflare Diamond
+            "1x Skyflare Diamond",-----Tireless Skyflare Diamond
             "1x Skyflare Diamond",-----Chaotic Skyflare Diamond
             "1x Skyflare Diamond",-----Destructive Skyflare Diamond
             "1x Skyflare Diamond",-----Effulgent Skyflare Diamond
@@ -354,9 +356,7 @@ addonTable.getJewelcraftingCurrentSkillLevelRecipeToCraft = function(rank)
             "1x Skyflare Diamond",-----Forlorn Skyflare Diamond
             "1x Skyflare Diamond",-----Impassive Skyflare Diamond
             "1x Skyflare Diamond",-----Revitalizing Skyflare Diamond
-            "1x Skyflare Diamond",-----Swift Skyflare Diamond
             "1x Skyflare Diamond",-----Thundering Skyflare Diamond
-            "1x Skyflare Diamond",-----Tireless Skyflare Diamond
             "1x Earthsiege Diamond",---Austere Earthsiege Diamond
             "1x Earthsiege Diamond",---Beaming Earthsiege Diamond
             "1x Earthsiege Diamond",---Bracing Earthsiege Diamond
