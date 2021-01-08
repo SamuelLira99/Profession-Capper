@@ -4,7 +4,7 @@ local shouldCraft, shouldCraftRecipe;
 
 addonTable.getAlchemyCurrentSkillLevelRecipeToCraft = function(rank)
     if rank > 0 and rank < 60 then -- 1-59
-        shouldCraft = {"Minor Healing Potions"};
+        shouldCraft = {"Minor Healing Potion"};
         shouldCraftRecipe = {"1x Peacebloom, 1x Sliverleaf, 1x Empty Vial"};
     elseif rank > 59 and rank < 106 then -- 60-105
         shouldCraft = {"Lesser Healing Potion"};
@@ -31,7 +31,7 @@ addonTable.getAlchemyCurrentSkillLevelRecipeToCraft = function(rank)
             "1x Wild Steelbloom, 1x Goldthorn, 1x Leaded Vial" -- Elixir of Fortitude
         };
     elseif rank > 204 and rank < 215 then -- 205-214
-        shouldCraft = {"Elixir of Greater Defence"};
+        shouldCraft = {"Elixir of Greater Defense"};
         shouldCraftRecipe = {"1x Wild Steelbloom, 1x Goldthorn, 1x Leaded Vial"};
     elseif rank > 214 and rank < 230 then -- 215-229
         shouldCraft = {"Superior Healing Potion"};
