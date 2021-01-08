@@ -95,7 +95,7 @@ addonTable.getInscriptionCurrentSkillLevelRecipeToCraft = function(rank)
             "1x Midnight Ink, 1x Light Parchment"  -- Glyph of Serpent Sting
         };
     elseif rank > 99 and rank < 105 then -- 100-104
-        shouldCraft = {"Lion’s Ink"};
+        shouldCraft = {"Lion's Ink"};
         shouldCraftRecipe = {"2x Golden Pigment"};
     elseif rank > 104 and rank < 110 then -- 105-109
         shouldCraft = {
@@ -716,17 +716,138 @@ addonTable.getInscriptionCurrentSkillLevelRecipeToCraft = function(rank)
     elseif rank > 414 and rank < 420 then -- 415-419
         shouldCraft = {"Scroll of Strength VIII"};
         shouldCraftRecipe = {"1x Ink of the Sea, 2x Resilient Parchment"};
-    elseif rank > 419 and rank < 430 then -- 420-429
+    elseif rank > 419 and rank < 425 then -- 420-424
         shouldCraft = {"Scroll of Agility VIII"};
         shouldCraftRecipe = {"1x Ink of the Sea, 2x Resilient Parchment"};
-    elseif rank > 429 and rank < 450 then -- 430-449
+    elseif rank > 424 and rank < 440 then -- 425-439
         shouldCraft = {
             "Northrend Inscription Research",
-            "Runescroll of Fortitude"
+            "Glyph of Arcane Barrage",
+            "Glyph of Barkskin",
+            "Glyph of Beacon of Light",
+            "Glyph of Berserk",
+            "Glyph of Bladestorm",
+            "Glyph of Chaos Bolt",
+            "Glyph of Chimera Shot",
+            "Glyph of Cloak of Shadows",
+            "Glyph of Dancing Rune Weapon",
+            "Glyph of Deep Freeze",
+            "Glyph of Demonic Circle",
+            "Glyph of Dispersion",
+            "Glyph of Divine Plea",
+            "Glyph of Divine Storm",
+            "Glyph of Enraged Regeneration",
+            "Glyph of Explosive Shot",
+            "Glyph of Explosive Trap",
+            "Glyph of Fan of Knives",
+            "Glyph of Feral Spirit",
+            "Glyph of Guardian Spirit",
+            "Glyph of Hammer of the Righteous",
+            "Glyph of Haunt",
+            "Glyph of Hex",
+            "Glyph of Holy Shock",
+            "Glyph of Howling Blast",
+            "Glyph of Hunger for Blood",
+            "Glyph of Hungering Cold",
+            "Glyph of Hymn of Hope",
+            "Glyph of Ice Barrier",
+            "Glyph of Kill Shot",
+            "Glyph of Killing Spree",
+            "Glyph of Life Tap",
+            "Glyph of Living Bomb",
+            "Glyph of Metamorphosis",
+            "Glyph of Mind Sear",
+            "Glyph of Mirror Image",
+            "Glyph of Nourish",
+            "Glyph of Penance",
+            "Glyph of Raptor Strike",
+            "Glyph of Riptide",
+            "Glyph of Salvation",
+            "Glyph of Savage Roar",
+            "Glyph of Scatter Shot",
+            "Glyph of Shadow Dance",
+            "Glyph of Shadowflame",
+            "Glyph of Shield of Righteousness",
+            "Glyph of Shield Wall",
+            "Glyph of Shockwave",
+            "Glyph of Soul Link",
+            "Glyph of Spell Reflection",
+            "Glyph of Stoneclaw Totem",
+            "Glyph of Survival Instincts",
+            "Glyph of Thunder",
+            "Glyph of Tricks of the Trade",
+            "Glyph of Unholy Blight",
+            "Glyph of Vigilance",
+            "Glyph of Wild Growth"
         };
         shouldCraftRecipe = {
             "3x Ink of the Sea, 1x Snowfall Ink, 5x Resilient Parchment", -- Northrend Inscription Research
-            "1x Snowfall Ink, 5x Resilient Parchment" ---------------------- Runescroll of Fortitude
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Arcane Barrage
+            "1x Celestial Ink, 1x Heavy Parchment", ------------------------ Glyph of Barkskin
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Beacon of Light
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Berserk
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Bladestorm
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Chaos Bolt
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Chimera Shot
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Cloak of Shadows
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Dancing Rune Weapon
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Deep Freeze
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Demonic Circle
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Dispersion
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Divine Plea
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Divine Storm
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Enraged Regeneration
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Explosive Shot
+            "1x Jadefire Ink, 1x Common Parchment", ------------------------ Glyph of Explosive Trap
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Fan of Knives
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Feral Spirit
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Guardian Spirit
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Hammer of the Righteous
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Haunt
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Hex
+            "1x Celestial Ink, 1x Common Parchment", ----------------------- Glyph of Holy Shock
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Howling Blast
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Hunger for Blood
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Hungering Cold
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Hymn of Hope
+            "1x Celestial Ink, 1x Heavy Parchment", ------------------------ Glyph of Ice Barrier
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Kill Shot
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Killing Spree
+            "1x Midnight Ink, 1x Light Parchment", ------------------------- Glyph of Life Tap
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Living Bomb
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Metamorphosis
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Mind Sear
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Mirror Image
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Nourish
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Penance
+            "1x Midnight Ink, 1x Light Parchment", ------------------------- Glyph of Raptor Strike
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Riptide
+            "1x Lion's Ink, 1x Common Parchment", -------------------------- Glyph of Salvation
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Savage Roar
+            "1x Lion's Ink, 1x Light Parchment", --------------------------- Glyph of Scatter Shot
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Shadow Dance
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Shadowflame
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Shield of Righteousness
+            "1x Lion's Ink, 1x Common Parchment", -------------------------- Glyph of Shield Wall
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Shockwave
+            "1x Lion's Ink, 1x Light Parchment", --------------------------- Glyph of Soul Link
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Spell Reflection
+            "1x Midnight Ink, 1x Light Parchment", ------------------------- Glyph of Stoneclaw Totem
+            "1x Ink of the Sea, 1x Light Parchment", ----------------------- Glyph of Survival Instincts
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Thunder
+            "1x Ink of the Sea, 1x Resilient Parchment", ------------------- Glyph of Tricks of the Trade
+            "1x Ethereal Ink, 1x Resilient Parchment", --------------------- Glyph of Unholy Blight
+            "1x Celestial Ink, 1x Common Parchment", ----------------------- Glyph of Vigilance
+            "1x Ethereal Ink, 1x Resilient Parchment" ---------------------- Glyph of Wild Growth
+        };
+    elseif rank > 439 and rank < 450 then -- 440-449
+        shouldCraft = {
+            "Runescroll of Fortitude",
+            "Northrend Inscription Research"
+        };
+        shouldCraftRecipe = {
+            "1x Snowfall Ink, 5x Resilient Parchment", -------------------- Runescroll of Fortitude
+            "3x Ink of the Sea, 1x Snowfall Ink, 5x Resilient Parchment" -- Northrend Inscription Research
         };
     end
     return shouldCraft, shouldCraftRecipe
