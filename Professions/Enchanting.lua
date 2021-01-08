@@ -110,8 +110,8 @@ addonTable.getEnchantingCurrentSkillLevelRecipeToCraft = function(rank)
         shouldCraft = {"Enchant Boots - Icewalker"};
         shouldCraftRecipe = {"8x Infinite Dust, 1x Crystallized Water"};
     elseif rank > 394 and rank < 410 then -- 395-409
-        shouldCraft = {"Enchant Cloak – Superior Agility"};
-        shouldCraftRecipe = {"0x Infinite Dust."};
+        shouldCraft = {"Enchant Cloak - Superior Agility"};
+        shouldCraftRecipe = {"9x Infinite Dust."};
     elseif rank > 409 and rank < 415 then -- 410-414
         shouldCraft = {"Enchant Gloves - Expertise"};
         shouldCraftRecipe = {"12x Infinite Dust"};
