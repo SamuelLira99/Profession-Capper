@@ -40,7 +40,7 @@ addonTable.getFirstAidCurrentSkillLevelRecipeToCraft = function(rank)
         shouldCraft = {"Heavy Netherweave Bandage"};
         shouldCraftRecipe = {"2x Netherweave Cloth"};
     elseif rank > 349 and rank < 390 then -- 350-389
-        shouldCraft = {"Frostweave Cloth"};
+        shouldCraft = {"Frostweave Bandage"};
         shouldCraftRecipe = {"1x Frostweave Cloth"};
     elseif rank > 389 and rank < 450 then -- 390-449
         shouldCraft = {"Heavy Frostweave Bandage"};
