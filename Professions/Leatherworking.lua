@@ -43,7 +43,7 @@ addonTable.getLeatherworkingCurrentSkillLevelRecipeToCraft = function(rank)
             "8x Medium Leather, 1x Fine Thread, 1x Gray Dye" ----------------------------- Dark Leather Cloak
         };
     elseif rank > 144 and rank < 150 then -- 145-149
-        shouldCraft = {"Hillman’s Leather Gloves"};
+        shouldCraft = {"Hillman's Leather Gloves"};
         shouldCraftRecipe = {"14x Medium Leather, 4x Fine Thread"};
     elseif rank > 149 and rank < 155 then -- 150-154
         shouldCraft = {"Heavy Leather Ball"};
@@ -96,7 +96,7 @@ addonTable.getLeatherworkingCurrentSkillLevelRecipeToCraft = function(rank)
             "Thick Draenic Vest"
         };
         shouldCraftRecipe = {
-            "28 Heavy Knothide Leather, 28 Fel Scales, 42 Rune Thread", --- Scaled Draenic Boots
+            "2x Heavy Knothide Leather, 2x Fel Scales, 3x Rune Thread", --- Scaled Draenic Boots
             "3x Heavy Knothide Leather, 3x Rune Thread" ------------------- Thick Draenic Vest
         };
     elseif rank > 349 and rank < 380 then -- 350-379
