@@ -45,7 +45,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 `Skinning` - Not supported (probably won't be)
 
 ### Secondary Professions
-`Coocking` - Not supported yet (queued to implement)
+`Coocking` - Fully supported
 
 `First Aid` - Fully supported
 
