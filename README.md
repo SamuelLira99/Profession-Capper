@@ -45,23 +45,46 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 `Skinning` - Not supported (probably won't be)
 
 ### Secondary Professions
-`Coocking` - Fully supported
+`Cooking` - Fully supported
 
 `First Aid` - Fully supported
 
 `Fishing` - Not supported (probably won't be)
 
 # Screenshots
-![option_01](https://rentyourapp.com/img/000-off-topic/pcapper/pcapper_crafting_option_1.jpg)
 
-![option_02](https://rentyourapp.com/img/000-off-topic/pcapper/pcapper_crafting_option_2.jpg)
+#### When the profession cap was already reached
+![Profession Capper - cap already reached](https://imgur.com/viU8cIc.jpg)
 
-# Screenshots(previous tetsting versions)
-![BS_copper_chanin_belt](https://rentyourapp.com/img/000-off-topic/pcapper/pcapper_blacksmithing_print.png)
+#### Enchanting
+![Profession Capper - Enchanting](https://imgur.com/Zb8udRn.jpg)
 
-![ENC_greater_mana_restoration](https://rentyourapp.com/img/000-off-topic/pcapper/pcapper_enchanting_plain_print.png)
+#### Tailoring
+![Profession Capper - Tailoring](https://imgur.com/qN6gBAN.jpg)
 
-![Tailoring_Capped](https://rentyourapp.com/img/000-off-topic/pcapper/pcapper_tailoring_plain.png)
+#### Blacksmithing
+![Profession Capper - Blacksmithing](https://imgur.com/m36QPKT.jpg)
+
+#### Alchemy
+![Profession Capper - Alchemy](https://imgur.com/74Cw1lp.jpg)
+
+#### Jewelcrafting
+![Profession Capper - Jewelcrafting](https://imgur.com/rMzesUO.jpg)
+
+#### Leatherworking
+![Profession Capper - Leatherworking](https://imgur.com/7Gn10JT.jpg)
+
+#### Inscription
+![Profession Capper - Inscription](https://imgur.com/Zef1GWz.jpg)
+
+#### Cooking
+![Profession Capper - Cooking](https://imgur.com/wlDzjSS.jpg)
+
+#### First Aid
+![Profession Capper - First Aid](https://imgur.com/voG9Ecr.jpg)
+
+#### When you didn't learn the recipe yet
+![Profession Capper - Recipe not learnt yet](https://imgur.com/Q2eXK6f.jpg)
 
 # Support
 You can open an issue on this repo, or mark `@SamuelLira99` on [Twitter](https://twitter.com/SamuelLira99)
