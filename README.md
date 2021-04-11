@@ -21,21 +21,21 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 
 ### Primary Trade Skills
 
-`Enchanting` - Fully supported
+`Enchanting` - Fully supported (revision in progress)
 
-`Tailoring` - Fully supported
+`Tailoring` - Fully supported (revision pending)
 
-`Blacksmithing` - Fully supported
+`Blacksmithing` - Fully supported (revision pending)
 
-`Alchemy` - Fully supported
+`Alchemy` - Fully supported (revision pending)
 
-`Engineering` - Fully supported
+`Engineering` - Fully supported (revision pending)
 
-`Jewelcrafting` - Fully supported
+`Jewelcrafting` - Fully supported (revision pending)
 
-`Leatherworking` - Fully supported
+`Leatherworking` - Fully supported (revision pending)
 
-`Inscription` - Fully supported
+`Inscription` - Fully supported (revision pending)
 
 ### Gathering Skills
 `Herbalism` - Not supported (probably won't be)
@@ -47,7 +47,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 ### Secondary Professions
 `Cooking` - Fully supported
 
-`First Aid` - Fully supported
+`First Aid` - Fully supported (revision pending)
 
 `Fishing` - Not supported (probably won't be)
 
