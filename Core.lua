@@ -126,7 +126,7 @@ function fnOnEvent()
     isLinked, name = IsTradeSkillLinked(); -- check if you opened a link or if it's your own professions frame
 
     if isLinked then
-        DEFAULT_CHAT_FRAME:AddMessage("You're viewing " .. name .. "'s linked profession");
+        -- DEFAULT_CHAT_FRAME:AddMessage("You're viewing " .. name .. "'s linked profession");
     else
 --        DEFAULT_CHAT_FRAME:AddMessage("It's your own profession frame");
         if event == "TRADE_SKILL_UPDATE" then
