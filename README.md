@@ -29,7 +29,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 
 `Alchemy` - Fully supported (revision pending)
 
-`Engineering` - Fully supported (revision pending)
+`Engineering` - Fully supported
 
 `Jewelcrafting` - Fully supported (revision pending)
 
