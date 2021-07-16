@@ -135,7 +135,7 @@ addonTable.getCookingCurrentSkillLevelRecipeToCraft = function(rank)
             "1x Raw Rainbow Fin Albacore", --------------- Rainbow Fin Albacore
             "1x Strider Meat" ---------------------------- Strider Stew
         };
-    elseif rank > 79 and rank < 130 then -- 80-129
+    elseif rank > 79 and rank < 110 then -- 80-109
         shouldCraft = {
             "Smoked Sagefish",
             "Crab Cake",
@@ -151,7 +151,34 @@ addonTable.getCookingCurrentSkillLevelRecipeToCraft = function(rank)
             "1x Raw Sagefish", ----------------------------- Smoked Sagefish
             "1x Crawler Meat", ----------------------------- Crab Cake
             "1x Coyote Meat", ------------------------------ Coyote Steak
-            "1x Clam Meat, 1x Refreshing Spring Water", -----Boiled Clams
+            "1x Clam Meat, 1x Refreshing Spring Water", ---- Boiled Clams
+            "1x Goretusk Liver", --------------------------- Goretusk Liver Pie
+            "1x Raw Loch Frenzy", -------------------------- Loch Frenzy Delight
+            "1x Raw Longjaw Mud Snapper", ------------------ Longjaw Mud Snapper
+            "1x Raw Rainbow Fin Albacore", ----------------- Rainbow Fin Albacore
+            "1x Strider Meat" ------------------------------ Strider Stew
+        };
+    elseif rank > 109 and rank < 130 then -- 110-129
+        shouldCraft = {
+            "Big Bear Steak",
+            "Gooey Spider Cake",
+            "Smoked Sagefish",
+            "Crab Cake",
+            "Coyote Steak",
+            "Boiled Clams",
+            "Goretusk Liver Pie",
+            "Loch Frenzy Delight",
+            "Longjaw Mud Snapper",
+            "Rainbow Fin Albacore",
+            "Strider Stew"
+        };
+        shouldCraftRecipe = {
+            "1x Big Bear Meat", ---------------------------- Big Bear Steak
+            "2x Gooey Spider Leg", ------------------------- Gooey Spider Cake
+            "1x Raw Sagefish", ----------------------------- Smoked Sagefish
+            "1x Crawler Meat", ----------------------------- Crab Cake
+            "1x Coyote Meat", ------------------------------ Coyote Steak
+            "1x Clam Meat, 1x Refreshing Spring Water", ---- Boiled Clams
             "1x Goretusk Liver", --------------------------- Goretusk Liver Pie
             "1x Raw Loch Frenzy", -------------------------- Loch Frenzy Delight
             "1x Raw Longjaw Mud Snapper", ------------------ Longjaw Mud Snapper
@@ -165,6 +192,8 @@ addonTable.getCookingCurrentSkillLevelRecipeToCraft = function(rank)
             "Lean Wolf Steak",
             "Goblin Deviled Clams",
             "Crocolisk Gumbo",
+            "Big Bear Steak",
+            "Gooey Spider Cake",
             "Smoked Sagefish",
             "Crab Cake",
             "Coyote Steak",
@@ -181,10 +210,12 @@ addonTable.getCookingCurrentSkillLevelRecipeToCraft = function(rank)
             "1x Lean Wolf Flank", -------------------------- Lean Wolf Steak
             "1x Tangy Clam Meat", -------------------------- Goblin Deviled Clams
             "1x Tender Crocolisk Meat", -------------------- Crocolisk Gumbo
+            "1x Big Bear Meat", ---------------------------- Big Bear Steak
+            "2x Gooey Spider Leg", ------------------------- Gooey Spider Cake
             "1x Raw Sagefish", ----------------------------- Smoked Sagefish
             "1x Crawler Meat", ----------------------------- Crab Cake
             "1x Coyote Meat", ------------------------------ Coyote Steak
-            "1x Clam Meat, 1x Refreshing Spring Water", -----Boiled Clams
+            "1x Clam Meat, 1x Refreshing Spring Water", ---- Boiled Clams
             "1x Goretusk Liver", --------------------------- Goretusk Liver Pie
             "1x Raw Loch Frenzy", -------------------------- Loch Frenzy Delight
             "1x Raw Longjaw Mud Snapper", ------------------ Longjaw Mud Snapper
@@ -197,14 +228,18 @@ addonTable.getCookingCurrentSkillLevelRecipeToCraft = function(rank)
             "Hot Lion Chops",
             "Lean Wolf Steak",
             "Goblin Deviled Clams",
-            "Crocolisk Gumbo"
+            "Crocolisk Gumbo",
+            "Big Bear Steak",
+            "Gooey Spider Cake"
         };
         shouldCraftRecipe = {
-            "1x Raptor Egg", ------------ Curiously Tasty Omelet
-            "1x Lion Meat", ------------- Hot Lion Chops
-            "1x Lean Wolf Flank", ------- Lean Wolf Steak
-            "1x Tangy Clam Meat", ------- Goblin Deviled Clams
-            "1x Tender Crocolisk Meat" -- Crocolisk Gumbo
+            "1x Raptor Egg", ------------- Curiously Tasty Omelet
+            "1x Lion Meat", -------------- Hot Lion Chops
+            "1x Lean Wolf Flank", -------- Lean Wolf Steak
+            "1x Tangy Clam Meat", -------- Goblin Deviled Clams
+            "1x Tender Crocolisk Meat", -- Crocolisk Gumbo
+            "1x Big Bear Meat", ---------- Big Bear Steak
+            "2x Gooey Spider Leg", ------- Gooey Spider Cake
         };
     elseif rank > 174 and rank < 225 then -- 175-224
         shouldCraft = {
