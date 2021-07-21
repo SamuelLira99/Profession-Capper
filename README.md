@@ -21,7 +21,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 
 ### Primary Trade Skills
 
-`Enchanting` - Fully supported (revision in progress)
+`Enchanting` - Fully supported
 
 `Tailoring` - Fully supported (revision pending)
 
