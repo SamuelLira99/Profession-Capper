@@ -23,7 +23,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 
 `Enchanting` - Fully supported
 
-`Tailoring` - Fully supported (revision pending)
+`Tailoring` - Fully supported
 
 `Blacksmithing` - Fully supported (revision pending)
 

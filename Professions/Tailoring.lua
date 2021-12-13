@@ -6,7 +6,10 @@ addonTable.getTailoringCurrentSkillLevelRecipeToCraft = function(rank)
     if rank > 0 and rank < 45 then -- 1-44
         shouldCraft = {"Bolt of Linen Cloth"};
         shouldCraftRecipe = {"2x Linen Cloth"};
-    elseif rank > 44 and rank < 70 then -- 45-69
+    elseif rank > 44 and rank < 50 then -- 45-49
+        shouldCraft = {"Linen Belt"};
+        shouldCraftRecipe = {"1x Bolt of Linen Cloth, 1x Coarse Thread"};
+    elseif rank > 49 and rank < 70 then -- 45-69
         shouldCraft = {"Heavy Linen Gloves"};
         shouldCraftRecipe = {"2x Bolt of Linen Cloth, 1x Coarse Thread"};
     elseif rank > 69 and rank < 75 then -- 70-74
@@ -15,7 +18,16 @@ addonTable.getTailoringCurrentSkillLevelRecipeToCraft = function(rank)
     elseif rank > 74 and rank < 100 then -- 75-99
         shouldCraft = {"Bolt of Woolen Cloth"};
         shouldCraftRecipe = {"3x Wool Cloth"};
-    elseif rank > 99 and rank < 110 then -- 100-109
+    elseif rank > 99 and rank < 105 then -- 100-104
+          shouldCraft = {
+            "Simple Kilt",
+            "Woolen Bag"
+          };
+          shouldCraftRecipe = {
+            "4x Bolt of Linen Cloth, 1x Fine Thread", -- Simple Kilt
+            "3x Bolt of Woolen Cloth, 1x Fine Thread" -- Woolen Bag
+          };
+    elseif rank > 104 and rank < 110 then -- 105-109
         shouldCraft = {"Simple Kilt"};
         shouldCraftRecipe = {"4x Bolt of Linen Cloth, 1x Fine Thread"};
     elseif rank > 109 and rank < 125 then -- 110-124
@@ -25,15 +37,21 @@ addonTable.getTailoringCurrentSkillLevelRecipeToCraft = function(rank)
         shouldCraft = {"Bolt of Silk Cloth"};
         shouldCraftRecipe = {"4x Silk Cloth"};
     elseif rank > 144 and rank < 160 then -- 145-159
-        shouldCraft = {"Azure Silk Hood"};
-        shouldCraftRecipe = {"2x Bolt of Silk Cloth, 2x Blue Dye, 1x Fine Thread"};
+        shouldCraft = {
+          "Azure Silk Hood",
+          "Double-stitched Woolen Shoulders"
+        };
+        shouldCraftRecipe = {
+          "2x Bolt of Silk Cloth, 2x Blue Dye, 1x Fine Thread", -- Azure Silk Hood
+          "3x Bolt of Woolen Cloth, 2x Fine Thread" -------------- Double-stitched Woolen Shoulders
+        };
     elseif rank > 159 and rank < 170 then -- 160-169
         shouldCraft = {"Silk Headband"};
         shouldCraftRecipe = {"3x Bolt of Silk Cloth, 2x Fine Thread"};
     elseif rank > 169 and rank < 175 then -- 170-174
         shouldCraft = {"Formal White Shirt"};
         shouldCraftRecipe = {"3x Bolt of Silk Cloth, 2x Bleach, 1x Fine Thread"};
-    elseif rank < 174 and rank < 185 then -- 715-184
+    elseif rank > 174 and rank < 185 then -- 715-184
         shouldCraft = {"Bolt of Mageweave"};
         shouldCraftRecipe = {"4x Mageweave Cloth"};
     elseif rank > 184 and rank < 205 then -- 185-204
@@ -43,8 +61,14 @@ addonTable.getTailoringCurrentSkillLevelRecipeToCraft = function(rank)
         shouldCraft = {"Crimson Silk Pantaloons"};
         shouldCraftRecipe = {"4x Bolt of Silk Cloth, 2x Red Dye, 2x Silken Thread"};
     elseif rank > 214 and rank < 220 then -- 215-219
-        shouldCraft = {"Black Mageweave Leggings"};
-        shouldCraftRecipe = {"2x Bolt of Mageweave, 3x Silken Thread"};
+        shouldCraft = {
+          "Black Mageweave Leggings",
+          "Crimson Silk Pantaloons"
+        };
+        shouldCraftRecipe = {
+          "2x Bolt of Mageweave, 3x Silken Thread", -------------- Black Mageweave Leggings
+          "4x Bolt of Silk Cloth, 2x Red Dye, 2x Silken Thread" -- Crimson Silk Pantaloons
+        };
     elseif rank > 219 and rank < 230 then -- 220-229
         shouldCraft = {"Black Mageweave Gloves"};
         shouldCraftRecipe = {"2x Bolt of Mageweave, 2x Heavy Silken Thread"};
@@ -100,8 +124,14 @@ addonTable.getTailoringCurrentSkillLevelRecipeToCraft = function(rank)
         shouldCraft = {"Duskweave Gloves"};
         shouldCraftRecipe = {"9x Bolt of Frostweave, 1x Eternium Thread"};
     elseif rank > 414 and rank < 425 then -- 415-424
-        shouldCraft = {"Duskweave Boots"};
-        shouldCraftRecipe = {"10x Bolt of Frostweave, 1x Eternium Thread"};
+        shouldCraft = {
+          "Duskweave Boots",
+          "Duskweave Shoulders"
+        };
+        shouldCraftRecipe = {
+          "10x Bolt of Frostweave, 1x Eternium Thread", -- Duskweave Boots
+          "10x Bolt of Frostweave, 1x Eternium Thread" --- Duskweave Shoulders
+        };
     elseif rank > 424 and rank < 450 then -- 425-449
         shouldCraft = {"Frostweave Bag"};
         shouldCraftRecipe = {"6x Bolt of Imbued Frostweave, 2x Eternium Thread"};
