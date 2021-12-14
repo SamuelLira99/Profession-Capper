@@ -31,7 +31,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 
 `Engineering` - Fully supported
 
-`Jewelcrafting` - Fully supported (revision pending)
+`Jewelcrafting` - Fully supported
 
 `Leatherworking` - Fully supported (revision pending)
 
