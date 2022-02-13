@@ -78,14 +78,22 @@ addonTable.getCookingCurrentSkillLevelRecipeToCraft = function(rank)
         shouldCraft = {
             "Smoked Bear Meat",
             "Scorpid Surprise",
-            "Spiced Wolf Meat"
+            "Spiced Wolf Meat",
+            "Crispy Bat Wing",
+            "Lynx Steak",
+            "Slitherskin Mackerel",
+            "Roasted Moongraze Tenderloin"
         };
         shouldCraftRecipe = {
-            "1x Bear Meat", ---------- Smoked Bear Meat
-            "1x Scorpid Stinger", ---- Scorpid Surprise
-            "1x Stringy Wolf Meat" --- Spiced Wolf Meat
+            "1x Bear Meat", --------------------- Smoked Bear Meat
+            "1x Scorpid Stinger", --------------- Scorpid Surprise
+            "1x Stringy Wolf Meat", ------------- Spiced Wolf Meat
+            "1x Meaty Bat Wing", ---------------- Crispy Bat Wing
+            "1x Lynx Meat", --------------------- Lynx Steak
+            "1x Raw Slitherskin Mackerel", ------ Slitherskin Mackerel
+            "1x Moongraze Stag Tenderloin" ------ Roasted Moongraze Tenderloin
         };
-    elseif rank > 49 and rank < 70 then -- 50-69
+    elseif rank > 49 and rank < 60 then -- 50-59
         shouldCraft = {
             "Smoked Bear Meat",
             "Bat Bites",
@@ -97,7 +105,11 @@ addonTable.getCookingCurrentSkillLevelRecipeToCraft = function(rank)
             "Longjaw Mud Snapper",
             "Rainbow Fin Albacore",
             "Strider Stew",
-            "Spiced Wolf Meat"
+            "Spiced Wolf Meat",
+            "Crispy Bat Wing",
+            "Lynx Steak",
+            "Slitherskin Mackerel",
+            "Roasted Moongraze Tenderloin"
         };
         shouldCraftRecipe = {
             "1x Bear Meat", ------------------------------ Smoked Bear Meat
@@ -110,35 +122,90 @@ addonTable.getCookingCurrentSkillLevelRecipeToCraft = function(rank)
             "1x Raw Longjaw Mud Snapper", ---------------- Longjaw Mud Snapper
             "1x Raw Rainbow Fin Albacore", --------------- Rainbow Fin Albacore
             "1x Strider Meat", --------------------------- Strider Stew
-            "1x Stringy Wolf Meat" ----------------------- Spiced Wolf Meat
+            "1x Stringy Wolf Meat", ---------------------- Spiced Wolf Meat
+            "1x Meaty Bat Wing", ------------------------- Crispy Bat Wing
+            "1x Lynx Meat", ------------------------------ Lynx Steak
+            "1x Raw Slitherskin Mackerel", --------------- Slitherskin Mackerel
+            "1x Moongraze Stag Tenderloin" --------------- Roasted Moongraze Tenderloin
         };
+      elseif rank > 59 and rank < 70 then -- 60-69
+          shouldCraft = {
+              "Crunchy Spider Surprise",
+              "Smoked Bear Meat",
+              "Bat Bites",
+              "Scorpid Surprise",
+              "Coyote Steak",
+              "Boiled Clams",
+              "Goretusk Liver Pie",
+              "Loch Frenzy Delight",
+              "Longjaw Mud Snapper",
+              "Rainbow Fin Albacore",
+              "Strider Stew",
+              "Spiced Wolf Meat",
+              "Crispy Bat Wing",
+              "Lynx Steak",
+              "Slitherskin Mackerel",
+              "Roasted Moongraze Tenderloin"
+          };
+          shouldCraftRecipe = {
+              "1x Crunchy Spider Leg", --------------------- Crunchy Spider Surprise
+              "1x Bear Meat", ------------------------------ Smoked Bear Meat
+              "1x Bat Flesh", ------------------------------ Bat Bites
+              "1x Scorpid Stinger", ------------------------ Scorpid Surprise
+              "1x Coyote Meat", ---------------------------- Coyote Steak
+              "1x Clam Meat, 1x Refreshing Spring Water", -- Boiled Clams
+              "1x Goretusk Liver", ------------------------- Goretusk Liver Pie
+              "1x Raw Loch Frenzy", ------------------------ Loch Frenzy Delight
+              "1x Raw Longjaw Mud Snapper", ---------------- Longjaw Mud Snapper
+              "1x Raw Rainbow Fin Albacore", --------------- Rainbow Fin Albacore
+              "1x Strider Meat", --------------------------- Strider Stew
+              "1x Stringy Wolf Meat", ---------------------- Spiced Wolf Meat
+              "1x Meaty Bat Wing", ------------------------- Crispy Bat Wing
+              "1x Lynx Meat", ------------------------------ Lynx Steak
+              "1x Raw Slitherskin Mackerel", --------------- Slitherskin Mackerel
+              "1x Moongraze Stag Tenderloin" --------------- Roasted Moongraze Tenderloin
+          };
     elseif rank > 69 and rank < 80 then -- 70-79
         shouldCraft = {
+            "Crunchy Spider Surprise",
             "Smoked Bear Meat",
-            "Scorpid Surprise",
+            "Bat Bites",
             "Coyote Steak",
             "Boiled Clams",
             "Goretusk Liver Pie",
             "Loch Frenzy Delight",
             "Longjaw Mud Snapper",
             "Rainbow Fin Albacore",
-            "Strider Stew"
+            "Strider Stew",
+            "Scorpid Surprise",
+            "Crispy Bat Wing",
+            "Lynx Steak",
+            "Slitherskin Mackerel",
+            "Roasted Moongraze Tenderloin"
         };
         shouldCraftRecipe = {
+            "1x Crunchy Spider Leg", --------------------- Crunchy Spider Surprise
             "1x Bear Meat", ------------------------------ Smoked Bear Meat
-            "1x Scorpid Stinger", ------------------------ Scorpid Surprise
+            "1x Bat Flesh", ------------------------------ Bat Bites
             "1x Coyote Meat", ---------------------------- Coyote Steak
             "1x Clam Meat, 1x Refreshing Spring Water", -- Boiled Clams
             "1x Goretusk Liver", ------------------------- Goretusk Liver Pie
             "1x Raw Loch Frenzy", ------------------------ Loch Frenzy Delight
             "1x Raw Longjaw Mud Snapper", ---------------- Longjaw Mud Snapper
             "1x Raw Rainbow Fin Albacore", --------------- Rainbow Fin Albacore
-            "1x Strider Meat" ---------------------------- Strider Stew
+            "1x Strider Meat", --------------------------- Strider Stew
+            "1x Scorpid Stinger", ------------------------ Scorpid Surprise
+            "1x Meaty Bat Wing", ------------------------- Crispy Bat Wing
+            "1x Lynx Meat", ------------------------------ Lynx Steak
+            "1x Raw Slitherskin Mackerel", --------------- Slitherskin Mackerel
+            "1x Moongraze Stag Tenderloin" --------------- Roasted Moongraze Tenderloin
         };
     elseif rank > 79 and rank < 110 then -- 80-109
         shouldCraft = {
             "Smoked Sagefish",
             "Crab Cake",
+            "Crunchy Spider Surprise",
+            "Bat Bites",
             "Coyote Steak",
             "Boiled Clams",
             "Goretusk Liver Pie",
@@ -150,6 +217,8 @@ addonTable.getCookingCurrentSkillLevelRecipeToCraft = function(rank)
         shouldCraftRecipe = {
             "1x Raw Sagefish", ----------------------------- Smoked Sagefish
             "1x Crawler Meat", ----------------------------- Crab Cake
+            "1x Crunchy Spider Leg", ----------------------- Crunchy Spider Surprise
+            "1x Bat Flesh", -------------------------------- Bat Bites
             "1x Coyote Meat", ------------------------------ Coyote Steak
             "1x Clam Meat, 1x Refreshing Spring Water", ---- Boiled Clams
             "1x Goretusk Liver", --------------------------- Goretusk Liver Pie
@@ -164,6 +233,8 @@ addonTable.getCookingCurrentSkillLevelRecipeToCraft = function(rank)
             "Gooey Spider Cake",
             "Smoked Sagefish",
             "Crab Cake",
+            "Crunchy Spider Surprise",
+            "Bat Bites",
             "Coyote Steak",
             "Boiled Clams",
             "Goretusk Liver Pie",
@@ -176,7 +247,9 @@ addonTable.getCookingCurrentSkillLevelRecipeToCraft = function(rank)
             "1x Big Bear Meat", ---------------------------- Big Bear Steak
             "2x Gooey Spider Leg", ------------------------- Gooey Spider Cake
             "1x Raw Sagefish", ----------------------------- Smoked Sagefish
-            "1x Crawler Meat", ----------------------------- Crab Cake
+            "1x Crawler Meat", ----------------------------- Crab Cake,
+            "1x Crunchy Spider Leg", ----------------------- Crunchy Spider Surprise
+            "1x Bat Flesh", -------------------------------- Bat Bites
             "1x Coyote Meat", ------------------------------ Coyote Steak
             "1x Clam Meat, 1x Refreshing Spring Water", ---- Boiled Clams
             "1x Goretusk Liver", --------------------------- Goretusk Liver Pie
@@ -273,41 +346,82 @@ addonTable.getCookingCurrentSkillLevelRecipeToCraft = function(rank)
             "Spiced Chili Crab",
             "Cooked Glossy Mightfish",
             "Filet of Redgill",
-            "Spotted Yellowtail"
+            "Spotted Yellowtail",
+            "Roast Raptor",
+            "Sagefish Delight",
+            "Mithril Head Trout",
+            "Soothing Turtle Bisque",
+            "Jungle Stew",
+            "Spider Sausage"
         };
         shouldCraftRecipe = {
-            "1x Giant Egg", --------------- Monster Omelet
-            "1x Tender Wolf Meat", -------- Tender Wolf Steak
-            "1x Tender Crab Meat", -------- Spiced Chili Crab
-            "1x Raw Glossy Mightfish", ---- Cooked Glossy Mightfish
-            "1x Raw Redgill", ------------- Filet of Redgill
-            "1x Raw Spotted Yellowtail" --- Spotted Yellowtail
+            "1x Giant Egg", ------------------------------- Monster Omelet
+            "1x Tender Wolf Meat", ------------------------ Tender Wolf Steak
+            "1x Tender Crab Meat", ------------------------ Spiced Chili Crab
+            "1x Raw Glossy Mightfish", -------------------- Cooked Glossy Mightfish
+            "1x Raw Redgill", ----------------------------- Filet of Redgill
+            "1x Raw Spotted Yellowtail", ------------------ Spotted Yellowtail
+            "1x Raptor Flesh", ---------------------------- Roast Raptor
+            "1x Raw Greater Sagefish", -------------------- Sagefish Delight
+            "1x Raw Mithril Head Trout", ------------------ Mithril Head Trout
+            "1x Turtle Meat", ----------------------------- Soothing Turtle Bisque
+            "1x Tiger Meat, 1x Refreshing Spring Water", -- Jungle Stew
+            "2x White Spider Meat" ------------------------ Spider Sausage
         };
-    elseif rank > 249 and rank < 285 then -- 250-284
+    elseif rank > 249 and rank < 275 then -- 250-274
         shouldCraft = {
             "Juicy Bear Burger",
             "Charred Bear Kabobs",
-            "Poached Sunscale Salmon"
+            "Poached Sunscale Salmon",
+            "Clamlette Magnifique",
+            "Monster Omelet",
+            "Tender Wolf Steak",
+            "Spiced Chili Crab",
+            "Cooked Glossy Mightfish",
+            "Filet of Redgill",
+            "Spotted Yellowtail"
         };
         shouldCraftRecipe = {
-            "1x Bear Flank", ---------- Juicy Bear Burger
-            "1x Bear Flank", ---------- Charred Bear Kabobs
-            "1x Raw Sunscale Salmon" -- Poached Sunscale Salmon
+            "1x Bear Flank", ------------- Juicy Bear Burger
+            "1x Bear Flank", ------------- Charred Bear Kabobs
+            "1x Raw Sunscale Salmon", ---- Poached Sunscale Salmon
+            "1x Zesty Clam Meat", -------- Clamlette Magnifique
+            "1x Giant Egg", -------------- Monster Omelet
+            "1x Tender Wolf Meat", ------- Tender Wolf Steak
+            "1x Tender Crab Meat", ------- Spiced Chili Crab
+            "1x Raw Glossy Mightfish", --- Cooked Glossy Mightfish
+            "1x Raw Redgill", ------------ Filet of Redgill
+            "1x Raw Spotted Yellowtail" -- Spotted Yellowtail
         };
+      elseif rank > 274 and rank < 285 then -- 275-284
+          shouldCraft = {
+              "Juicy Bear Burger",
+              "Charred Bear Kabobs",
+              "Poached Sunscale Salmon",
+              "Clamlette Magnifique"
+          };
+          shouldCraftRecipe = {
+              "1x Bear Flank", ----------- Juicy Bear Burger
+              "1x Bear Flank", ----------- Charred Bear Kabobs
+              "1x Raw Sunscale Salmon", -- Poached Sunscale Salmon
+              "1x Zesty Clam Meat" ------- Clamlette Magnifique
+          };
     elseif rank > 284 and rank < 300 then -- 285-299
         shouldCraft = {
             "Smoked Desert Dumplings",
             "Baked Salmon",
             "Mightfish Steak",
             "Lobster Stew",
-            "Runn Tum Tuber Surprise"
+            "Runn Tum Tuber Surprise",
+            "Clamlette Magnifique"
         };
         shouldCraftRecipe = {
             "1x Sandworm Meat", --------------------------------- Smoked Desert Dumplings
             "1x Raw Whitescale Salmon", ------------------------- Baked Salmon
             "1x Large Raw Mightfish", --------------------------- Mightfish Steak
             "1x Darkclaw Lobster, 1x Refreshing Spring Water", -- Lobster Stew
-            "1x Runn Tum Tuber" --------------------------------- Runn Tum Tuber Surprise
+            "1x Runn Tum Tuber", -------------------------------- Runn Tum Tuber Surprise
+            "1x Zesty Clam Meat" -------------------------------- Clamlette Magnifique
         };
     elseif rank > 299 and rank < 325 then -- 300-324
         shouldCraft = {
