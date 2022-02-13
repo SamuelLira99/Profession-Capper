@@ -12,6 +12,8 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 
     - from [bestwowaddons.com](https://bestwowaddons.com/download/profession-capper/)
 
+    - from [addonsofwow.com](https://addonsofwow.com/addons/2372-profession-capper/)
+
 
 2. Extract the file "Profession_Capper.zip"
 
