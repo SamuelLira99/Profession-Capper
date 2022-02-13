@@ -86,35 +86,33 @@ addonTable.getEnchantingCurrentSkillLevelRecipeToCraft = function(rank)
         shouldCraft = {
             "Runed Silver Rod",
             "Enchant Bracer - Minor Spirit",
-            "Greater Magic Wand"
+            "Enchant Bracer - Minor Stamina"
         };
         shouldCraftRecipe = {
             "1x Silver Rod, 6x Strange Dust, 3x Greater Magic Essence, 1x Runed copper Rod", -- Runed Silver Rod
             "2x Lesser Magic Essence", -------------------------------------------------------- Enchant Bracer - Minor Spirit
-            "1x Simple Wood, 1x Greater Magic Essence" ---------------------------------------- Greater Magic Wand
+            "3x Strange Dust" ----------------------------------------------------------------- Enchant Bracer - Minor Stamina
         };
     elseif rank > 100 and rank < 110 then -- 101-109
         shouldCraft = {
             "Enchant Bracer - Minor Spirit",
-            "Greater Magic Wand",
+            "Enchant Bracer - Minor Stamina",
             "Runed Silver Rod"
         };
         shouldCraftRecipe = {
             "2x Lesser Magic Essence", ------------------------------------------------------- Enchant Bracer - Minor Spirit
-            "1x Simple Wood, 1x Greater Magic Essence", -------------------------------------- Greater Magic Wand
+            "3x Strange Dust", --------------------------------------------------------------- Enchant Bracer - Minor Stamina
             "1x Silver Rod, 6x Strange Dust, 3x Greater Magic Essence, 1x Runed copper Rod" -- Runed Silver Rod
         };
     elseif rank > 109 and rank < 135 then -- 110-134
         shouldCraft = {
             "Enchant Cloak - Minor Agility", -- bougth from vendor
-            "Enchant Shield - Minor Stamina",
             "Enchant Bracer - Minor Spirit",
             "Enchant Bracer - Minor Strength",
             "Runed Silver Rod"
         };
         shouldCraftRecipe = {
             "1x Lesser Astral Essence", ------------------------------------------------------- Enchant Cloak - Minor Agility
-            "1x Lesser Astral Essence, 2x Strange Dust", -------------------------------------- Enchant Shield - Minor Stamina
             "2x Lesser Magic Essence", -------------------------------------------------------- Enchant Bracer - Minor Spirit
             "5x Strange Dust", ---------------------------------------------------------------- Enchant Bracer - Minor Strength
             "1x Silver Rod, 6x Strange Dust, 3x Greater Magic Essence, 1x Runed copper Rod", -- Runed Silver Rod
