@@ -1,6 +1,8 @@
 addonName, addonTable = ...;
 
-local shouldCraft, shouldCraftRecipe;
+local tailoringRecipes = addonTable.recipes.tailoring;
+
+local shouldCraft;
 
 addonTable.getTailoringCurrentSkillLevelRecipeToCraft = function(rank)
     if rank > 0 and rank < 45 then -- 1-44
@@ -58,8 +60,11 @@ addonTable.getTailoringCurrentSkillLevelRecipeToCraft = function(rank)
         shouldCraft = {"Crimson Silk Vest"};
         shouldCraftRecipe = {"4x Bolt of Silk Cloth, 2x Fine Thread, 2x Red Dye"};
     elseif rank > 204 and rank < 215 then -- 205-214
-        shouldCraft = {"Crimson Silk Pantaloons"};
-        shouldCraftRecipe = {"4x Bolt of Silk Cloth, 2x Red Dye, 2x Silken Thread"};
+        shouldCraft = {
+          tailoringRecipes.crimsonSilkPantaloons,
+          tailoringRecipes.solidBlastingPowder
+        }
+        -- shouldCraftRecipe = {"4x Bolt of Silk Cloth, 2x Red Dye, 2x Silken Thread"};
     elseif rank > 214 and rank < 220 then -- 215-219
         shouldCraft = {
           "Black Mageweave Leggings",
@@ -136,7 +141,7 @@ addonTable.getTailoringCurrentSkillLevelRecipeToCraft = function(rank)
         shouldCraft = {"Frostweave Bag"};
         shouldCraftRecipe = {"6x Bolt of Imbued Frostweave, 2x Eternium Thread"};
     end
-    return shouldCraft, shouldCraftRecipe;
+    return shouldCraft;
 end
 
 print("|cff" .. addonTable.chat_frame_default_color .. '[Profession Capper] loaded Tailoring module|r');

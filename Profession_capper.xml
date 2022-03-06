@@ -60,7 +60,7 @@
                 <Anchors>
                     <Anchor point="top">
                         <Offset>
-                            <AbsDimension y="-75"/>
+                            <AbsDimension y="-100"/>
                         </Offset>
                     </Anchor>
                 </Anchors>
@@ -90,14 +90,28 @@
                 </Anchors>
             </FontString>
 
-            <FontString name="txtShouldCraftRecipe" inherits="GameFontNormal">
+            <FontString name="txtSkillUpChance" inherits="GameFontNormal">
                 <Size>
                     <AbsDimension x="200"/>
                 </Size>
                 <Anchors>
                     <Anchor point="TOP" relativeTo="$parentTitle">
                         <Offset>
-                            <AbsDimension x="0" y="-165"/>
+                            <AbsDimension x="0" y="-75"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+            </FontString>
+
+            <FontString name="txtShouldCraftRecipe" inherits="GameFontNormal" justifyh="LEFT">
+                <!-- <Color r="1" g="1" b="1" a="1" /> -->
+                <Size>
+                    <AbsDimension x="200"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOP" relativeTo="$parentTitle">
+                        <Offset>
+                            <AbsDimension x="30" y="-193"/>
                         </Offset>
                     </Anchor>
                 </Anchors>
@@ -107,6 +121,22 @@
     </Layers>
 
     <Frames>
+        <Frame name="frameImgSkillIconMouseHandler" movable="false" resizable="false" enableMouse="true">
+            <Scripts>
+                <OnEnter>fnShowTooltip()</OnEnter>
+                <OnLeave>fnHideTooltip()</OnLeave>
+            </Scripts>
+            <Size>
+                <AbsDimension x="50" y="50"/>
+            </Size>
+            <Anchors>
+                <Anchor point="top">
+                    <Offset>
+                        <AbsDimension y="-100"/>
+                    </Offset>
+                </Anchor>
+            </Anchors>
+        </Frame>
         <Button name="$parentCraft" text="TXT_CRAFT" inherits="UIPanelButtonTemplate">
             <Size>
                 <AbsDimension x="96" y="32"/>
@@ -114,7 +144,7 @@
             <Anchors>
                 <Anchor point="top">
                     <Offset>
-                        <AbsDimension y="-125" />
+                        <AbsDimension y="-150" />
                     </Offset>
                 </Anchor>
             </Anchors>
@@ -135,7 +165,7 @@
             <Anchors>
                 <Anchor point="topright">
                     <Offset>
-                        <AbsDimension y="-125" x="-20" />
+                        <AbsDimension y="-150" x="-20" />
                     </Offset>
                 </Anchor>
             </Anchors>
@@ -157,7 +187,7 @@
             <Anchors>
                 <Anchor point="topleft">
                     <Offset>
-                        <AbsDimension y="-125" x="20" />
+                        <AbsDimension y="-150" x="20" />
                     </Offset>
                 </Anchor>
             </Anchors>
