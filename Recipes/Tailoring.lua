@@ -1,5 +1,7 @@
 local addonName, addonTable = ...;
 
+local reagents = addonTable.recipes.reagents;
+
 addonTable.recipes.tailoring = {
   crimsonSilkPantaloons = {
     spellName = "Crimson Silk Pantaloons",
@@ -10,22 +12,24 @@ addonTable.recipes.tailoring = {
     turnsGreenAtSkillLevel = 225,
     reagents = {
       {
-        name = "Bolt of Silk Cloth",
-        amount = 4,
-        id = "4305"
+        name = reagents.boltOfSilkCloth.name,
+        id = reagents.boltOfSilkCloth.id,
+        amount = 4
       },
       {
-        name = "Red Dye",
-        amount = 2,
-        id = "2604"
+        name = reagents.redDye.name,
+        id = reagents.redDye.id,
+        amount = 2
       },
       {
-        name = "Silken Thread",
-        amount = 2,
-        id = "4291"
+        name = reagents.silkenThread.name,
+        id = reagents.silkenThread.id,
+        amount = 2
       }
     }
   },
+
+  -- Solid Blasting Powder is here only for testing purposes
   solidBlastingPowder = {
     spellName = "Solid Blasting Powder",
     spellId = "12585",
@@ -35,9 +39,9 @@ addonTable.recipes.tailoring = {
     turnsGreenAtSkillLevel = 185,
     reagents = {
       {
-        name = "Solid Stone",
-        amount = 2,
-        id = "7912"
+        name = reagents.solidStone.name,
+        id = reagents.solidStone.id,
+        amount = 2
       }
     }
   }

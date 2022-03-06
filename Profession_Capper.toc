@@ -5,6 +5,8 @@
 
 constants.lua
 
+Recipes\Reagents.lua
+
 Recipes\Tailoring.lua
 
 Professions\Enchanting.lua
