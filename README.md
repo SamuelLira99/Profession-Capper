@@ -23,21 +23,21 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 
 ### Primary Trade Skills
 
-`Enchanting` - Fully supported
+`Enchanting` - Fully supported (Port pending)
 
-`Tailoring` - Fully supported
+`Tailoring` - Fully supported (Port pending)
 
-`Blacksmithing` - Fully supported (revision pending)
+`Blacksmithing` - Fully supported (revision pending) (Port pending)
 
-`Alchemy` - Fully supported
+`Alchemy` - Fully supported (Port pending)
 
-`Engineering` - Fully supported
+`Engineering` - Fully supported (Port pending)
 
-`Jewelcrafting` - Fully supported
+`Jewelcrafting` - Fully supported (Port pending)
 
-`Leatherworking` - Fully supported (revision pending)
+`Leatherworking` - Fully supported (revision pending) (Port pending)
 
-`Inscription` - Fully supported (revision pending)
+`Inscription` - Fully supported (revision pending) (Port pending)
 
 ### Gathering Skills
 `Herbalism` - Not supported (probably won't be)
@@ -47,7 +47,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 `Skinning` - Not supported (probably won't be)
 
 ### Secondary Professions
-`Cooking` - Fully supported
+`Cooking` - Fully supported (Port pending)
 
 `First Aid` - Fully supported
 
@@ -83,7 +83,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 ![Profession Capper - Cooking](https://imgur.com/wlDzjSS.jpg)
 
 #### First Aid
-![Profession Capper - First Aid](https://imgur.com/voG9Ecr.jpg)
+![Profession Capper - First Aid](https://imgur.com/9wReapw.jpg)
 
 #### When you didn't learn the recipe yet
 ![Profession Capper - Recipe not learnt yet](https://imgur.com/Q2eXK6f.jpg)

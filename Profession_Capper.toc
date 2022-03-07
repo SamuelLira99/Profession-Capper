@@ -8,6 +8,7 @@ constants.lua
 Recipes\Reagents.lua
 
 Recipes\Tailoring.lua
+Recipes\FirstAid.lua
 
 Professions\Enchanting.lua
 Professions\Tailoring.lua
