@@ -58,35 +58,35 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 #### When the profession cap was already reached
 ![Profession Capper - cap already reached](https://imgur.com/viU8cIc.jpg)
 
-#### Enchanting
-![Profession Capper - Enchanting](https://imgur.com/Zb8udRn.jpg)
+<!-- #### Enchanting
+![Profession Capper - Enchanting](https://imgur.com/Zb8udRn.jpg) -->
 
-#### Tailoring
-![Profession Capper - Tailoring](https://imgur.com/qN6gBAN.jpg)
+<!-- #### Tailoring
+![Profession Capper - Tailoring](https://imgur.com/qN6gBAN.jpg) -->
 
-#### Blacksmithing
-![Profession Capper - Blacksmithing](https://imgur.com/m36QPKT.jpg)
+<!-- #### Blacksmithing
+![Profession Capper - Blacksmithing](https://imgur.com/m36QPKT.jpg) -->
 
-#### Alchemy
-![Profession Capper - Alchemy](https://imgur.com/74Cw1lp.jpg)
+<!-- #### Alchemy
+![Profession Capper - Alchemy](https://imgur.com/74Cw1lp.jpg) -->
 
-#### Jewelcrafting
-![Profession Capper - Jewelcrafting](https://imgur.com/rMzesUO.jpg)
+<!-- #### Jewelcrafting
+![Profession Capper - Jewelcrafting](https://imgur.com/rMzesUO.jpg) -->
 
-#### Leatherworking
-![Profession Capper - Leatherworking](https://imgur.com/7Gn10JT.jpg)
+<!-- #### Leatherworking
+![Profession Capper - Leatherworking](https://imgur.com/7Gn10JT.jpg) -->
 
-#### Inscription
-![Profession Capper - Inscription](https://imgur.com/Zef1GWz.jpg)
+<!-- #### Inscription
+![Profession Capper - Inscription](https://imgur.com/Zef1GWz.jpg) -->
 
-#### Cooking
-![Profession Capper - Cooking](https://imgur.com/wlDzjSS.jpg)
+<!-- #### Cooking
+![Profession Capper - Cooking](https://imgur.com/wlDzjSS.jpg) -->
 
 #### First Aid
 ![Profession Capper - First Aid](https://imgur.com/9wReapw.jpg)
 
-#### When you didn't learn the recipe yet
-![Profession Capper - Recipe not learnt yet](https://imgur.com/Q2eXK6f.jpg)
+<!-- #### When you didn't learn the recipe yet
+![Profession Capper - Recipe not learnt yet](https://imgur.com/Q2eXK6f.jpg) -->
 
 # Support
 You can open an issue on this repo, or mark `@SamuelLira99` on [Twitter](https://twitter.com/SamuelLira99)
