@@ -228,7 +228,7 @@ function displayRecipe()
             skillUpChance = ((shouldCraft[craftRecipeOptionsIndex].turnsGreyAtSkillLevel - rank) / (shouldCraft[craftRecipeOptionsIndex].turnsGreyAtSkillLevel - shouldCraft[craftRecipeOptionsIndex].turnsYellowAtSkillLevel) * 100);
             if skillUpChance > 100 then skillUpChance = 100 end
 
-            txtSkillUpChance:SetText('Skill Up: ' .. skillUpChance .. '%'); -- text that displays next recipe(s) you should craft
+            txtSkillUpChance:SetText('Skill Up: ' .. string.format('%.0f', skillUpChance) .. '%'); -- text that displays next recipe(s) you should craft
 
             if rank < shouldCraft[craftRecipeOptionsIndex].turnsYellowAtSkillLevel then
               txtShouldCraft:SetTextColor(1, 0.5, 0.25, 1); -- Orange
@@ -353,8 +353,8 @@ end
 function craftRecipe()
     for i = 1, GetNumTradeSkills() do
         local skillName, skillType, numAvailable, isExpanded, serviceType = GetTradeSkillInfo(i);
-        if skillName == shouldCraft[craftRecipeOptionsIndex] then
-            print("|cff" .. addonTable.chat_frame_default_color .."[Profession Capper] crafting|r |cff" .. addonTable.chat_frame_player_name_color .. numAvailable .."x |r|cff" .. addonTable.chat_frame_default_color .. shouldCraft[craftRecipeOptionsIndex] .. "|r")
+        if skillName == shouldCraft[craftRecipeOptionsIndex].spellName then
+            print("|cff" .. addonTable.chat_frame_default_color .."[Profession Capper] crafting|r |cff" .. addonTable.chat_frame_player_name_color .. numAvailable .."x |r|cff" .. addonTable.chat_frame_default_color .. shouldCraft[craftRecipeOptionsIndex].spellName .. "|r")
             DoTradeSkill(i, numAvailable);
         end
     end
@@ -395,7 +395,12 @@ end
 
 
 function fnShowTooltip()
-local name, link, quality, iLevel, reqLevel, class, subclass, maxStack, equipSlot, texture, vendorPrice = GetItemInfo(shouldCraft[craftRecipeOptionsIndex].producedItemId);
+    local link, tradeLink, name, link, quality, iLevel, reqLevel, class, subclass, maxStack, equipSlot, texture, vendorPrice;
+    if shouldCraft[craftRecipeOptionsIndex].producedItemId == 'isSpell' then
+        link, tradeLink = GetSpellLink(shouldCraft[craftRecipeOptionsIndex].spellId);
+    else
+        name, link, quality, iLevel, reqLevel, class, subclass, maxStack, equipSlot, texture, vendorPrice = GetItemInfo(shouldCraft[craftRecipeOptionsIndex].producedItemId);
+    end
 
     -- GameTooltip:SetOwner(MainFrameCore);
     GameTooltip:SetOwner(frameImgSkillIconMouseHandler);
