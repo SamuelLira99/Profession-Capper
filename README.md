@@ -23,7 +23,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 
 ### Primary Trade Skills
 
-`Enchanting` - Fully supported (Port pending)
+`Enchanting` - Fully supported
 
 `Tailoring` - Fully supported (Port pending)
 
@@ -58,8 +58,8 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 #### When the profession cap was already reached
 ![Profession Capper - cap already reached](https://imgur.com/viU8cIc.jpg)
 
-<!-- #### Enchanting
-![Profession Capper - Enchanting](https://imgur.com/Zb8udRn.jpg) -->
+#### Enchanting
+![Profession Capper - Enchanting](https://imgur.com/T8GmJOS.jpg)
 
 <!-- #### Tailoring
 ![Profession Capper - Tailoring](https://imgur.com/qN6gBAN.jpg) -->

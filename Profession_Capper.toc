@@ -7,6 +7,7 @@ constants.lua
 
 Recipes\Reagents.lua
 
+Recipes\Enchanting.lua
 Recipes\Tailoring.lua
 Recipes\FirstAid.lua
 
