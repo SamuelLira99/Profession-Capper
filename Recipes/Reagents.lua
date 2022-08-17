@@ -42,17 +42,82 @@ addonTable.recipes.reagents = {
 
     -- Bolts of Cloth
 
+    boltOfLinenCloth = {
+        name = "Bolt of Linen Cloth",
+        id = "2996"
+    },
+
+    boltOfWoolenCloth = {
+        name = "Bolt of Woolen Cloth",
+        id = "2997"
+    },
+
     boltOfSilkCloth = {
         name = "Bolt of Silk Cloth",
         id = "4305"
     },
 
+    boltOfMageweave = {
+        name = "Bolt of Mageweave",
+        id = "4339"
+    },
+
+    boltOfRunecloth = {
+        name = "Bolt of Runecloth",
+        id = "14048"
+    },
+
+    boltOfNetherweave = {
+        name = "Bolt of Netherweave",
+        id = "21840"
+    },
+
+    boltOfImbuedNetherweave = {
+        name = "Bolt of Imbued Netherweave",
+        id = "21842"
+    },
+
+    boltOfFrostweave = {
+        name = "Bolt of Frostweave",
+        id = "41510"
+    },
+
+    boltOfImbuedFrostweave = {
+        name = "Bolt of Imbued Frostweave",
+        id = "41511"
+    },
+
 
     -- Threads
+
+    coarseThread = {
+        name = "Coarse Thread",
+        id = "2320"
+    },
+
+    fineThread = {
+        name = "Fine Thread",
+        id = "2321"
+    },
 
     silkenThread = {
         name = "Silken Thread",
         id = "4291"
+    },
+
+    heavySilkenThread = {
+        name = "Heavy Silken Thread",
+        id = "8343"
+    },
+
+    runeThread = {
+        name = "Rune Thread",
+        id = "14341"
+    },
+
+    eterniumThread = {
+        name = "Eternium Thread",
+        id = "38426"
     },
 
 
@@ -61,6 +126,27 @@ addonTable.recipes.reagents = {
     redDye = {
         name = "Red Dye",
         id = "2604"
+    },
+
+    blueDye = {
+        name = "Blue Dye",
+        id = "6260"
+    },
+
+
+    -- Leathers
+
+    knothideLeather = {
+        name = "Knothide Leather",
+        id = "21887"
+    },
+
+
+    -- Trade Goods
+
+    bleach = {
+        name = "Bleach",
+        id = "2324"
     },
 
 
