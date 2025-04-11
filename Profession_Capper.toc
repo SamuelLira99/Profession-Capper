@@ -9,6 +9,7 @@ Recipes\Reagents.lua
 
 Recipes\Enchanting.lua
 Recipes\Tailoring.lua
+Recipes\Engineering.lua
 Recipes\FirstAid.lua
 
 Professions\Enchanting.lua

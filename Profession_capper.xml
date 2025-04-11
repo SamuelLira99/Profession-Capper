@@ -66,6 +66,18 @@
                 </Anchors>
             </Texture>
 
+            <!-- Number of produced items (producedAmount) -->
+            <FontString name="txtProducedAmount" inherits="GameFontNormal" text="">
+                <Color r="255" g="255" b="255" />
+                <Anchors>
+                    <Anchor point="BOTTOMRIGHT" relativeTo="imgSkillIcon">
+                        <Offset>
+                            <AbsDimension x="-5" y="5" />
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+            </FontString>
+
 
             <FontString inherits="GameFontNormal" text="Next recipe you should craft">
                 <Anchors>

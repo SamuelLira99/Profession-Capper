@@ -6,14 +6,7 @@ When you open your **Profession frame**, the **Profession Capper frame** will be
 By default, the **Profession Capper frame** will be opened at the **Bottom Left** corner of the game screen, feel free to drag it as you want
 
 # Instructions
-1. Download lastest release of Profession_Capper
-
-    - from [GitHub](https://github.com/SamuelLira99/Profession-Capper/releases)
-
-    - from [bestwowaddons.com](https://bestwowaddons.com/download/profession-capper/)
-
-    - from [addonsofwow.com](https://addonsofwow.com/addons/2372-profession-capper/)
-
+1. Download [latest release](https://github.com/SamuelLira99/Profession-Capper/releases) of Profession_Capper
 
 2. Extract the file "Profession_Capper.zip"
 
@@ -31,7 +24,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 
 `Alchemy` - Fully supported (Port pending)
 
-`Engineering` - Fully supported (Port pending)
+`Engineering` - Fully supported
 
 `Jewelcrafting` - Fully supported (Port pending)
 
@@ -63,6 +56,9 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 
 #### Tailoring
 ![Profession Capper - Tailoring](https://imgur.com/h4HzOhf.jpg)
+
+#### Engineering
+![Profession Capper - Engineering](https://imgur.com/2MAKWv7)
 
 <!-- #### Blacksmithing
 ![Profession Capper - Blacksmithing](https://imgur.com/m36QPKT.jpg) -->

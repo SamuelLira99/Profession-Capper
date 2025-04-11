@@ -44,7 +44,7 @@ local previousShouldCraft = {
 
 
 ------------------------------------------------------------------------------------------------------------
--- function that determines which recipe you shout craft
+-- function that determines which recipe you shoud craft
 
 function GetCraftingToDo()
 
@@ -225,6 +225,10 @@ function displayRecipe()
             -- GameTooltip:SetHyperlink(GetTradeSkillItemLink(i))
             -- GameTooltip:SetHyperlink(GetSpellLink(3942))
 
+            if shouldCraft[craftRecipeOptionsIndex].producedAmount then
+                txtProducedAmount:SetText(shouldCraft[craftRecipeOptionsIndex].producedAmount);
+            end
+
             skillUpChance = ((shouldCraft[craftRecipeOptionsIndex].turnsGreyAtSkillLevel - rank) / (shouldCraft[craftRecipeOptionsIndex].turnsGreyAtSkillLevel - shouldCraft[craftRecipeOptionsIndex].turnsYellowAtSkillLevel) * 100);
             if skillUpChance > 100 then skillUpChance = 100 end
 
@@ -371,6 +375,7 @@ function resetValues()
     imgSkillIcon:SetTexture("Interface\\InventoryItems\\WoWUnknownItem01");
     txtShouldCraftRecipe:SetText('');
     MainFrameCoreCraft:SetText('Craft');
+    txtProducedAmount:SetText('');
     for i = 1, #frames do
         frames[i]:Hide();
         textures[i] = nil;

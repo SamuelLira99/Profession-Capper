@@ -136,9 +136,19 @@ addonTable.recipes.reagents = {
 
     -- Leathers
 
+    mediumLeather = {
+        name = "Medium Leather",
+        id = "2319"
+    },
+
     knothideLeather = {
         name = "Knothide Leather",
         id = "21887"
+    },
+
+    boreanLeather = {
+        name = "Borean Leather",
+        id = "33568"
     },
 
 
@@ -147,6 +157,16 @@ addonTable.recipes.reagents = {
     bleach = {
         name = "Bleach",
         id = "2324"
+    },
+
+    weakFlux = {
+        name = "Weak Flux",
+        id = "2880"
+    },
+
+    heavyStock = {
+        name = "Heavy Stock",
+        id = "4400"
     },
 
 
@@ -385,6 +405,74 @@ addonTable.recipes.reagents = {
     },
 
 
+    -- Bars
+
+    copperBar = {
+        name = "Copper Bar",
+        id = "2840"
+    },
+
+    silverBar = {
+        name = "Silver Bar",
+        id = "2842"
+    },
+
+    bronzeBar = {
+        name = "Bronze Bar",
+        id = "2841"
+    },
+
+    ironBar = {
+        name = "Iron Bar",
+        id = "3575"
+    },
+
+    goldBar = {
+        name = "Gold Bar",
+        id = "3577"
+    },
+
+    steelBar = {
+        name = "Steel Bar",
+        id = "3859"
+    },
+
+    mithrilBar = {
+        name = "Mithril Bar",
+        id = "3860"
+    },
+
+    thoriumBar = {
+        name = "Thorium Bar",
+        id = "12359"
+    },
+
+    felIronBar = {
+        name = "Fel Iron Bar",
+        id = "23445"
+    },
+
+    adamantiteBar = {
+        name = "Adamantite Bar",
+        id = "23446"
+    },
+
+    felsteelBar = {
+        name = "Felsteel Bar",
+        id = "23448"
+    },
+
+    cobaltBar = {
+        name = "Cobalt Bar",
+        id = "36916"
+    },
+
+    saroniteBar = {
+        name = "Saronite Bar",
+        id = "36913"
+    },
+
+
     -- Elementals
 
     primalMight = {
@@ -397,12 +485,85 @@ addonTable.recipes.reagents = {
         id = "37705"
     },
 
+    crystallizedEarth = {
+        name = "Crystallized Earth",
+        id = "37701"
+    },
+
+    moteOfFire = {
+        name = "Mote of Fire",
+        id = "22574"
+    },
+
+    moteOfEarth = {
+        name = "Mote of Earth",
+        id = "22573"
+    },
+
+    eternalShadow = {
+        name = "Eternal Shadow",
+        id = "35627"
+    },
+
 
     -- Stones
+
+    roughStone = {
+        name = "Rough Stone",
+        id = "2835"
+    },
+
+    coarseStone = {
+        name = "Coarse Stone",
+        id = "2836"
+    },
+
+    heavyStone = {
+        name = "Heavy Stone",
+        id = "2838"
+    },
 
     solidStone = {
         name = "Solid Stone",
         id = "7912"
+    },
+
+    denseStone = {
+        name = "Dense Stone",
+        id = "12365"
+    },
+
+
+    -- Powders
+
+    roughBlastingPowder = {
+        name = "Rough Blasting Powder",
+        id = "4357"
+    },
+
+    coarseBlastingPowder = {
+        name = "Coarse Blasting Powder",
+        id = "4364"
+    },
+
+    heavyBlastingPowder = {
+        name = "Heavy Blasting Powder",
+        id = "4377"
+    },
+
+    solidBlastingPowder = {
+        name = "Solid Blasting Powder",
+        id = "10505"
+    },
+
+    denseBlastingPowder = {
+        name = "Dense Blasting Powder",
+        id = "15992"
+    },
+
+    elementalBlastingPowder = {
+        name = "Elemental Blasting Powder",
+        id = "23781"
     },
 
 
@@ -447,6 +608,127 @@ addonTable.recipes.reagents = {
     imbuedVial = {
         name = "Imbued Vial",
         id = "18256"
+    },
+
+
+    -- Parts
+
+    copperTube = {
+        name = "Copper Tube",
+        id = "4361"
+    },
+
+    bronzeTube = {
+        name = "Bronze Tube",
+        id = "4371"
+    },
+
+    froststeelTube = {
+        name = "Froststeel Tube",
+        id = "39683"
+    },
+
+    silverContact = {
+        name = "Silver Contact",
+        id = "4404"
+    },
+
+    copperModulator = {
+        name = "Copper Modulator",
+        id = "4363"
+    },
+
+    handfulOfCopperBolts = {
+        name = "Handful of Copper Bolts",
+        id = "4359"
+    },
+
+    whirringBronzeGizmo = {
+        name = "Whirring Bronze Gizmo",
+        id = "4375"
+    },
+
+    bronzeFramework = {
+        name = "Bronze Framework",
+        id = "4382"
+    },
+
+    ironStrut = {
+        name = "Iron Strut",
+        id = "4387"
+    },
+
+    goldPowerCore = {
+        name = "Gold Power Core",
+        id = "10558"
+    },
+
+    mithrilTube = {
+        name = "Mithril Tube",
+        id = "10559"
+    },
+
+    unstableTrigger = {
+        name = "Unstable Trigger",
+        id = "10560"
+    },
+
+    mithrilCasing = {
+        name = "Mithril Casing",
+        id = "10561"
+    },
+
+    thoriumWidget = {
+        name = "Thorium Widget",
+        id = "15994"
+    },
+
+    thoriumTube = {
+        name = "Thorium Tube",
+        id = "16000"
+    },
+
+    handfulOfFelIronBolts = {
+        name = "Handful of Fel Iron Bolts",
+        id = "23783"
+    },
+
+    felIronCasing = {
+        name = "Fel Iron Casing",
+        id = "23782"
+    },
+
+    handfulOfCobaltBolts = {
+        name = "Handful of Cobalt Bolts",
+        id = "39681"
+    },
+
+    volatileBlastingTrigger = {
+        name = "Volatile Blasting Trigger",
+        id = "39690"
+    },
+
+    overchargedCapacitor = {
+        name = "Overcharged Capacitor",
+        id = "39682"
+    },
+
+
+    -- Tools
+
+    skinningKnife = {
+        name = "Skinning Knife",
+        id = "7005"
+    },
+
+    miningPick = {
+        name = "Mining Pick",
+        id = "2901"
+    },
+
+    blacksmithHammer = {
+        name = "Blacksmith Hammer",
+        id = "5956"
     }
 
 }
