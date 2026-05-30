@@ -14,18 +14,10 @@ local textures = {};
 -- variables for check if the recipe you should craft has changed
 -- local previousShouldCraft = {"unknown"}; -- what was the last value of shouldCraft?
 local previousShouldCraft = {
-  spellName = "unknown",
   spellId = "noSpellId",
-  producedItemId = "noItemId",
-  turnsGreyAtSkillLevel = 4,
-  turnsYellowAtSkillLevel = 3,
-  turnsGreenAtSkillLevel = 2,
-  reagents = {
-    {
-      name = "unknown",
-      amount = 0
-    }
-  }
+  -- turnsGreyAtSkillLevel = 4,
+  -- turnsYellowAtSkillLevel = 3,
+  -- turnsGreenAtSkillLevel = 2,
 }; -- what was the last value of shouldCraft?
 
 
@@ -48,36 +40,26 @@ local previousShouldCraft = {
 
 function GetCraftingToDo()
 
-    if tradeSkillName == "Enchanting" then
-        shouldCraft = addonTable.getEnchantingCurrentSkillLevelRecipeToCraft(rank);
+    local recipes =
+    addonTable.getRecipesForSkill(
+        tradeSkillName,
+        rank
+    )
 
-    elseif tradeSkillName == "Tailoring" then
-        shouldCraft = addonTable.getTailoringCurrentSkillLevelRecipeToCraft(rank);
+shouldCraft = {}
 
-    elseif tradeSkillName == "Jewelcrafting" then
-        shouldCraft = addonTable.getJewelcraftingCurrentSkillLevelRecipeToCraft(rank);
+for i = 1, #recipes do
+--     print('current spellId: ' .. recipes[i].spellId);
+    local recipe =
+    addonTable.getTradeSkillDataBySpellId(
+        recipes[i].spellId
+    )
 
-    elseif tradeSkillName == "Blacksmithing" then
-        shouldCraft = addonTable.getBlacksmithingCurrentSkillLevelRecipeToCraft(rank);
+    recipe.producedAmount =
+        recipes[i].producedAmount
 
-    elseif tradeSkillName == "Leatherworking" then
-        shouldCraft = addonTable.getLeatherworkingCurrentSkillLevelRecipeToCraft(rank);
-
-    elseif tradeSkillName == "Engineering" then
-        shouldCraft = addonTable.getEngineeringCurrentSkillLevelRecipeToCraft(rank);
-
-    elseif tradeSkillName == "Inscription" then
-        shouldCraft = addonTable.getInscriptionCurrentSkillLevelRecipeToCraft(rank);
-
-    elseif tradeSkillName == "Alchemy" then
-        shouldCraft = addonTable.getAlchemyCurrentSkillLevelRecipeToCraft(rank);
-
-    elseif tradeSkillName == "First Aid" then
-        shouldCraft = addonTable.getFirstAidCurrentSkillLevelRecipeToCraft(rank);
-
-    elseif tradeSkillName == "Cooking" then
-        shouldCraft = addonTable.getCookingCurrentSkillLevelRecipeToCraft(rank);
-    end
+    table.insert(shouldCraft, recipe)
+end
 
 
     -- Check if cap level was already reached
@@ -150,6 +132,12 @@ function fnOnEvent()
             tradeSkillName, rank, maxLevel = GetTradeSkillLine(); -- get profession name, current level and max level, respectively
             -- print(tradeSkillName .. '(' .. rank .. '-' .. maxLevel .. ')'); -- for debugging
 
+            --  TODO GetSkillLineInfo()
+
+
+            -- test
+            -- name, rank, icon, powerCost, isFunnel, powerType, castingTime, minRange, maxRange = GetSpellInfo(18239)
+            -- print('{name: ' .. name .. ', rank: ' .. rank .. '}');
             GetCraftingToDo();
 
             MainFrameCore:Show()
@@ -174,14 +162,18 @@ function displayRecipe()
     local skillUpChance;
     local shouldCraftRecipe = '';
 
-    -- print('shouldCraft: ' .. table.concat(shouldCraft));
-    -- print('previousShouldCraft: ' .. table.concat(previousShouldCraft));
-    --
-    -- print('recipe changed:');
-    -- print(hasRecipeChanged); --debugging
-    --
-    -- -- prevent skill level changes from having nil values due to index out of bound
-    -- print('craftRecipeOptionsIndex(BEFORE): ' .. craftRecipeOptionsIndex); --debugging
+    local currentRecipe = shouldCraft[craftRecipeOptionsIndex];
+
+    for i, frame in ipairs(frames) do
+
+        frame:Hide()
+
+        frame.reagentId = nil
+
+        if textures[i] then
+            textures[i]:SetTexture(nil)
+        end
+    end
 
     -- show buttons in case it was hidden due to 'skill level already 450'
     MainFrameCoreNextRecipe:Show();
@@ -206,60 +198,87 @@ function displayRecipe()
         MainFrameCoreNextRecipe:Enable();
     end
 
+    -- local recipeData = addonTable.getTradeSkillDataBySpellId(
+    --     shouldCraft[craftRecipeOptionsIndex].spellId
+    -- );
 
-    for i = 1, GetNumTradeSkills() do
-        skillName, skillType, numAvailable, isExpanded, serviceType = GetTradeSkillInfo(i);
+    for i = 1, #currentRecipe.reagents do
+--         print('[' .. currentRecipe.reagents[i].id .. '] ' .. currentRecipe.reagents[i].amount .. 'x' .. currentRecipe.reagents[i].name);
+    end
 
-        if skillName == shouldCraft[craftRecipeOptionsIndex].spellName then
-            craftButtonText = 'Craft (' .. numAvailable .. ')';
-            enableBtnCraft = true;
 
-            -- Replacements for generic icons
-            if GetTradeSkillIcon(i) == "Interface\\Icons\\Trade_Engraving" then
-                shouldCraftIcon = "Interface\\Icons\\Spell_Holy_GreaterHeal";
-            else
-                shouldCraftIcon = GetTradeSkillIcon(i);
-            end
-            -- Test
-            -- GameTooltip:SetOwner(MainFrameCore)
-            -- GameTooltip:SetHyperlink(GetTradeSkillItemLink(i))
-            -- GameTooltip:SetHyperlink(GetSpellLink(3942))
+    local currentRecipe = shouldCraft[craftRecipeOptionsIndex]
 
-            if shouldCraft[craftRecipeOptionsIndex].producedAmount then
-                txtProducedAmount:SetText(shouldCraft[craftRecipeOptionsIndex].producedAmount);
-            end
+local skillName,
+      skillType,
+      numAvailable,
+      isExpanded,
+      serviceType =
+    GetTradeSkillInfo(currentRecipe.tradeSkillIndex)
 
-            skillUpChance = ((shouldCraft[craftRecipeOptionsIndex].turnsGreyAtSkillLevel - rank) / (shouldCraft[craftRecipeOptionsIndex].turnsGreyAtSkillLevel - shouldCraft[craftRecipeOptionsIndex].turnsYellowAtSkillLevel) * 100);
-            if skillUpChance > 100 then skillUpChance = 100 end
+-- print('skillType: ' .. tostring(skillType))
 
-            txtSkillUpChance:SetText('Skill Up: ' .. string.format('%.0f', skillUpChance) .. '%'); -- text that displays next recipe(s) you should craft
+craftButtonText = 'Craft (' .. tostring(numAvailable) .. ')'
+enableBtnCraft = true
 
-            if rank < shouldCraft[craftRecipeOptionsIndex].turnsYellowAtSkillLevel then
-              txtShouldCraft:SetTextColor(1, 0.5, 0.25, 1); -- Orange
-              txtSkillUpChance:SetTextColor(1, 0.5, 0.25, 1); -- Orange
-          elseif rank < shouldCraft[craftRecipeOptionsIndex].turnsGreenAtSkillLevel then
-              txtShouldCraft:SetTextColor(1, 1, 0, 1); -- Yellow
-              txtSkillUpChance:SetTextColor(1, 1, 0, 1); -- Yellow
-          elseif rank < shouldCraft[craftRecipeOptionsIndex].turnsGreyAtSkillLevel then
-              txtShouldCraft:SetTextColor(0.25, 0.75, 0.25, 1); -- Green
-              txtSkillUpChance:SetTextColor(0.25, 0.75, 0.25, 1); -- Green
-            else
-              txtShouldCraft:SetTextColor(0.5, 0.5, 0.5, 1); -- Grey
-            end
+-- Replacements for generic icons
+if currentRecipe.icon == "Interface\\Icons\\Trade_Engraving" then
+    shouldCraftIcon = "Interface\\Icons\\Spell_Holy_GreaterHeal"
+else
+    shouldCraftIcon = currentRecipe.icon
+end
 
-            break; -- exit 'for' loop if current skill index(on profession frame) matches the skill stored on 'shouldCraft' variable
-        else
-            shouldCraftIcon = "Interface\\InventoryItems\\WoWUnknownItem01"; -- red interrogation icon
-            craftButtonText = "Unavailable"; -- means that you have not learnt this recipe yet
-            enableBtnCraft = false;
-            txtSkillUpChance:SetText('');
-            txtShouldCraft:SetTextColor(1, 0.1, 0.1, 1);
-            for i = 1, #frames do
-                frames[i]:Hide();
-                textures[i] = nil;
-            end
-        end --if
-    end --for
+local producedAmount = currentRecipe.producedAmount;
+
+if type(producedAmount) == "table" then
+
+    txtProducedAmount:SetText(
+        producedAmount[1] ..
+        "-" ..
+        producedAmount[2]
+    )
+
+elseif producedAmount then
+
+    txtProducedAmount:SetText(
+        tostring(producedAmount)
+    )
+
+else
+
+    txtProducedAmount:SetText('')
+end
+
+if skillType == 'optimal' then
+    txtShouldCraft:SetTextColor(1, 0.5, 0.25, 1)
+    txtSkillUpChance:SetTextColor(1, 0.5, 0.25, 1)
+    skillUpChance = 100
+
+elseif skillType == 'medium' then
+    txtShouldCraft:SetTextColor(1, 1, 0, 1)
+    txtSkillUpChance:SetTextColor(1, 1, 0, 1)
+    skillUpChance = 75
+
+elseif skillType == 'easy' then
+    txtShouldCraft:SetTextColor(0.25, 0.75, 0.25, 1)
+    txtSkillUpChance:SetTextColor(0.25, 0.75, 0.25, 1)
+    skillUpChance = 25
+
+else
+    txtShouldCraft:SetTextColor(0.5, 0.5, 0.5, 1)
+    txtSkillUpChance:SetTextColor(0.5, 0.5, 0.5, 1)
+    skillUpChance = 0
+end
+
+if skillUpChance > 100 then
+    skillUpChance = 100
+end
+
+txtSkillUpChance:SetText(
+    'Skill Up: ' ..
+    string.format('%.0f', skillUpChance) ..
+    '%'
+)
 
 
     -- Disable "craft" button if you can't craft the item
@@ -273,32 +292,86 @@ function displayRecipe()
 
 
     -- Setup and display the frame and its elements
-    txtShouldCraft:SetText(shouldCraft[craftRecipeOptionsIndex].spellName); -- text that displays next recipe(s) you should craft
+    txtShouldCraft:SetText(currentRecipe.spellName); -- text that displays next recipe(s) you should craft
     -- txtShouldCraft:SetText(shouldCraft[craftRecipeOptionsIndex]); -- text that displays next recipe(s) you should craft
 
     -- set and show reagents icons and texts
-    for i = 1, #shouldCraft[craftRecipeOptionsIndex].reagents do
-        shouldCraftRecipe = shouldCraftRecipe .. shouldCraft[craftRecipeOptionsIndex].reagents[i].amount .. 'x ' .. shouldCraft[craftRecipeOptionsIndex].reagents[i].name .. '\n\n';
+    -- for i = 1, #shouldCraft[craftRecipeOptionsIndex].reagents do
+    for i = 1, #currentRecipe.reagents do
 
-        frames[i] = CreateFrame("Frame", "frameIndex" .. i, MainFrameCore);
-        frames[i]:SetWidth(16);
-        frames[i]:SetHeight(16);
-        frames[i]:ClearAllPoints();
-        frames[i]:SetPoint('TOP',MainFrameCoreTitle,'TOP', -82, (-175 - i*(16+7.6)));
-        frames[i]:Show();
-        frames[i]:EnableMouse();
-        frames[i]:SetScript("onEnter", function()
-            -- print('reagentessIndex')
-            local name, link, quality, iLevel, reqLevel, class, subclass, maxStack, equipSlot, texture, vendorPrice = GetItemInfo(shouldCraft[craftRecipeOptionsIndex].reagents[i].id);
-            GameTooltip:SetOwner(frames[i]);
-            GameTooltip:SetHyperlink(link);
-        end)
-        frames[i]:SetScript("onLeave", fnHideTooltip)
+    local reagent =
+        currentRecipe.reagents[i]
 
-        textures[i] = frames[i]:CreateTexture(nil, "ARTWORK")
+    local reagentId =
+        reagent.id
+
+    shouldCraftRecipe =
+        shouldCraftRecipe ..
+        reagent.amount ..
+        'x ' ..
+        reagent.name ..
+        '\n\n'
+
+    if not frames[i] then
+        frames[i] =
+            CreateFrame(
+                "Frame",
+                "frameIndex" .. i,
+                MainFrameCore
+            )
+
+        frames[i]:SetWidth(16)
+        frames[i]:SetHeight(16)
+        frames[i]:EnableMouse()
+    end
+
+    frames[i]:ClearAllPoints()
+
+    frames[i]:SetPoint(
+        'TOP',
+        MainFrameCoreTitle,
+        'TOP',
+        -82,
+        (-175 - i*(16+7.6))
+    )
+
+    frames[i]:Show()
+
+    frames[i].reagentId = reagentId
+
+    frames[i]:SetScript(
+        "OnEnter",
+        function(self)
+
+            local _, link =
+                GetItemInfo(self.reagentId)
+
+            if link then
+                GameTooltip:SetOwner(self)
+                GameTooltip:SetHyperlink(link)
+            end
+        end
+    )
+
+    frames[i]:SetScript(
+        "OnLeave",
+        fnHideTooltip
+    )
+
+    if not textures[i] then
+        textures[i] =
+            frames[i]:CreateTexture(
+                nil,
+                "ARTWORK"
+            )
+
         textures[i]:SetAllPoints()
-        textures[i]:SetTexture(GetItemIcon(shouldCraft[craftRecipeOptionsIndex].reagents[i].id));
-    end -- for
+    end
+
+    textures[i]:SetTexture(
+        GetItemIcon(reagentId)
+    )
+end -- for
 
     txtShouldCraftRecipe:SetText(shouldCraftRecipe); -- text that displays reagents for next recipe(s) you should craft
     -- txtShouldCraftRecipe:SetText("Recipe: " .. shouldCraftRecipe[craftRecipeOptionsIndex]); -- text that displays reagents for next recipe(s) you should craft
@@ -329,7 +402,7 @@ function displayRecipe()
     imgSkillIcon:SetTexture(shouldCraftIcon); ---- skill texture icon above button
     MainFrameCoreCraft:SetText(craftButtonText) -- 'craft' button
     MainFrameCore:SetHeight(205); ---------------- set frame height
-    MainFrameCore:SetHeight(MainFrameCore:GetHeight() + (#shouldCraft[craftRecipeOptionsIndex].reagents * 23.6) + 10); ---------------- set frame height
+    MainFrameCore:SetHeight(MainFrameCore:GetHeight() + (#currentRecipe.reagents * 23.6) + 10); ---------------- set frame height
     MainFrameCoreCraft:Show(); ------------------- show the frame itself(turn it visible)
 
     previousShouldCraft = shouldCraft;
@@ -355,13 +428,33 @@ end
 
 
 function craftRecipe()
-    for i = 1, GetNumTradeSkills() do
-        local skillName, skillType, numAvailable, isExpanded, serviceType = GetTradeSkillInfo(i);
-        if skillName == shouldCraft[craftRecipeOptionsIndex].spellName then
-            print("|cff" .. addonTable.chat_frame_default_color .."[Profession Capper] crafting|r |cff" .. addonTable.chat_frame_player_name_color .. numAvailable .."x |r|cff" .. addonTable.chat_frame_default_color .. shouldCraft[craftRecipeOptionsIndex].spellName .. "|r")
-            DoTradeSkill(i, numAvailable);
-        end
-    end
+
+    local currentRecipe =
+        shouldCraft[craftRecipeOptionsIndex]
+
+    local skillName,
+          skillType,
+          numAvailable =
+        GetTradeSkillInfo(
+            currentRecipe.tradeSkillIndex
+        )
+
+    print(
+        "|cff" ..
+        addonTable.chat_frame_default_color ..
+        "[Profession Capper] crafting|r |cff" ..
+        addonTable.chat_frame_player_name_color ..
+        numAvailable ..
+        "x |r|cff" ..
+        addonTable.chat_frame_default_color ..
+        currentRecipe.spellName ..
+        "|r"
+    )
+
+    DoTradeSkill(
+        currentRecipe.tradeSkillIndex,
+        numAvailable
+    )
 end
 
 
@@ -377,8 +470,11 @@ function resetValues()
     MainFrameCoreCraft:SetText('Craft');
     txtProducedAmount:SetText('');
     for i = 1, #frames do
-        frames[i]:Hide();
-        textures[i] = nil;
+        frames[i]:Hide()
+
+        if textures[i] then
+            textures[i]:SetTexture(nil)
+        end
     end
 end
 
@@ -400,19 +496,163 @@ end
 
 
 function fnShowTooltip()
-    local link, tradeLink, name, link, quality, iLevel, reqLevel, class, subclass, maxStack, equipSlot, texture, vendorPrice;
-    if shouldCraft[craftRecipeOptionsIndex].producedItemId == 'isSpell' then
-        link, tradeLink = GetSpellLink(shouldCraft[craftRecipeOptionsIndex].spellId);
-    else
-        name, link, quality, iLevel, reqLevel, class, subclass, maxStack, equipSlot, texture, vendorPrice = GetItemInfo(shouldCraft[craftRecipeOptionsIndex].producedItemId);
+
+    local currentRecipe =
+        shouldCraft[craftRecipeOptionsIndex]
+
+    if not currentRecipe then
+        return
     end
 
-    -- GameTooltip:SetOwner(MainFrameCore);
-    GameTooltip:SetOwner(frameImgSkillIconMouseHandler);
-    GameTooltip:SetHyperlink(link);
-    -- GameTooltip:SetHyperlink(GetSpellLink(shouldCraft[craftRecipeOptionsIndex].spellId));
+    GameTooltip:SetOwner(
+        frameImgSkillIconMouseHandler
+    )
+
+    if currentRecipe.producedItemId
+    and currentRecipe.producedItemId ~= 'isSpell' then
+
+        local _, link =
+            GetItemInfo(
+                currentRecipe.producedItemId
+            )
+
+        if link then
+            GameTooltip:SetHyperlink(link)
+        end
+
+    else
+
+        local link =
+            GetSpellLink(
+                currentRecipe.spellId
+            )
+
+        if link then
+            GameTooltip:SetHyperlink(link)
+        end
+    end
 end
 
 function fnHideTooltip()
     GameTooltip:Hide();
+end
+
+-- refactoring
+addonTable.getRecipesForSkill = function(professionName, rank)
+
+    local professionData = addonTable.professions[
+            string.lower(professionName)
+        ]
+
+    if not professionData then
+        return nil
+    end
+
+    for i = 1, #professionData do
+
+        local range = professionData[i]
+
+        if rank >= range.min
+        and rank <= range.max then
+
+            return range.recipes
+        end
+    end
+
+    return nil
+end
+
+
+
+addonTable.getTradeSkillDataBySpellId =
+    function(spellId)
+
+    for i = 1, GetNumTradeSkills() do
+
+        local skillName, skillType =
+            GetTradeSkillInfo(i)
+
+        local link =
+            GetTradeSkillRecipeLink(i)
+
+        if link then
+
+            local currentSpellId =
+                string.match(link, ":(%d+)")
+
+            currentSpellId =
+                tonumber(currentSpellId)
+
+            if currentSpellId == spellId then
+
+                local recipeData = {}
+
+                recipeData.tradeSkillIndex = i
+
+                recipeData.spellId = spellId
+
+                recipeData.spellName = skillName
+
+                recipeData.icon = GetTradeSkillIcon(i)
+
+                local itemLink = GetTradeSkillItemLink(i)
+
+                if itemLink then
+                    recipeData.producedItemId =
+                        tonumber(
+                            string.match(
+                                itemLink,
+                                "item:(%d+)"
+                            )
+                        )
+                else
+                    recipeData.producedItemId = 'isSpell'
+                end
+
+                recipeData.reagents = {}
+
+                local numReagents =
+                    GetTradeSkillNumReagents(i)
+
+                for reagentIndex = 1, numReagents do
+
+                    local reagentName,
+                          reagentTexture,
+                          reagentAmount,
+                          playerHas =
+                        GetTradeSkillReagentInfo(
+                            i,
+                            reagentIndex
+                        )
+
+                    local reagentLink =
+                        GetTradeSkillReagentItemLink(
+                            i,
+                            reagentIndex
+                        )
+
+                    local reagentId =
+                        tonumber(
+                            string.match(
+                                reagentLink or "",
+                                "item:(%d+)"
+                            )
+                        )
+
+                    table.insert(
+                        recipeData.reagents,
+                        {
+                            id = reagentId,
+                            name = reagentName,
+                            amount = reagentAmount
+                        }
+                    )
+                end
+
+                return recipeData
+            end
+        end
+    end
+
+    return nil
 end

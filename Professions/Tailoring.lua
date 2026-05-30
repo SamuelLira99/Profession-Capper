@@ -1,100 +1,346 @@
-addonName, addonTable = ...;
+local addonName, addonTable = ...;
+
+if not addonTable.recipes or not addonTable.recipes.tailoring then
+    print("|cff" .. addonTable.chat_frame_error_color .. '[Profession Capper] Error loading Tailoring module|r');
+    return
+end
 
 local tailoringRecipes = addonTable.recipes.tailoring;
 
-local shouldCraft;
+addonTable.professions = addonTable.professions or {};
 
-addonTable.getTailoringCurrentSkillLevelRecipeToCraft = function(rank)
-    if rank > 0 and rank < 45 then -- 1-44
-        shouldCraft = {tailoringRecipes.boltOfLinenCloth};
-    elseif rank > 44 and rank < 50 then -- 45-49
-        shouldCraft = {tailoringRecipes.linenBelt};
-    elseif rank > 49 and rank < 70 then -- 45-69
-        shouldCraft = {tailoringRecipes.heavyLinenGloves};
-    elseif rank > 69 and rank < 75 then -- 70-74
-        shouldCraft = {tailoringRecipes.reinforcedLinenCape};
-    elseif rank > 74 and rank < 100 then -- 75-99
-        shouldCraft = {tailoringRecipes.boltOfWoolenCloth};
-    elseif rank > 99 and rank < 105 then -- 100-104
-          shouldCraft = {
+addonTable.professions.tailoring = {
+
+    {
+        min = 1,
+        max = 44,
+
+        recipes = {
+            tailoringRecipes.boltOfLinenCloth
+        }
+    },
+
+    {
+        min = 45,
+        max = 49,
+    
+        recipes = {
+            tailoringRecipes.linenBelt
+        }
+    },
+    
+    {
+        min = 50,
+        max = 69,
+    
+        recipes = {
+            tailoringRecipes.heavyLinenGloves
+        }
+    },
+    
+    {
+        min = 70,
+        max = 74,
+    
+        recipes = {
+            tailoringRecipes.reinforcedLinenCape
+        }
+    },
+
+    {
+        min = 75,
+        max = 99,
+
+        recipes = {
+            tailoringRecipes.boltOfWoolenCloth
+        }
+    },
+
+    {
+        min = 100,
+        max = 104,
+
+        recipes = {
             tailoringRecipes.simpleKilt,
             tailoringRecipes.woolenBag
-          };
-    elseif rank > 104 and rank < 110 then -- 105-109
-        shouldCraft = {tailoringRecipes.simpleKilt};
-    elseif rank > 109 and rank < 125 then -- 110-124
-        shouldCraft = {tailoringRecipes.doubleStitchedWoolenShoulders};
-    elseif rank > 124 and rank < 145 then -- 125-144
-        shouldCraft = {tailoringRecipes.boltOfSilkCloth};
-    elseif rank > 144 and rank < 160 then -- 145-159
-        shouldCraft = {
-          tailoringRecipes.azureSilkHood,
-          tailoringRecipes.doubleStitchedWoolenShoulders
-        };
-    elseif rank > 159 and rank < 170 then -- 160-169
-        shouldCraft = {tailoringRecipes.silkHeadband};
-    elseif rank > 169 and rank < 175 then -- 170-174
-        shouldCraft = {tailoringRecipes.formalWhiteShirt};
-    elseif rank > 174 and rank < 185 then -- 715-184
-        shouldCraft = {tailoringRecipes.boltOfMageweave};
-    elseif rank > 184 and rank < 205 then -- 185-204
-        shouldCraft = {tailoringRecipes.crimsonSilkVest};
-    elseif rank > 204 and rank < 215 then -- 205-214
-        shouldCraft = {tailoringRecipes.crimsonSilkPantaloons}
-    elseif rank > 214 and rank < 220 then -- 215-219
-        shouldCraft = {
-          tailoringRecipes.blackMageweaveLeggings,
-          tailoringRecipes.blackMageweaveVest,
-          tailoringRecipes.crimsonSilkPantaloons
-        };
-    elseif rank > 219 and rank < 230 then -- 220-229
-        shouldCraft = {tailoringRecipes.blackMageweaveGloves};
-    elseif rank > 229 and rank < 250 then -- 230-249
-        shouldCraft = {
+        }
+    },
+
+    {
+        min = 105,
+        max = 109,
+
+        recipes = {
+            tailoringRecipes.simpleKilt
+        }
+    },
+
+    {
+        min = 110,
+        max = 124,
+
+        recipes = {
+            tailoringRecipes.doubleStitchedWoolenShoulders
+        }
+    },
+
+    {
+        min = 125,
+        max = 144,
+
+        recipes = {
+            tailoringRecipes.boltOfSilkCloth
+        }
+    },
+
+    {
+        min = 145,
+        max = 159,
+
+        recipes = {
+            tailoringRecipes.azureSilkHood,
+            tailoringRecipes.doubleStitchedWoolenShoulders
+        }
+    },
+
+    {
+        min = 160,
+        max = 169,
+
+        recipes = {
+            tailoringRecipes.silkHeadband
+        }
+    },
+
+    {
+        min = 170,
+        max = 174,
+
+        recipes = {
+            tailoringRecipes.formalWhiteShirt
+        }
+    },
+
+    {
+        min = 175,
+        max = 184,
+
+        recipes = {
+            tailoringRecipes.boltOfMageweave
+        }
+    },
+
+    {
+        min = 185,
+        max = 204,
+
+        recipes = {
+            tailoringRecipes.crimsonSilkVest
+        }
+    },
+
+    {
+        min = 205,
+        max = 214,
+
+        recipes = {
+            tailoringRecipes.crimsonSilkPantaloons
+        }
+    },
+
+    {
+        min = 215,
+        max = 219,
+
+        recipes = {
+            tailoringRecipes.blackMageweaveLeggings,
+            tailoringRecipes.blackMageweaveVest,
+            tailoringRecipes.crimsonSilkPantaloons
+        }
+    },
+
+    {
+        min = 220,
+        max = 229,
+
+        recipes = {
+            tailoringRecipes.blackMageweaveGloves
+        }
+    },
+
+    {
+        min = 230,
+        max = 249,
+
+        recipes = {
             tailoringRecipes.blackMageweaveHeadband,
             tailoringRecipes.blackMageweaveShoulders
-        };
-    elseif rank > 249 and rank < 260 then -- 250-259
-        shouldCraft = {tailoringRecipes.boltOfRunecloth};
-    elseif rank > 259 and rank < 280 then -- 260-279
-        shouldCraft = {tailoringRecipes.runeclothBelt};
-    elseif rank > 279 and rank < 295 then -- 280-294
-        shouldCraft = {tailoringRecipes.runeclothGloves};
-    elseif rank > 294 and rank < 300 then -- 295-299
-        shouldCraft = {tailoringRecipes.runeclothHeadband};
-    elseif rank > 299 and rank < 325 then -- 300-324
-        shouldCraft = {tailoringRecipes.boltOfNetherweave};
-    elseif rank > 324 and rank < 335 then -- 325-334
-        shouldCraft = {tailoringRecipes.boltOfImbuedNetherweave};
-    elseif rank > 334 and rank < 345 then -- 335-344
-        shouldCraft = {tailoringRecipes.netherweaveBoots};
-    elseif rank > 344 and rank < 350 then -- 345-349
-        shouldCraft = {tailoringRecipes.netherweaveTunic};
-    elseif rank > 349 and rank < 375 then -- 350-374
-        shouldCraft = {tailoringRecipes.boltOfFrostweave};
-    elseif rank > 374 and rank < 380 then -- 375-379
-        shouldCraft = {tailoringRecipes.frostwovenBelt};
-    elseif rank > 379 and rank < 385 then -- 380-384
-        shouldCraft = {tailoringRecipes.frostwovenBoots};
-    elseif rank > 384 and rank < 395 then -- 385-394
-        shouldCraft = {tailoringRecipes.frostwovenCowl};
-    elseif rank > 394 and rank < 400 then -- 395-399
-        shouldCraft = {tailoringRecipes.duskweaveBelt};
-    elseif rank > 399 and rank < 405 then -- 400-404
-        shouldCraft = {boltOfImbuedFrostweave};
-    elseif rank > 404 and rank < 410 then -- 405-409
-        shouldCraft = {tailoringRecipes.duskweaveWristwraps};
-    elseif rank > 409 and rank < 415 then -- 410-414
-        shouldCraft = {tailoringRecipes.duskweaveGloves};
-    elseif rank > 414 and rank < 425 then -- 415-424
-        shouldCraft = {
-          tailoringRecipes.duskweaveBoots,
-          tailoringRecipes.duskweaveShoulders
-        };
-    elseif rank > 424 and rank < 450 then -- 425-449
-        shouldCraft = {tailoringRecipes.frostweaveBag};
-    end
-    return shouldCraft;
-end
+        }
+    },
+
+    {
+        min = 250,
+        max = 259,
+
+        recipes = {
+            tailoringRecipes.boltOfRunecloth
+        }
+    },
+
+    {
+        min = 260,
+        max = 279,
+
+        recipes = {
+            tailoringRecipes.runeclothBelt
+        }
+    },
+
+    {
+        min = 280,
+        max = 294,
+
+        recipes = {
+            tailoringRecipes.runeclothGloves
+        }
+    },
+
+    {
+        min = 295,
+        max = 299,
+
+        recipes = {
+            tailoringRecipes.runeclothHeadband
+        }
+    },
+
+    {
+        min = 300,
+        max = 324,
+
+        recipes = {
+            tailoringRecipes.boltOfNetherweave
+        }
+    },
+
+    {
+        min = 325,
+        max = 334,
+
+        recipes = {
+            tailoringRecipes.boltOfImbuedNetherweave
+        }
+    },
+
+    {
+        min = 335,
+        max = 344,
+
+        recipes = {
+            tailoringRecipes.netherweaveBoots
+        }
+    },
+
+    {
+        min = 345,
+        max = 349,
+
+        recipes = {
+            tailoringRecipes.netherweaveTunic
+        }
+    },
+    
+    {
+        min = 350,
+        max = 374,
+    
+        recipes = {
+            tailoringRecipes.boltOfFrostweave
+        }
+    },
+    
+    {
+        min = 375,
+        max = 379,
+    
+        recipes = {
+            tailoringRecipes.frostwovenBelt
+        }
+    },
+    
+    {
+        min = 380,
+        max = 384,
+    
+        recipes = {
+            tailoringRecipes.frostwovenBoots
+        }
+    },
+    
+    {
+        min = 385,
+        max = 394,
+    
+        recipes = {
+            tailoringRecipes.frostwovenCowl
+        }
+    },
+    
+    {
+        min = 395,
+        max = 399,
+    
+        recipes = {
+            tailoringRecipes.duskweaveBelt
+        }
+    },
+    
+    {
+        min = 400,
+        max = 404,
+    
+        recipes = {
+            tailoringRecipes.boltOfImbuedFrostweave
+        }
+    },
+
+    {
+        min = 405,
+        max = 409,
+
+        recipes = {
+            tailoringRecipes.duskweaveWristwraps
+        }
+    },
+
+    {
+        min = 410,
+        max = 414,
+
+        recipes = {
+            tailoringRecipes.duskweaveGloves
+        }
+    },
+
+    {
+        min = 415,
+        max = 424,
+
+        recipes = {
+            tailoringRecipes.duskweaveBoots,
+            tailoringRecipes.duskweaveShoulders
+        }
+    },
+
+    {
+        min = 425,
+        max = 449,
+
+        recipes = {
+            tailoringRecipes.frostweaveBag
+        }
+    }
+
+}
 
 print("|cff" .. addonTable.chat_frame_default_color .. '[Profession Capper] loaded Tailoring module|r');

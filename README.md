@@ -16,21 +16,21 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 
 ### Primary Trade Skills
 
-`Enchanting` - Fully supported
+`Enchanting` - Fully supported (id-based port pending)
 
 `Tailoring` - Fully supported
 
-`Blacksmithing` - Fully supported (revision pending) (Port pending)
+`Blacksmithing` - Fully supported (revision pending) (Port pending) (id-based port pending)
 
-`Alchemy` - Fully supported (Port pending)
+`Alchemy` - Fully supported (Port pending) (id-based port pending)
 
-`Engineering` - Fully supported
+`Engineering` - Fully supported (id-based port pending)
 
-`Jewelcrafting` - Fully supported (Port pending)
+`Jewelcrafting` - Fully supported (Port pending) (id-based port pending)
 
-`Leatherworking` - Fully supported (revision pending) (Port pending)
+`Leatherworking` - Fully supported (revision pending) (Port pending) (id-based port pending)
 
-`Inscription` - Fully supported (revision pending) (Port pending)
+`Inscription` - Fully supported (revision pending) (Port pending) (id-based port pending)
 
 ### Gathering Skills
 `Herbalism` - Not supported (probably won't be)
@@ -40,9 +40,9 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 `Skinning` - Not supported (probably won't be)
 
 ### Secondary Professions
-`Cooking` - Fully supported (Port pending)
+`Cooking` - Fully supported (Port pending) (id-based port pending)
 
-`First Aid` - Fully supported
+`First Aid` - Fully supported (id-based port pending)
 
 `Fishing` - Not supported (probably won't be)
 
