@@ -1,80 +1,192 @@
-addonName, addonTable = ...;
+local addonName, addonTable = ...;
+
+if not addonTable.recipes or not addonTable.recipes.firstAid then
+    print("|cff" .. addonTable.chat_frame_error_color .. '[Profession Capper] Error loading First Aid module|r');
+    return
+end
 
 local firstAidRecipes = addonTable.recipes.firstAid;
 
-local shouldCraft;
+addonTable.professions = addonTable.professions or {};
 
-addonTable.getFirstAidCurrentSkillLevelRecipeToCraft = function(rank)
-    if rank > 0 and rank < 40 then --1 -39
-        shouldCraft = {firstAidRecipes.linenBandage};
-    elseif rank > 39 and rank < 80 then -- 40-79
-        shouldCraft = {firstAidRecipes.heavyLinenBandage};
-    elseif rank > 79 and rank < 100 then -- 80-99
-        shouldCraft = {
+addonTable.professions.firstaid = {
+
+    {
+        min = 1,
+        max = 39,
+
+        recipes = {
+            firstAidRecipes.linenBandage
+        }
+    },
+
+    {
+        min = 40,
+        max = 79,
+
+        recipes = {
+            firstAidRecipes.heavyLinenBandage
+        }
+    },
+
+    {
+        min = 80,
+        max = 99,
+
+        recipes = {
             firstAidRecipes.woolBandage,
             firstAidRecipes.heavyLinenBandage,
             firstAidRecipes.antiVenom
-        };
-    elseif rank > 99 and rank < 115 then -- 100-114
-        shouldCraft = {
+
+        }
+    },
+
+    {
+        min = 100,
+        max = 114,
+
+        recipes = {
             firstAidRecipes.woolBandage,
             firstAidRecipes.antiVenom
-        };
-    elseif rank > 114 and rank < 130 then -- 115-129
-        shouldCraft = {firstAidRecipes.heavyWoolBandage};
-    elseif rank > 129 and rank < 150 then -- 130-149
-        shouldCraft = {
+
+        }
+    },
+
+    {
+        min = 115,
+        max = 129,
+
+        recipes = {
+            firstAidRecipes.heavyWoolBandage
+        }
+    },
+
+    {
+        min = 130,
+        max = 149,
+
+        recipes = {
             firstAidRecipes.heavyWoolBandage,
             firstAidRecipes.strongAntiVenom
-        };
-    elseif rank > 149 and rank < 180 then -- 150-179
-        shouldCraft = {
+
+        }
+    },
+
+    {
+        min = 150,
+        max = 179,
+
+        recipes = {
             firstAidRecipes.silkBandage,
             firstAidRecipes.heavyWoolBandage,
             firstAidRecipes.strongAntiVenom
-        };
-    elseif rank > 179 and rank < 210 then -- 180-209
-        shouldCraft = {firstAidRecipes.heavySilkBandage};
-    elseif rank > 209 and rank < 240 then -- 210-239
-        shouldCraft = {
+
+        }
+    },
+
+    {
+        min = 180,
+        max = 209,
+
+        recipes = {
+            firstAidRecipes.heavySilkBandage
+        }
+    },
+
+    {
+        min = 210,
+        max = 239,
+
+        recipes = {
             firstAidRecipes.mageweaveBandage,
             firstAidRecipes.heavySilkBandage
-        };
-    elseif rank > 239 and rank < 260 then -- 240-259
-        shouldCraft = {firstAidRecipes.heavyMageweaveBandage};
-    elseif rank > 259 and rank < 290 then -- 260-289
-        shouldCraft = {
+
+        }
+    },
+
+    {
+        min = 240,
+        max = 259,
+
+        recipes = {
+            firstAidRecipes.heavyMageweaveBandage
+        }
+    },
+
+    {
+        min = 260,
+        max = 289,
+
+        recipes = {
             firstAidRecipes.runeclothBandage,
             firstAidRecipes.heavyMageweaveBandage
-        };
-    elseif rank > 289 and rank < 300 then -- 290-299
-        shouldCraft = {
+
+        }
+    },
+
+    {
+        min = 290,
+        max = 299,
+
+        recipes = {
             firstAidRecipes.heavyRuneclothBandage,
             firstAidRecipes.heavyMageweaveBandage
-        };
-    elseif rank > 299 and rank < 330 then -- 300-329
-        shouldCraft = {
+
+        }
+    },
+
+    {
+        min = 300,
+        max = 329,
+
+        recipes = {
             firstAidRecipes.netherweaveBandage,
             firstAidRecipes.heavyRuneclothBandage,
             firstAidRecipes.powerfulAntiVenom
-        };
-    elseif rank > 329 and rank < 350 then -- 330-349
-        shouldCraft = {
+
+        }
+    },
+
+    {
+        min = 330,
+        max = 349,
+
+        recipes = {
             firstAidRecipes.heavyNetherweaveBandage,
             firstAidRecipes.heavyRuneclothBandage,
             firstAidRecipes.powerfulAntiVenom
-        };
-    elseif rank > 349 and rank < 375 then -- 350-374
-        shouldCraft = {
+
+        }
+    },
+
+    {
+        min = 350,
+        max = 374,
+
+        recipes = {
             firstAidRecipes.frostweaveBandage,
             firstAidRecipes.heavyNetherweaveBandage
-        };
-    elseif rank > 374 and rank < 400 then -- 375-399
-        shouldCraft = {firstAidRecipes.frostweaveBandage};
-    elseif rank > 399 and rank < 450 then -- 400-449
-        shouldCraft = {firstAidRecipes.heavyFrostweaveBandage};
-    end
-    return shouldCraft
-end
+
+        }
+    },
+
+    {
+        min = 375,
+        max = 399,
+
+        recipes = {
+            firstAidRecipes.frostweaveBandage
+        }
+    },
+
+    {
+        min = 400,
+        max = 449,
+
+        recipes = {
+            firstAidRecipes.heavyFrostweaveBandage
+        }
+    }
+};
 
 print("|cff" .. addonTable.chat_frame_default_color .. '[Profession Capper] loaded First Aid module|r');

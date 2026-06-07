@@ -42,7 +42,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 ### Secondary Professions
 `Cooking` - Fully supported (Port pending) (id-based port pending)
 
-`First Aid` - Fully supported (id-based port pending)
+`First Aid` - Fully supported
 
 `Fishing` - Not supported (probably won't be)
 

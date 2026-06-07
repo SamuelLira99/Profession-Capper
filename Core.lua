@@ -540,9 +540,16 @@ end
 -- refactoring
 addonTable.getRecipesForSkill = function(professionName, rank)
 
-    local professionData = addonTable.professions[
-            string.lower(professionName)
-        ]
+    --local professionData = addonTable.professions[
+    --        string.lower(professionName)
+    --    ]
+
+    local professionData =
+    addonTable.professions[
+    addonTable.normalizeProfessionName(
+            professionName
+    )
+    ]
 
     if not professionData then
         return nil

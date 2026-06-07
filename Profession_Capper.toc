@@ -4,11 +4,12 @@
 ## Version: v1.0.0-beta17
 
 constants.lua
+utils.lua
 
 Recipes\Enchanting.lua
 Recipes\Tailoring.lua
 Recipes\Engineering.lua
-# Recipes\FirstAid.lua
+Recipes\FirstAid.lua
 
 Professions\Enchanting.lua
 Professions\Tailoring.lua
@@ -18,6 +19,6 @@ Professions\Engineering.lua
 # Professions\Blacksmithing.lua
 # Professions\Inscription.lua
 # Professions\Alchemy.lua
-# Professions\FirstAid.lua
+Professions\FirstAid.lua
 # Professions\Cooking.lua
 Profession_Capper.xml
