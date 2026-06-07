@@ -1,6 +1,6 @@
 local addonName, addonTable = ...;
 
-if not addonTable.recipes or not addonTable.recipes.tailoring then
+if not addonTable.recipes or not addonTable.recipes.enchanting then
     print("|cff" .. addonTable.chat_frame_error_color .. '[Profession Capper] Error loading Enchanting module|r');
     return
 end
