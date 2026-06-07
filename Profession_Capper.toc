@@ -5,21 +5,19 @@
 
 constants.lua
 
-Recipes\Reagents.lua
-
 Recipes\Enchanting.lua
 Recipes\Tailoring.lua
 Recipes\Engineering.lua
-Recipes\FirstAid.lua
+# Recipes\FirstAid.lua
 
 Professions\Enchanting.lua
 Professions\Tailoring.lua
-Professions\Jewelcrafting.lua
-Professions\Leatherworking.lua
-Professions\Blacksmithing.lua
 Professions\Engineering.lua
-Professions\Inscription.lua
-Professions\Alchemy.lua
-Professions\FirstAid.lua
-Professions\Cooking.lua
+# Professions\Jewelcrafting.lua
+# Professions\Leatherworking.lua
+# Professions\Blacksmithing.lua
+# Professions\Inscription.lua
+# Professions\Alchemy.lua
+# Professions\FirstAid.lua
+# Professions\Cooking.lua
 Profession_Capper.xml

@@ -16,7 +16,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 
 ### Primary Trade Skills
 
-`Enchanting` - Fully supported (id-based port pending)
+`Enchanting` - Fully supported
 
 `Tailoring` - Fully supported
 
@@ -24,7 +24,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 
 `Alchemy` - Fully supported (Port pending) (id-based port pending)
 
-`Engineering` - Fully supported (id-based port pending)
+`Engineering` - Fully supported
 
 `Jewelcrafting` - Fully supported (Port pending) (id-based port pending)
 
@@ -85,4 +85,4 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 ![Profession Capper - Recipe not learnt yet](https://imgur.com/Q2eXK6f.jpg) -->
 
 # Support
-You can open an issue on this repo, or mark `@SamuelLira99` on [Twitter](https://twitter.com/SamuelLira99)
+You can open an issue on this repo, or chat `u/SamuelLira99` on [Reddit](https://reddit.com/user/SamuelLira99/)
