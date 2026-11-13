@@ -40,7 +40,7 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 `Skinning` - Not supported (probably won't be)
 
 ### Secondary Professions
-`Cooking` - Fully supported (Port pending) (id-based port pending)
+`Cooking` - Fully supported
 
 `First Aid` - Fully supported
 
@@ -75,8 +75,8 @@ By default, the **Profession Capper frame** will be opened at the **Bottom Left*
 <!-- #### Inscription
 ![Profession Capper - Inscription](https://imgur.com/Zef1GWz.jpg) -->
 
-<!-- #### Cooking
-![Profession Capper - Cooking](https://imgur.com/wlDzjSS.jpg) -->
+#### Cooking
+![Profession Capper - Cooking](Screenshots/cooking.png)
 
 #### First Aid
 ![Profession Capper - First Aid](https://imgur.com/9wReapw.jpg)
