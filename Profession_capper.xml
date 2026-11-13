@@ -107,9 +107,22 @@
                     <AbsDimension x="200"/>
                 </Size>
                 <Anchors>
-                    <Anchor point="TOP" relativeTo="$parentTitle">
+                    <Anchor point="TOP" relativeTo="txtShouldCraft">
                         <Offset>
-                            <AbsDimension x="0" y="-75"/>
+                            <AbsDimension x="0" y="-25"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+            </FontString>
+
+            <FontString name="txtNextChange" inherits="GameFontNormal">
+                <Size>
+                    <AbsDimension x="200"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOP" relativeTo="txtSkillUpChance">
+                        <Offset>
+                            <AbsDimension x="0" y="-25"/>
                         </Offset>
                     </Anchor>
                 </Anchors>
@@ -121,9 +134,9 @@
                     <AbsDimension x="200"/>
                 </Size>
                 <Anchors>
-                    <Anchor point="TOP" relativeTo="$parentTitle">
+                    <Anchor point="TOP" relativeTo="imgSkillIcon">
                         <Offset>
-                            <AbsDimension x="30" y="-193"/>
+                            <AbsDimension x="30" y="-85"/>
                         </Offset>
                     </Anchor>
                 </Anchors>
@@ -142,10 +155,10 @@
                 <AbsDimension x="50" y="50"/>
             </Size>
             <Anchors>
-                <Anchor point="top">
-                    <Offset>
-                        <AbsDimension y="-100"/>
-                    </Offset>
+                <Anchor point="topleft" relativeTo="imgSkillIcon">
+<!--                    <Offset>-->
+<!--                        <AbsDimension y="-125"/>-->
+<!--                    </Offset>-->
                 </Anchor>
             </Anchors>
         </Frame>
@@ -154,9 +167,9 @@
                 <AbsDimension x="96" y="32"/>
             </Size>
             <Anchors>
-                <Anchor point="top">
+                <Anchor point="top" relativeTo="imgSkillIcon">
                     <Offset>
-                        <AbsDimension y="-150" />
+                        <AbsDimension y="-50" />
                     </Offset>
                 </Anchor>
             </Anchors>
@@ -177,7 +190,7 @@
             <Anchors>
                 <Anchor point="topright">
                     <Offset>
-                        <AbsDimension y="-150" x="-20" />
+                        <AbsDimension y="-175" x="-20" />
                     </Offset>
                 </Anchor>
             </Anchors>
@@ -199,7 +212,7 @@
             <Anchors>
                 <Anchor point="topleft">
                     <Offset>
-                        <AbsDimension y="-150" x="20" />
+                        <AbsDimension y="-175" x="20" />
                     </Offset>
                 </Anchor>
             </Anchors>
